@@ -46,17 +46,26 @@
 @import url('./footer.css');
 
 :root {
-  /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+  --primary-font: 'Neue Montreal', sans-serif;
+  --primary-fontsize: 16px;
+  --primary-fontweight: 400;
+  --primary-fontcolor: #242424;
+  --primary-background-color: #f4f4f4;
+  --footer-fontcolor: #f4f4f4;
+  --footer-background-color: #242424;
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
-
+  /* 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%; */
+}
+
+body {
+  background: var(--primary-background-color);
+  font-family: var(--primary-font);
+  color: var(--primary-fontcolor);
+  font-size: var(--primary-fontsize);
+  font-weight: var(--primary-fontweight);
 }
