@@ -1,29 +1,41 @@
 import axios from 'axios';
 // Реалізація всіх запитів через екземпляр классу
 // nodemon ./src/js/api.js
-// TODO: Написати методи для усіх фетчів
+// TODO: Прийняти дані від союзників та лоповнити функції
 
 class Api {
   #BASE_URL = 'https://your-energy.b.goit.study/api';
 
-  async getData(url) {
+  async #getData(url) {
     const response = await axios.get(url);
     return response.data;
   }
 
-  async getExFilters(params) {
+  /* Example
+  params = {
+  filter: "Muscles",
+  page: 1,
+  }
+  */
+  async getFilters(params) {
     const searchParams = new URLSearchParams(params);
     try {
-      return await this.getData(`${this.#BASE_URL}/filters?${searchParams}`);
+      return await this.#getData(`${this.#BASE_URL}/filters?${searchParams}`);
     } catch (error) {
       console.log(error);
     }
   }
 
+  /* Example
+  params = {
+  bodypart: "back",
+  page: 1,
+  }
+  */
   async getFiltered(params) {
     const searchParams = new URLSearchParams(params);
     try {
-      return await this.getData(`${this.#BASE_URL}/exercises?${searchParams}`);
+      return await this.#getData(`${this.#BASE_URL}/exercises?${searchParams}`);
     } catch (error) {
       console.log(error);
     }
@@ -31,14 +43,14 @@ class Api {
 
   async getDetails(id) {
     try {
-      return await this.getData(`${this.#BASE_URL}/exercises?${id}`);
+      return await this.#getData(`${this.#BASE_URL}/exercises?${id}`);
     } catch (error) {
       console.log(error);
     }
   }
 
-  /*
-body = {
+  /* Example
+  body = {
   "rate": 5,
   "email": "test@gmail.com",
   "review": "My best exercise"
@@ -57,12 +69,13 @@ body = {
 
   async getQuote() {
     try {
-      return await this.getData(`${this.#BASE_URL}/quote`);
+      return await this.#getData(`${this.#BASE_URL}/quote`);
     } catch (error) {
       console.log(error);
     }
   }
 
+  // Example
   // email = "string@gmail.com"
   async subscribe(email) {
     try {
