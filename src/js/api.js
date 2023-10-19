@@ -63,6 +63,7 @@ body = {
     }
   }
 
+  // email = "string@gmail.com"
   async subscribe(email) {
     try {
       return await axios.post(`${this.#BASE_URL}/subscription`, { email });
