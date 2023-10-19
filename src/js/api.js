@@ -1,4 +1,3 @@
-class Api {}
 import axios from 'axios';
 // Реалізація всіх запитів через екземпляр классу
 // nodemon ./src/js/api.js
