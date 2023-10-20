@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Notiflix from 'notiflix';
 // Реалізація всіх запитів через екземпляр классу
 // nodemon ./src/js/api.js
 // TODO: Прийняти дані від команди та доповнити функції
