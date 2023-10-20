@@ -1,5 +1,4 @@
 .container-hero {
-  min-width: 320px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 40px;
@@ -16,7 +15,6 @@
   line-height: 1.2;
   letter-spacing: -0.8px;
   margin-bottom: 20px;
-  height: 96px;
   text-align: center;
 }
 
