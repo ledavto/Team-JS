@@ -5,6 +5,13 @@
   |============================
 */
 
+@import url('./reset.css');
+@import url('./header.css');
+@import url('./hero.css');
+@import url('./exercises.css');
+@import url('./favorites.css');
+@import url('./footer.css');
+
 @font-face {
   font-family: 'Neue Montreal';
   src: local('../fonts/NeueMontreal-Italic'),
@@ -37,13 +44,6 @@
   font-weight: 400;
   font-style: normal;
 }
-
-@import url('./reset.css');
-@import url('./header.css');
-@import url('./hero.css');
-@import url('./exercises.css');
-@import url('./favorites.css');
-@import url('./footer.css');
 
 :root {
   --primary-font: 'Neue Montreal', sans-serif;
