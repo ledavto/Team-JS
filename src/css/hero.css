@@ -5,13 +5,17 @@
   padding-bottom: 40px;
 }
 
+/* .container-hero {
+  padding-left: 32px;
+  padding-right: 32px;
+} */
+
 .hero-title {
   font-size: 40px;
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: -0.8px;
   margin-bottom: 20px;
-  min-width: 335px;
   height: 96px;
   text-align: center;
 }
@@ -29,7 +33,6 @@
   line-height: 1.2;
   letter-spacing: -0.28px;
   margin-bottom: 40px;
-  min-width: 335px;
 }
 
 .hero-picture {
@@ -58,10 +61,4 @@
   gap: 10px;
   border-radius: 30px;
   border: 1px solid var(--primary-fontcolor);
-}
-
-.container-hero {
-  padding-left: 32px;
-  padding-right: 32px;
-  padding-bottom: 40px;
 }
