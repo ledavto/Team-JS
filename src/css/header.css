@@ -1,174 +1,215 @@
 .header {
   padding: 20px 0;
+}
 
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-  }
-  .header {
-    padding-top: 20px;
-    padding-bottom: 14px;
-  }
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+.header-nav-list {
+  display: none;
+}
+.header-addresses {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
   .header-nav-list {
-    display: none;
-  }
-
-  .header-nav {
     display: flex;
-    align-items: center;
-  }
-  .logo-link {
-    display: flex;
-    align-items: center;
-    font-family: 'Montserrat';
-    font-style: italic;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 18px;
-    letter-spacing: -0.03em;
-
-    text-transform: uppercase;
-  }
-
-  .Logo-icon {
-    margin-left: 4px;
-  }
-
-  .header-nav-link {
-    display: block;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    height: 100%;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: -0.02em;
-  }
-  .header-nav-link:hover {
-  }
-  .header-nav-link:focus {
-  }
-
-  /* Addresses */
-
-  .header-socials-link {
-    display: flex;
-    align-items: center;
-  }
-  .header-social-icon {
-  }
-
-  .header-social-icon:hover,
-  .header-social-icon:focus {
-  }
-
-  .header-socials-list {
-    display: none;
-    align-items: center;
+    gap: 20px;
+    border: solid;
+    border-radius: 60px;
+    width: 233px;
+    height: 52px;
     justify-content: center;
-    gap: 18px;
+    align-items: center;
+    background-color: var(--primary-fontcolor);
+    color: var(--primary-background-color);
+    font-family: 'Neue Montreal';
   }
+  .header-addresses {
+    display: flex;
+  }
+}
+.header-nav-item {
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+}
 
-  /* Mobile menu */
+.logo-link {
+  margin-right: 103px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.Logo-icon {
+  margin-left: 4px;
+}
+
+.header-nav-link {
+  display: block;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  height: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+.header-nav-link:hover {
+}
+.header-nav-link:focus {
+}
+
+/* Addresses */
+
+.header-socials-link {
+  display: flex;
+  align-items: center;
+}
+.header-social-icon {
+  fill: #242424;
+  stroke: #242424;
+}
+
+.header-social-icon:hover,
+.header-social-icon:focus {
+}
+
+.header-socials-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.header-socials-item {
+  border: solid 1px #2424241a;
+  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mobile menu */
+.menu-toggle {
+  min-height: 32px;
+  min-width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+@media (min-width: 768px) {
   .menu-toggle {
-    min-height: 20px;
-    min-width: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-    border: none;
-    outline: none;
+    display: none;
   }
-  .mobile-menu-icon {
-    fill: black;
-    stroke: black;
-  }
-  .modal-close-icon {
-    fill: #f4f4f4;
-    stroke: #f4f4f4;
-  }
-  .menu-container {
-    background-color: #242424;
-    width: 210px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    right: 0;
-    top: 0;
-    transform: translateX(100%);
-    transition: transform 250ms ease-in-out;
-    padding: 136px 46px 20px 50px;
-    z-index: 2;
-  }
+}
+.mobile-menu-icon {
+  fill: black;
+  stroke: black;
+}
+.modal-close-icon {
+  fill: var(--primary-background-color);
+  stroke: var(--primary-background-color);
+}
+.menu-container {
+  background-color: #242424;
+  width: 210px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+  /* padding: 100px 46px 20px 50px; */
+  z-index: 2;
+}
 
-  .menu-container.is-open {
-    transform: translateX(0);
-  }
-  .menu-container .menu-toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    min-width: 28px;
-    min-height: 28px;
-  }
+.menu-container.is-open {
+  transform: translateX(0);
+}
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  min-width: 32px;
+  min-height: 32px;
+}
 
-  .modal-close-icon:hover,
-  .modal-close-icon:focus {
-  }
+.modal-close-icon:hover,
+.modal-close-icon:focus {
+}
 
-  .mobile-menu {
-    list-style: none;
-    margin-bottom: 50px;
-  }
+.mobile-menu {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  list-style: none;
+}
 
-  /* .mobile-menu-item:not(:last-child) {
+/* .mobile-menu-item:not(:last-child) {
     margin-bottom: 24px;
   } */
-  .mobile-link {
-    color: #f4f4f4;
+.mobile-link {
+  color: var(--primary-background-color);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: 'Neue Montreal';
+}
 
-    text-decoration: none;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-  }
+.mobile-link:hover,
+.mobile-link:focus,
+.mobile-link:active {
+}
 
-  .mobile-link:hover,
-  .mobile-link:focus,
-  .mobile-link:active {
-  }
+/* Mobile social links */
+.mobile-addresses {
+  position: absolute;
+  bottom: 20px;
+  left: 27px;
+}
+.mobile-socials {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+.mobile-socials-item {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #f4f4f41a;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-icon {
+  fill: var(--primary-background-color);
+}
 
-  /* Mobile social links */
-  .mobile-addresses {
-    /* position: absolute;
-    bottom: 20px;
-    left: 20px; */
-  }
-  .mobile-socials {
-    list-style: none;
-    display: flex;
-    gap: 18px;
-  }
-  .social-icon {
-    fill: #f4f4f4;
-  }
+.social-icon:active,
+.social-icon:focus,
+.social-icon:hover {
+}
 
-  .social-icon:active,
-  .social-icon:focus,
-  .social-icon:hover {
-  }
-
-  .mobile-socials-link {
-    display: flex;
-    align-items: center;
-  }
+.mobile-socials-link {
+  /* display: flex;
+    justify-content: center; */
 }
