@@ -11,6 +11,9 @@ class Api {
     return response.data;
   }
 
+  #handleError(error) {
+    console.log(error);
+  }
   /* Example
   params = {
   filter: "Muscles",
@@ -20,9 +23,9 @@ class Api {
   async getFilters(params) {
     const searchParams = new URLSearchParams(params);
     try {
-      return await this.#getData(`${this.#BASE_URL}/filters?${searchParams}`);
+      return await this.#getData(`${this.#BASE_URL}gh/filters?${searchParams}`);
     } catch (error) {
-      console.log(error);
+      this.#handleError(error);
     }
   }
 
@@ -87,4 +90,5 @@ class Api {
 }
 
 const api = new Api();
+api.getFilters();
 export default api;
