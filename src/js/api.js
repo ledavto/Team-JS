@@ -1,7 +1,7 @@
 import axios from 'axios';
 // Реалізація всіх запитів через екземпляр классу
 // nodemon ./src/js/api.js
-// TODO: Прийняти дані від союзників та лоповнити функції
+// TODO: Прийняти дані від команди та доповнити функції
 
 class Api {
   #BASE_URL = 'https://your-energy.b.goit.study/api';
@@ -12,8 +12,9 @@ class Api {
   }
 
   #handleError(error) {
-    console.log(error);
+    Notiflix.Notify.failure(error.response.data.message);
   }
+
   /* Example
   params = {
   filter: "Muscles",
@@ -21,9 +22,9 @@ class Api {
   }
   */
   async getFilters(params) {
-    const searchParams = new URLSearchParams(params);
     try {
-      return await this.#getData(`${this.#BASE_URL}gh/filters?${searchParams}`);
+      const searchParams = new URLSearchParams(params);
+      return await this.#getData(`${this.#BASE_URL}/filters?${searchParams}`);
     } catch (error) {
       this.#handleError(error);
     }
@@ -36,11 +37,11 @@ class Api {
   }
   */
   async getFiltered(params) {
-    const searchParams = new URLSearchParams(params);
     try {
+      const searchParams = new URLSearchParams(params);
       return await this.#getData(`${this.#BASE_URL}/exercises?${searchParams}`);
     } catch (error) {
-      console.log(error);
+      this.#handleError(error);
     }
   }
 
@@ -48,7 +49,7 @@ class Api {
     try {
       return await this.#getData(`${this.#BASE_URL}/exercises?${id}`);
     } catch (error) {
-      console.log(error);
+      this.#handleError(error);
     }
   }
 
@@ -66,7 +67,7 @@ class Api {
         body
       );
     } catch (error) {
-      console.log(error);
+      this.#handleError(error);
     }
   }
 
@@ -74,7 +75,7 @@ class Api {
     try {
       return await this.#getData(`${this.#BASE_URL}/quote`);
     } catch (error) {
-      console.log(error);
+      this.#handleError(error);
     }
   }
 
@@ -84,11 +85,10 @@ class Api {
     try {
       return await axios.post(`${this.#BASE_URL}/subscription`, { email });
     } catch (error) {
-      console.log(error);
+      this.#handleError(error);
     }
   }
 }
 
 const api = new Api();
-api.getFilters();
 export default api;
