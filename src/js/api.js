@@ -1,44 +1,61 @@
 import axios from 'axios';
+import Notiflix from 'notiflix';
 // Реалізація всіх запитів через екземпляр классу
 // nodemon ./src/js/api.js
-// TODO: Написати методи для усіх фетчів
+// TODO: Прийняти дані від команди та доповнити функції
 
 class Api {
   #BASE_URL = 'https://your-energy.b.goit.study/api';
 
-  async getData(url) {
+  async #getData(url) {
     const response = await axios.get(url);
     return response.data;
   }
 
-  async getExFilters(params) {
-    const searchParams = new URLSearchParams(params);
+  #handleError(error) {
+    Notiflix.Notify.failure(error.response.data.message);
+  }
+
+  /* Example
+  params = {
+  filter: "Muscles",
+  page: 1,
+  }
+  */
+  async getFilters(params) {
     try {
-      return await this.getData(`${this.#BASE_URL}/filters?${searchParams}`);
+      const searchParams = new URLSearchParams(params);
+      return await this.#getData(`${this.#BASE_URL}/filters?${searchParams}`);
     } catch (error) {
-      console.log(error);
+      this.#handleError(error);
     }
   }
 
+  /* Example
+  params = {
+  bodypart: "back",
+  page: 1,
+  }
+  */
   async getFiltered(params) {
-    const searchParams = new URLSearchParams(params);
     try {
-      return await this.getData(`${this.#BASE_URL}/exercises?${searchParams}`);
+      const searchParams = new URLSearchParams(params);
+      return await this.#getData(`${this.#BASE_URL}/exercises?${searchParams}`);
     } catch (error) {
-      console.log(error);
+      this.#handleError(error);
     }
   }
 
   async getDetails(id) {
     try {
-      return await this.getData(`${this.#BASE_URL}/exercises?${id}`);
+      return await this.#getData(`${this.#BASE_URL}/exercises?${id}`);
     } catch (error) {
-      console.log(error);
+      this.#handleError(error);
     }
   }
 
-  /*
-body = {
+  /* Example
+  body = {
   "rate": 5,
   "email": "test@gmail.com",
   "review": "My best exercise"
@@ -51,23 +68,25 @@ body = {
         body
       );
     } catch (error) {
-      console.log(error);
+      this.#handleError(error);
     }
   }
 
   async getQuote() {
     try {
-      return await this.getData(`${this.#BASE_URL}/quote`);
+      return await this.#getData(`${this.#BASE_URL}/quote`);
     } catch (error) {
-      console.log(error);
+      this.#handleError(error);
     }
   }
 
+  // Example
+  // email = "string@gmail.com"
   async subscribe(email) {
     try {
       return await axios.post(`${this.#BASE_URL}/subscription`, { email });
     } catch (error) {
-      console.log(error);
+      this.#handleError(error);
     }
   }
 }
