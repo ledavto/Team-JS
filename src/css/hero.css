@@ -1,7 +1,11 @@
-
+@media screen and (min-width: 375px){
+    .container{
+        max-width: 375px;
+    }
+}
 
 .container-hero{
-    max-width: 335px;
+    min-width: 335px;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 40px;
@@ -9,38 +13,35 @@
 }
 
 .hero-title {
-    color: var(--primary-fontcolor);
-    font-family: var(--primary-font);
+    
     font-size: 40px;
     font-weight: 400;
-    line-height: 48px;
+    line-height: 1.2;
     letter-spacing: -0.8px;
     margin-bottom: 20px;
     min-width: 335px;
-   
-    
+    text-align: center;
+ 
 }
 
 .hero-title span {
-    color: var(--primary-fontcolor);
-    font-family: var(--primary-font);
+    
     font-size: 40px;
     font-style: italic;
     font-weight: 400;
-    line-height: 48px;
+    line-height: 1.2;
     letter-spacing: -0.8px;
 }
 
 .hero-text {
-    color: var(--primary-fontcolor);
-    font-family: var(--primary-font);
+
     font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
+    line-height: 1.2;
     letter-spacing: -0.28px;
-    margin-bottom: 36px;
+    margin-bottom: 40px;
     min-width: 335px;
     max-height: 36px;
+    
 }
 
 .hero-img{
@@ -50,16 +51,15 @@ border-radius: 30px;
 }
 
 .hero-list{
-    display: flex;
+   display: flex;
    justify-content: center;
-    min-width: 334px;
-    gap: 6px;
+   gap: 6px;
    
 }
 
 .hero-item{
-    color: var(--primary-fontcolor);
-    font-family: var(--primary-font);
+    
+    width: calc((100% - 18) / 4);
     font-size: 14px;
     line-height: 18px;
     display: flex;

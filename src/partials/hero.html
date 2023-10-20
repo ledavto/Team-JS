@@ -1,17 +1,42 @@
 <section class="hero container">
   <div class="container-hero">
-    <div class="hero-icon"></div>
+    <div class="hero-icon">
+      <svg class="icon-logo" width="106">
+        <use href="./img/icons.svg#icon-logo"></use>
+      </svg>
+    </div>
     <h1 class="hero-title">Get <span>Body</span> in shape, Stay healthy</h1>
     <p class="hero-text">
       Transform your physique and embrace a healthier lifestyle with our
       comprehensive fitness and nutrition support.
     </p>
-    <img
-      class="hero-img"
-      srcset="../img/mobile/hero-mobile.png, ../img/mobile/hero-mobile@2x.png"
-      src="../img/big-hero.jpg"
-      alt="women-doing-fitness"
-    />
+    <div class="hero-picture">
+      <picture>
+        <source
+          media="(min-width: 375px)"
+          srset="../img/mobile/hero-mobile.png,
+        ../img/mobile/hero-mobile@2x.png"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            ../img/tablet/hero-tablet.png,
+            ../img/tablet/hero-tablet@2x.png
+          "
+        />
+        <source
+          media="(min-width: 1280px)"
+          srcset="../img/tablet/hero.png, ../img/tablet/hero@2x.png"
+        />
+
+        <img
+          class="hero-img"
+          src="../img/big-hero.jpg, "
+          alt="women-doing-fitness"
+          width="335"
+        />
+      </picture>
+    </div>
     <ul class="hero-list">
       <li class="hero-item">#Sport</li>
       <li class="hero-item">#Healthy</li>
