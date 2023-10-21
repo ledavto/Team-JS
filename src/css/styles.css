@@ -79,17 +79,38 @@ body {
   padding-right: 32px;
 }
 
+/* Modal */
+
 .backdrop {
-  position: absolute;
-  background-color: white;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  background-color: rgba(4, 4, 4, 0.4);
   width: 100%;
   height: 100%;
+}
+
+.modal {
+  width: 335px;
+  position: relative;
 }
 
 .rating {
   background-color: var(--footer-background-color);
   border-radius: 20px;
-  padding: 0 20px;
+  padding: 40px 20px;
+}
+
+.rating-close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  max-width: 24px;
+  max-height: 24px;
+  background-color: transparent;
 }
 
 .rating-form {
@@ -103,22 +124,41 @@ body {
   padding: 12px 14px;
   border-radius: 30px;
   border: 1px solid #f4f4f4;
+  margin-bottom: 10px;
+  background-color: var(--footer-background-color);
 }
 
 .rating-inp-com {
   width: 295px;
-  padding: 12px 0 0 14px;
+  padding: 12px 14px;
   resize: none;
   border-radius: 15px;
   border: 1px solid #f4f4f4;
+  margin-bottom: 20px;
+  background-color: var(--footer-background-color);
 }
 
-.rating-form button {
+.rating-submit {
   width: 295px;
   border-radius: 30px;
   background: #f4f4f4;
+  padding: 12px 131px;
 }
 
 .rate {
   display: flex;
+  margin-bottom: 20px;
+}
+
+.rate-item {
+  width: 10px;
+  height: 10px;
+}
+
+.rating-text {
+  color: rgba(244, 244, 244, 0.4);
+}
+
+.rating-choosed {
+  color: white;
 }
