@@ -1,26 +1,28 @@
 <!-- <link rel="stylesheet" href="../css/header.css"> -->
 
-<header class="header">
+<header id="home" class="header">
   <div class="header-container container">
-    <nav class="header-nav">
-      <a class="logo-link link" href="/src/index.html">
+    <div class="logo">
+      <a class="logo-link link" href="#home">
         <svg class="Logo-icon" width="132" height="24">
           <use href="./img/icons.svg#icon-logo"></use></svg
       ></a>
+    </div>
+    <nav class="header-nav">
       <ul class="header-nav-list list">
-        <li class="header-nav-item">
+        <li class="header-nav-item homepageitem">
           <a
-            class="header-nav-link active"
-            href="/src/index.html"
+            class="header-nav-link"
+            href="#home"
             aria-label="Check our maim page"
             >Home</a
           >
         </li>
-        <li class="header-nav-item">
+        <li class="header-nav-item favoritespageitem">
           <a
-            class="header-nav-link"
+            class="header-nav-link favoriteslink"
             href="./favorites.html"
-            aria-label="Visit section about manufacture"
+            aria-label="your favorites"
             >Favorites</a
           >
         </li>
@@ -89,7 +91,7 @@
       <ul class="mobile-menu">
         <li class="mobile-menu-item">
           <a
-            href="#index"
+            href="#home"
             class="mobile-link active"
             aria-label="Home Sweet Home"
             >Home</a
