@@ -2,6 +2,61 @@
   <div class="modal"></div>
 </div>
 
-<div class="backdrop is-hidden" data-first-modal>
-  <div class="modal rating"></div>
+<!-- TODO: Розгорнути модалку -->
+<!--  is-hidden -->
+<div class="backdrop" data-rating-modal>
+  <div class="modal rating">
+    <button class="rating-close">
+      <svg><use href="../img/icons.svg#icon-btn-x"></use></svg>
+    </button>
+    <form class="rating-form">
+      <p>Rating</p>
+      <ul class="rate">
+        <li>
+          <svg data-id="1">
+            <use href="../img/icons.svg#"></use>
+          </svg>
+          *
+        </li>
+        <li>
+          <svg data-id="2">
+            <use href="../img/icons.svg#">*</use>
+          </svg>
+          *
+        </li>
+        <li>
+          <svg data-id="3">
+            <use href="../img/icons.svg#">*</use>
+          </svg>
+          *
+        </li>
+        <li>
+          <svg data-id="4">
+            <use href="../img/icons.svg#">*</use>
+          </svg>
+          *
+        </li>
+        <li>
+          <svg data-id="5">
+            <use href="../img/icons.svg#">*</use>
+          </svg>
+          *
+        </li>
+      </ul>
+      <input
+        class="rating-inp-e"
+        type="email"
+        name="email"
+        placeholder="Email"
+      />
+      <textarea
+        class="rating-inp-com"
+        type="text"
+        name="comment"
+        placeholder="Your comment"
+        rows="4"
+      ></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
 </div>
