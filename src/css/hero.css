@@ -17,6 +17,8 @@
   letter-spacing: -0.8px;
   margin-bottom: 20px;
   text-align: center;
+  max-width: 335px;
+  
  
 
   
@@ -132,4 +134,6 @@
 
 
   }
+
+  
 }
