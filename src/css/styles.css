@@ -69,3 +69,12 @@ body {
   font-size: var(--primary-fontsize);
   font-weight: var(--primary-fontweight);
 }
+
+.footer-container {
+  padding: 64px 32px;
+}
+.header-container {
+  padding-top: 28px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
