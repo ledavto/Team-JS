@@ -1,12 +1,12 @@
 import api from './api.js';
 
 // Modal
-
+const refsModal = {};
 // Rating
 
 // TODO: Доробити код для модалки rating
 
-const refs = {
+const refsRating = {
   ratingModal: document.querySelector('[data-rating-modal]'),
   form: document.querySelector('.rating-form'),
   rateList: document.querySelector('.rate'),
