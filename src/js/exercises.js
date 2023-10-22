@@ -17,7 +17,7 @@ function showCategories(subcategory, page = 1) {
   }
 
   api
-    .getExFilters({ filter: subcategory, page, limit: itemsPerPage })
+    .getFilters({ filter: subcategory, page, limit: itemsPerPage })
     .then(data => {
       const categoryCards = document.getElementById('category-cards');
       categoryCards.innerHTML = '';
