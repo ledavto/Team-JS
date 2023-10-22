@@ -2,9 +2,11 @@ body {
   background-color: #f4f4f4;
 }
 .exercisesLeft {
-  /* display: flex;
-  gap: 20px; */
+  /* display: flex; */
+  /* gap: 20px; */
   margin: 32px;
+  gap: 32px;
+  max-width: 444px;
 }
 /* todo DIV №1   */
 .contain-one {
@@ -13,6 +15,7 @@ body {
   /* background-color: #443a3a5b; */
   max-width: 444px;
   min-height: 230px;
+  width: 100%;
   border: 1.5px solid#29adce;
 }
 
@@ -44,11 +47,8 @@ body {
 }
 
 .quote-text {
-  /* position: absolute; */
-  /* display: block; */
-  /* position: relative; */
   display: block;
-  /* text-align: center; */
+  font-family: Neue Montreal;
 }
 
 .commas-icon {
@@ -59,6 +59,10 @@ body {
   display: block;
   /* text-align: center; */
 }
+.boxAutor {
+  margin-left: 90px;
+  margin-right: 40px;
+}
 
 .boxTextMidle-sect-one {
   color: rgba(244, 244, 244, 0.6);
@@ -67,6 +71,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
+  margin-bottom: 18px;
 }
 
 .boxTextDown-sect-one {
@@ -93,8 +98,11 @@ body {
   border-radius: 20px;
   background-color: #fff;
   max-width: 444px;
+  width: 100%;
   min-height: 315px;
+  /* max-height: 315px; */
   border: 1.5px solid #29adce;
+  /* overflow-x: hidden; */
 }
 
 .box-three-list {
@@ -135,17 +143,23 @@ body {
 }
 
 .box-three-down {
-  color: #242424;
+  /* color: #242424;
   font-family: Neue Montreal;
   font-size: 14px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 18px; /* 128.571% */
+  font-weight: 400; */
+  /* line-height: 18px; 128.571% */
   max-width: 314px;
+  /* width: 100%; */
   margin-left: 90px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  /* padding-bottom: 40px; */
+  /* margin: 6px, 40px, 40px, 90px; */
 }
 
 .text-daily-norm {
+  color: rgba(36, 36, 36, 0.6);
 }
 .text-the-world-health {
 }
