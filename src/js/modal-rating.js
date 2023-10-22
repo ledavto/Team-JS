@@ -1,7 +1,4 @@
 import api from './api.js';
-
-// Modal
-const refsModal = {};
 // Rating
 
 // TODO: Доробити код для модалки rating
