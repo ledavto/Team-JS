@@ -12,26 +12,26 @@
     <div class="hero-picture">
       <picture>
         <source
-          media="(min-width: 375px)"
+          media="(max-width: 767px)"
           srcset="
-            ./img/mobile/hero-mobile.png    1x,
-            ./img/mobile/hero-mobile@2x.png 2x
+            /img/mobile/hero-mobile.png    1x,
+            /img/mobile/hero-mobile@2x.png 2x
           "
         />
         <source
-          media="(max-width: 768px)"
+          media="(max-width: 1439px)"
           srcset="
-            ./img/tablet/hero-tablet.png    1x,
-            ./img/tablet/hero-tablet@2x.png 2x
+            /img/tablet/hero-tablet.png    1x,
+            /img/tablet/hero-tablet@2x.png 2x
           "
         />
         <source
           media="(min-width: 1440px)"
-          srcset="./img/desktop/hero.png 1x, ./img/desktop/hero@2x.png 2x"
+          srcset="/img/desktop/hero.png 1x, /img/desktop/hero@2x.png 2x"
         />
         <img
           class="hero-img"
-          src="./img/big-hero.jpg"
+          src="/img/mobile/hero-mobile.png"
           alt="women-doing-fitness"
           width="335"
         />
@@ -45,7 +45,6 @@
           ./img/desktop/young-women-doing-fitness@2x.png 2x
         "
       />
-      <img class="" src="" alt="women-doing-fitness" width="335" />
     </picture>
     <ul class="hero-list">
       <li class="hero-item">#Sport</li>
