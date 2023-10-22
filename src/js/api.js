@@ -63,7 +63,7 @@ class Api {
   async setRating(id, body) {
     try {
       return await axios.patch(
-        `${this.#BASE_URL}/exercises?${id}/rating`,
+        `${this.#BASE_URL}/exercises/${id}/rating`,
         body
       );
     } catch (error) {
