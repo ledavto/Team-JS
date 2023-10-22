@@ -2,7 +2,6 @@ import axios from 'axios';
 import Notiflix from 'notiflix';
 // Реалізація всіх запитів через екземпляр классу
 // nodemon ./src/js/api.js
-// TODO: Прийняти дані від команди та доповнити функції
 
 class Api {
   #BASE_URL = 'https://your-energy.b.goit.study/api';
@@ -64,7 +63,7 @@ class Api {
   async setRating(id, body) {
     try {
       return await axios.patch(
-        `${this.#BASE_URL}/exercises?${id}/rating`,
+        `${this.#BASE_URL}/exercises/${id}/rating`,
         body
       );
     } catch (error) {

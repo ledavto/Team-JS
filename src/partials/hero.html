@@ -1,7 +1,10 @@
 <section class="hero">
   <div class="container-hero container">
-    <div class="hero-icon">O</div>
-    <h1 class="hero-title">Get <span>Body</span> in shape, Stay healthy</h1>
+    <div>
+      <img class="title-icon" src="./img/star.png" alt="icon-star" width="38" />
+
+      <h1 class="hero-title">Get <span>Body</span> in shape, Stay healthy</h1>
+    </div>
     <p class="hero-text">
       Transform your physique and embrace a healthier lifestyle with our
       comprehensive fitness and nutrition support.
@@ -9,37 +12,53 @@
     <div class="hero-picture">
       <picture>
         <source
-          media="(min-width: 375px)"
+          media="(max-width: 767px)"
           srcset="
-            ./img/mobile/hero-mobile.png    1x,
-            ./img/mobile/hero-mobile@2x.png 2x
+            /img/mobile/hero-mobile.png    1x,
+            /img/mobile/hero-mobile@2x.png 2x
           "
         />
         <source
-          media="(min-width: 768px)"
+          media="(max-width: 1439px)"
           srcset="
-            ./img/tablet/hero-tablet.png    1x,
-            ./img/tablet/hero-tablet@2x.png 2x
+            /img/tablet/hero-tablet.png    1x,
+            /img/tablet/hero-tablet@2x.png 2x
           "
         />
         <source
-          media="(min-width: 1280px)"
-          srcset="./img/desktop/hero.png 1x, ./img/desktop/hero@2x.png 2x"
+          media="(min-width: 1440px)"
+          srcset="/img/desktop/hero.png 1x, /img/desktop/hero@2x.png 2x"
         />
-
         <img
           class="hero-img"
-          src="../img/mobile/hero-mobile.png"
+          src="/img/mobile/hero-mobile.png"
           alt="women-doing-fitness"
           width="335"
         />
       </picture>
     </div>
-    <ul class="hero-list">
-      <li class="hero-item">#Sport</li>
-      <li class="hero-item">#Healthy</li>
-      <li class="hero-item">#Workout</li>
-      <li class="hero-item">#Diet</li>
-    </ul>
+    <div class="hero-list-img">
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          srcset="
+            ./img/desktop/young-women-doing-fitness.png    1x,
+            ./img/desktop/young-women-doing-fitness@2x.png 2x
+          "
+        />
+        <img
+          class="list-img"
+          src="young-women-doing-fitness.png"
+          alt="women-doing-fitness"
+          width="335"
+        />
+      </picture>
+      <ul class="hero-list">
+        <li class="hero-item">#Sport</li>
+        <li class="hero-item">#Healthy</li>
+        <li class="hero-item">#Workout</li>
+        <li class="hero-item">#Diet</li>
+      </ul>
+    </div>
   </div>
 </section>

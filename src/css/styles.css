@@ -9,8 +9,11 @@
 @import url('./header.css');
 @import url('./hero.css');
 @import url('./exercises.css');
+@import url('./exercises-left.css');
 @import url('./favorites.css');
 @import url('./footer.css');
+@import url('./modal.css');
+@import url('./modal-rating.css');
 
 @font-face {
   font-family: 'Neue Montreal';
@@ -73,8 +76,9 @@ body {
 .footer-container {
   padding: 64px 32px;
 }
-.header-container {
-  padding-top: 28px;
-  padding-left: 32px;
-  padding-right: 32px;
-}
+/* .header-container {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 80px;
+} */
