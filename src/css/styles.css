@@ -70,9 +70,6 @@ body {
   font-weight: var(--primary-fontweight);
 }
 
-.footer-container {
-  padding: 64px 32px;
-}
 /* .header-container {
   padding-top: 20px;
   padding-left: 20px;
