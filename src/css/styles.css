@@ -150,15 +150,20 @@ body {
   margin-bottom: 20px;
 }
 
-.rate-item {
-  width: 10px;
-  height: 10px;
-}
-
 .rating-text {
   color: rgba(244, 244, 244, 0.4);
 }
 
 .rating-choosed {
   color: white;
+}
+
+.icon-star {
+  fill: rgba(244, 244, 244, 0.2);
+  width: 24px;
+  height: 24px;
+}
+
+.icon-star-hover {
+  fill: gold;
 }

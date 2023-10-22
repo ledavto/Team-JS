@@ -52,3 +52,29 @@ function logModalError(text) {
 }
 
 // TODO: Розгорнути код для модалки rating
+
+const refs = {
+  rateList: document.querySelector('.rate'),
+  stars: document.querySelectorAll('.icon-star'),
+};
+
+refs.rateList.addEventListener('mouseover', handleHover);
+function handleHover(event) {
+  const target = event.target;
+  let targetId = target.dataset.id;
+  if (target.tagName === 'use') {
+    targetId = target.parentNode.dataset.id;
+  }
+  if (targetId) {
+    for (let i = 0; i < targetId; i++) {
+      refs.stars[i].classList.add('icon-star-hover');
+    }
+  }
+}
+
+refs.rateList.addEventListener('mouseout', handleOut);
+function handleOut() {
+  refs.stars.forEach(star => {
+    star.classList.remove('icon-star-hover');
+  });
+}

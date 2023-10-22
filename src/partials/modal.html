@@ -2,7 +2,7 @@
   <div class="modal"></div>
 </div>
 
-<!-- TODO: Розгорнути модалку -->
+<!-- TODO: Доробити модалку -->
 <!--  is-hidden -->
 <div class="backdrop" data-rating-modal>
   <div class="modal rating">
@@ -11,41 +11,25 @@
     </button>
     <form class="rating-form">
       <span class="rating-text">Rating</span>
-      <ul class="rate">
-        <li class="rate-item">
-          <span class="rating-choosed">0.0</span>
-        </li>
-        <li class="rate-item">
-          <svg data-id="1">
-            <use href="../img/icons.svg#"></use>
-          </svg>
-          *
-        </li>
-        <li class="rate-item">
-          <svg data-id="2">
-            <use href="../img/icons.svg#">*</use>
-          </svg>
-          *
-        </li>
-        <li class="rate-item">
-          <svg data-id="3">
-            <use href="../img/icons.svg#">*</use>
-          </svg>
-          *
-        </li>
-        <li class="rate-item">
-          <svg data-id="4">
-            <use href="../img/icons.svg#">*</use>
-          </svg>
-          *
-        </li>
-        <li class="rate-item">
-          <svg data-id="5">
-            <use href="../img/icons.svg#">*</use>
-          </svg>
-          *
-        </li>
-      </ul>
+
+      <div class="rate">
+        <span class="rating-choosed">0.0</span>
+        <svg class="icon-star" data-id="1">
+          <use href="../img/icons.svg#star-rate"></use>
+        </svg>
+        <svg class="icon-star" data-id="2">
+          <use href="../img/icons.svg#star-rate"></use>
+        </svg>
+        <svg class="icon-star" data-id="3">
+          <use href="../img/icons.svg#star-rate"></use>
+        </svg>
+        <svg class="icon-star" data-id="4">
+          <use href="../img/icons.svg#star-rate"></use>
+        </svg>
+        <svg class="icon-star" data-id="5">
+          <use href="../img/icons.svg#star-rate"></use>
+        </svg>
+      </div>
       <input
         class="rating-inp-e"
         type="email"
