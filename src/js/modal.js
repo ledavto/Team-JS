@@ -7,10 +7,12 @@ import api from './api.js';
 // TODO: Доробити код для модалки rating
 
 const refs = {
+  ratingModal: document.querySelector('[data-rating-modal]'),
   form: document.querySelector('.rating-form'),
   rateList: document.querySelector('.rate'),
   stars: document.querySelectorAll('.icon-star'),
   ratingChoosed: document.querySelector('.rating-choosed'),
+  ratingCloseBtn: document.querySelector('.rating-close-btn'),
 };
 
 const variables = {
@@ -79,4 +81,9 @@ function handleRatigSubmit(event) {
   });
   refs.ratingChoosed.textContent = '0.0';
   variables.rate = 0;
+}
+
+refs.ratingCloseBtn.addEventListener('click', handleRatingClose);
+function handleRatingClose() {
+  refs.ratingModal.classList.add('is-hidden');
 }
