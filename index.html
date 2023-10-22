@@ -10,8 +10,8 @@
       href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
     />
     
-    <script type="module" crossorigin src="/Team-JS/assets/styles-cc316d0c.js"></script>
-    <link rel="stylesheet" href="/Team-JS/assets/styles-ddb2e4dd.css">
+    <script type="module" crossorigin src="/Team-JS/assets/exercises-5aa53ddb.js"></script>
+    <link rel="stylesheet" href="/Team-JS/assets/exercises-693b6920.css">
   </head>
   <body>
     <header class="header">
@@ -72,7 +72,19 @@
 </section>
 
       <section>
-  <p>Welcome to page EXERCISES</p>
+  <div class="category-filter">
+    <button id="bodypart-filter">Body Part</button>
+    <button id="muscles-filter">Muscles</button>
+    <button id="equipment-filter">Equipment</button>
+  </div>
+  <div>
+    <div>ліва частина</div>
+    <div class="category-container">
+      <div class="category-cards" id="category-cards"></div>
+      <div id="pagination" class="tui-pagination"></div>
+    </div>
+  </div>
+
 </section>
 
     </main>
