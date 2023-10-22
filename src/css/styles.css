@@ -12,6 +12,7 @@
 @import url('./favorites.css');
 @import url('./footer.css');
 @import url('./modal.css');
+@import url('./modal-rating.css');
 
 @font-face {
   font-family: 'Neue Montreal';
