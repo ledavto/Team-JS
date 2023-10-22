@@ -1,8 +1,50 @@
 <section>
   <div class="category-filter">
-    <button id="bodypart-filter">Body Part</button>
-    <button id="muscles-filter">Muscles</button>
-    <button id="equipment-filter">Equipment</button>
+    <div class="exercise-section-top-container">
+      <h2 class="exercise-section-title">
+        Exercise<span class="exercise-section-title-span"></span>
+      </h2>
+    
+     
+    
+        <ul class="exercise-section-buttons-container">
+          <li>
+            <button id="bodypart-filter"
+              class="exercise-section-button js-active-filter-button"
+              type="button"
+              disabled
+              data-filter="Body%20parts"
+            >
+              Body parts
+            </button>
+          </li>
+          <li>
+            <button id="muscles-filter"
+              class="exercise-section-button"
+              type="button"
+              data-filter="Muscles"
+            >
+              Muscles
+            </button>
+          </li>
+          <li>
+            <button id="equipment-filter"
+              class="exercise-section-button"
+              type="button"
+              data-filter="Equipment"
+            >
+              Equipment
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="exercise-section-right-container">
+      <ul class="exercise-card-list"></ul>
+    
+      <p class="exercise-error" style="display: none">Error has occurred</p>
+    </div>
   </div>
   <div>
     <div>ліва частина</div>
