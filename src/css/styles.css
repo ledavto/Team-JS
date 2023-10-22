@@ -118,7 +118,7 @@ body {
 }
 
 .rating-close-icon {
-  fill: gold;
+  stroke: #f4f4f4;
   width: 24px;
   height: 24px;
 }
