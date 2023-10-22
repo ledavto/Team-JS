@@ -1,6 +1,7 @@
 const homepage = document.querySelector('.homepageitem');
-// const favoritesLink = document.querySelector('.favoritelink');
 const favoritespageitem = document.querySelector('.favoritespageitem');
+
+// Mobile menu function
 (() => {
   const mobileMenu = document.querySelector('.js-menu-container');
   const openMenuBtn = document.querySelector('.js-open-menu');
@@ -30,13 +31,24 @@ const favoritespageitem = document.querySelector('.favoritespageitem');
   });
 })();
 
+// changing style for navigation header
 const changeTextColor = () => {
-  // Event.preventDefault();
   homepage.style.backgroundColor = '#242424';
   homepage.style.color = '#F4F4F4';
-
+  homepage.style.padding = '0';
+  favoritespageitem.style.padding = '0';
   favoritespageitem.style.backgroundColor = '#F4F4F4';
   favoritespageitem.style.color = '#242424';
   favoritespageitem.style.width = '87px';
 };
+
+const changeTextColorHome = () => {
+  homepage.style.backgroundColor = '#F4F4F4';
+  homepage.style.color = '#242424';
+
+  favoritespageitem.style.backgroundColor = '#242424';
+  favoritespageitem.style.color = '#F4F4F4';
+};
+
+homepage.addEventListener('click', changeTextColorHome);
 favoritespageitem.addEventListener('click', changeTextColor);
