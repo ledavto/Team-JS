@@ -10,14 +10,158 @@
       href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
     />
     
-    <script type="module" crossorigin src="/Team-JS/assets/exercises-42da8c85.js"></script>
-    <link rel="stylesheet" href="/Team-JS/assets/exercises-c4edcdf5.css">
+    <script type="module" crossorigin src="/Team-JS/assets/exercises-aa7e6af1.js"></script>
+    <link rel="stylesheet" href="/Team-JS/assets/exercises-11016067.css">
   </head>
   <body>
-    <header class="header">
+    <!-- <link rel="stylesheet" href="../css/header.css"> -->
+
+<header id="home" class="header">
   <div class="header-container container">
-    
+    <div class="logo">
+      <a class="logo-link link" href="#home">
+        <svg class="Logo-icon" width="132" height="24">
+          <use href="/Team-JS/assets/icons-bbb7e348.svg#icon-logo"></use></svg
+      ></a>
+    </div>
+    <nav class="header-nav">
+      <ul class="header-nav-list list">
+        <li class="header-nav-item homepageitem">
+          <a
+            class="header-nav-link"
+            href="#home"
+            aria-label="Check our maim page"
+            >Home</a
+          >
+        </li>
+        <li class="header-nav-item favoritespageitem">
+          <a
+            class="header-nav-link favoriteslink"
+            href="./favorites.html"
+            aria-label="your favorites"
+            >Favorites</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <!-- Addresses -->
+    <address class="header-addresses">
+      <ul class="header-socials-list list">
+        <li class="header-socials-item">
+          <a
+            class="header-socials-link link"
+            href="https://www.instagram.com/goitclub/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="icon-instagram"
+            ><svg class="header-social-icon" width="28" height="28">
+              <use href="/Team-JS/assets/icons-bbb7e348.svg#icon-instagram"></use></svg
+          ></a>
+        </li>
+        <li class="header-socials-item">
+          <a
+            class="header-socials-link link"
+            href="https://www.facebook.com/goITclub/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="icon-twitter"
+            ><svg class="header-social-icon" width="28" height="28">
+              <use href="/Team-JS/assets/icons-bbb7e348.svg#icon-facebook"></use></svg
+          ></a>
+        </li>
+        <li class="header-socials-item">
+          <a
+            class="header-socials-link link"
+            href="https://www.youtube.com/c/GoIT"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="icon-twitter"
+            ><svg class="header-social-icon" width="28" height="28">
+              <use href="/Team-JS/assets/icons-bbb7e348.svg#icon-youtube"></use></svg
+          ></a>
+        </li>
+      </ul>
+    </address>
+
+    <!-- mobile menu button -->
+
+    <button
+      class="menu-toggle js-open-menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <svg class="mobile-menu-icon" width="32" height="32">
+        <use href="/Team-JS/assets/icons-bbb7e348.svg#icon-btn-menu"></use>
+      </svg>
+    </button>
+
+    <!-- Mobile menuu -->
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="modal-close-icon" width="16" height="16">
+          <use href="/Team-JS/assets/icons-bbb7e348.svg#icon-btn-x"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li class="mobile-menu-item">
+          <a
+            href="#home"
+            class="mobile-link active"
+            aria-label="Home Sweet Home"
+            >Home</a
+          >
+        </li>
+        <li class="mobile-menu-item">
+          <a
+            href="#favorites"
+            class="mobile-link"
+            aria-label="The Making Process"
+            >Favorites</a
+          >
+        </li>
+      </ul>
+      <address class="mobile-addresses">
+        <ul class="mobile-socials list">
+          <li class="mobile-socials-item">
+            <a
+              class="mobile-socials-link link"
+              href="https://www.instagram.com/goitclub/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="icon-instagram"
+              ><svg class="social-icon" width="28" height="28">
+                <use href="/Team-JS/assets/icons-bbb7e348.svg#icon-instagram"></use></svg
+            ></a>
+          </li>
+          <li class="mobile-socials-item">
+            <a
+              class="mobile-socials-link link"
+              href="https://www.facebook.com/goITclub/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="icon-twitter"
+              ><svg class="social-icon" width="28" height="28">
+                <use href="/Team-JS/assets/icons-bbb7e348.svg#icon-facebook"></use></svg
+            ></a>
+          </li>
+          <li class="mobile-socials-item">
+            <a
+              class="mobile-socials-link link"
+              href="https://www.youtube.com/c/GoIT"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="icon-twitter"
+              ><svg class="social-icon" width="28" height="28">
+                <use href="/Team-JS/assets/icons-bbb7e348.svg#icon-youtube"></use></svg
+            ></a>
+          </li>
+        </ul>
+      </address>
+    </div>
   </div>
+  <!-- <script type="module" src="../js/header.js"></script> -->
 </header>
 
 
