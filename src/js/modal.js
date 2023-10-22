@@ -20,70 +20,90 @@ const variables = {
   exerciseId: '64f389465ae26083f39b17a2',
 };
 
-refs.rateList.addEventListener('mouseover', handleHover);
+refsRating.rateList.addEventListener('mouseover', handleHover);
 function handleHover(event) {
   const target = event.target;
-  let targetId = target.dataset.id;
-  if (target.tagName === 'use') {
-    targetId = target.parentNode.dataset.id;
+  let value = 0;
+  switch (target.tagName) {
+    case 'use':
+      value = target.parentNode.parentNode.previousElementSibling.value;
+      break;
+    case 'svg':
+      value = target.parentNode.previousElementSibling.value;
+      break;
+    case 'LABEL':
+      value = target.previousElementSibling.value;
+      break;
   }
-  if (targetId) {
-    for (let i = 0; i < targetId; i++) {
-      refs.stars[i].classList.add('icon-star-hover');
+  if (value) {
+    for (let i = 0; i < value; i++) {
+      refsRating.stars[i].classList.add('icon-star-hover');
     }
   }
 }
 
-refs.rateList.addEventListener('mouseout', handleOut);
+refsRating.rateList.addEventListener('mouseout', handleOut);
 function handleOut() {
-  refs.stars.forEach(star => {
-    if (star.dataset.id > variables.rate) {
+  refsRating.stars.forEach(star => {
+    const value = star.parentNode.previousElementSibling.value;
+    if (value > variables.rate) {
       star.classList.remove('icon-star-hover');
     }
   });
 }
 
-refs.rateList.addEventListener('click', handleSetRating);
+refsRating.rateList.addEventListener('click', handleSetRating);
 function handleSetRating(event) {
   const target = event.target;
-  let targetId = target.dataset.id;
-  if (target.tagName === 'use') {
-    targetId = target.parentNode.dataset.id;
+  let value = 0;
+
+  switch (target.tagName) {
+    case 'use':
+      value = target.parentNode.parentNode.previousElementSibling.value;
+      break;
+    case 'svg':
+      value = target.parentNode.previousElementSibling.value;
+      break;
+    case 'LABEL':
+      value = target.previousElementSibling.value;
+      break;
   }
-  if (targetId) {
-    for (let i = 0; i < targetId; i++) {
-      refs.stars[i].classList.add('icon-star-hover');
+
+  if (value) {
+    for (let i = 0; i < value; i++) {
+      refsRating.stars[i].classList.add('icon-star-hover');
     }
-    variables.rate = targetId;
-    refs.stars.forEach(star => {
-      if (star.dataset.id > variables.rate) {
+    variables.rate = value;
+    refsRating.stars.forEach(star => {
+      const value = star.parentNode.previousElementSibling.value;
+      if (value > variables.rate) {
         star.classList.remove('icon-star-hover');
       }
     });
-    refs.ratingChoosed.textContent = variables.rate + '.0';
+    refsRating.ratingChoosed.textContent = variables.rate + '.0';
   }
 }
 
-refs.form.addEventListener('submit', handleRatigSubmit);
+refsRating.form.addEventListener('submit', handleRatigSubmit);
 function handleRatigSubmit(event) {
   event.preventDefault();
   const id = variables.exerciseId;
   const body = {};
-  body.email = refs.form.elements.email.value;
-  body.review = refs.form.elements.comment.value;
+  body.email = refsRating.form.elements.email.value;
+  body.review = refsRating.form.elements.comment.value;
   body.rate = variables.rate / 1;
 
   api.setRating(id, body);
 
-  refs.form.reset();
-  refs.stars.forEach(star => {
+  refsRating.form.reset();
+  refsRating.stars.forEach(star => {
     star.classList.remove('icon-star-hover');
   });
-  refs.ratingChoosed.textContent = '0.0';
+  refsRating.ratingChoosed.textContent = '0.0';
   variables.rate = 0;
 }
 
-refs.ratingCloseBtn.addEventListener('click', handleRatingClose);
+refsRating.ratingCloseBtn.addEventListener('click', handleRatingClose);
 function handleRatingClose() {
-  refs.ratingModal.classList.add('is-hidden');
+  refsRating.ratingModal.classList.add('is-hidden');
 }
