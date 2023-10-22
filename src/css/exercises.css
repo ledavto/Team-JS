@@ -1,3 +1,9 @@
+.container-button {
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 32px;
+}
+
 .category-cards {
   align-items: center;
   display: flex;
@@ -349,4 +355,68 @@
   font-feature-settings: 'clig' off, 'liga' off;
   font-size: 12px;
   line-height: 1.5; 
+}
+
+.js-active-filter-button {
+  color: black;
+}
+
+.js-active-filter-button::after {
+  position: absolute;
+  bottom: -8px;
+  left: 0px;
+  content: "";
+  border-radius: 2px;
+  background: var(--main-dark);
+  height: 4px;
+  width: 100%;
+}
+
+.underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: black;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.exercise-section-button {
+  position: relative;
+  padding-bottom: 4px; /* Відстань до тексту */
+}
+
+.exercise-section-button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px; /* Висота риски */
+  background-color: black;
+  border-radius: 2px; /* Радіус */
+}
+
+.exercise-section-button {
+  position: relative;
+}
+
+.exercise-section-button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: black;
+  border-radius: 2px;
+  transform: scaleX(0); /* Риска прихована спочатку */
+  transition: transform 0.3s ease;
+}
+
+.exercise-section-button.js-active-filter-button::after {
+  transform: scaleX(1); /* Риска з'явиться при активній кнопці */
 }
