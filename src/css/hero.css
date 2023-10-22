@@ -1,5 +1,4 @@
 .hero-title-icon {
-  
 }
 .container-hero {
  
@@ -22,16 +21,8 @@
   margin-bottom: 20px;
   text-align: center;
   max-width: 335px;
-} 
-.hero-title::before {
-  content: "";
-  display: inline-block;
-  width: 38px;
-  height: 38px;
-  background-image: url("../img/star.png");
-  margin-right: 10px;
-  background-size: cover;
 }
+
 .hero-title span {
   font-size: 40px;
   font-style: italic;
@@ -134,8 +125,6 @@
     display: flex;
     flex-direction: column;
     max-width: 182px;
-    
-    
   }
 
   .hero-list {
