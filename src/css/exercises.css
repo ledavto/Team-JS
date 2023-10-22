@@ -1,0 +1,78 @@
+.category-cards {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.category-card {
+  background-size: cover;
+  border-radius: 12px;
+  width: 335px;
+  height: 225px;
+}
+
+.category-title {
+  text-transform: capitalize;
+  color: #f4f4f4;
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Neue Montreal;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  padding-top: 92px;
+}
+
+.category-subcategory {
+  color: rgba(244, 244, 244, 0.4);
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Neue Montreal;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+@media screen and (min-width: 768px) {
+  .category-container {
+    max-width: 900px;
+  }
+  .category-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px 15px;
+    max-width: calc(225px * 3 + 15px * 2);
+  }
+
+  .category-card {
+    width: 225px;
+    height: 225px;
+  }
+
+  .category-title {
+    font-size: 24px;
+    padding-top: 90px;
+  }
+  .category-subcategory {
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .category-cards {
+    max-width: calc(290px * 3 + 15px * 2);
+  }
+
+  .category-card {
+    width: 290px;
+    height: 242px;
+  }
+
+  .category-title {
+    padding-top: 100px;
+  }
+  .category-subcategory {
+  }
+}
