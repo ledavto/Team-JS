@@ -1,5 +1,5 @@
 .hero-title-icon {
-  /* background: transparent; */
+  
 }
 .container-hero {
   padding-left: 20px;
@@ -8,7 +8,7 @@
 }
 .title-icon {
 }
-/* .hero-title {
+.hero-title {
   font-size: 40px;
   font-weight: 400;
   line-height: 1.2;
@@ -16,7 +16,7 @@
   margin-bottom: 20px;
   text-align: center;
   max-width: 335px;
-} */
+} 
 
 .hero-title span {
   font-size: 40px;
@@ -56,6 +56,10 @@
   gap: 10px;
   border-radius: 30px;
   border: 1px solid var(--primary-fontcolor);
+}
+
+.list-img {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -104,5 +108,23 @@
     line-height: 1;
     letter-spacing: -1.48px;
     min-width: 593px;
+  }
+
+  .hero-list-img {
+    display: flex;
+    flex-direction: column;
+    max-width: 182px;
+    
+  }
+
+  .hero-list {
+    flex-wrap: wrap;
+    justify-content: right;
+  }
+
+  .list-img {
+    display: unset;
+    border-radius: 30px;
+    margin-bottom: 30px;
   }
 }
