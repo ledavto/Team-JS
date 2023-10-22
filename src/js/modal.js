@@ -52,7 +52,7 @@ function logModalError(text) {
   console.log('%c' + text, styles);
 }
 
-// TODO: Розгорнути код для модалки rating
+// TODO: Доробити код для модалки rating
 
 const refs = {
   form: document.querySelector('.rating-form'),
