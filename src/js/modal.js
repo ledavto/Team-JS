@@ -9,10 +9,10 @@ const refsModal = {};
 const refsRating = {
   ratingModal: document.querySelector('[data-rating-modal]'),
   form: document.querySelector('.rating-form'),
-  rateList: document.querySelector('.rate'),
-  stars: document.querySelectorAll('.icon-star'),
-  ratingChoosed: document.querySelector('.rating-choosed'),
   ratingCloseBtn: document.querySelector('.rating-close-btn'),
+  rateList: document.querySelector('.rate'),
+  ratingChoosed: document.querySelector('.rating-choosed'),
+  stars: document.querySelectorAll('.icon-star'),
 };
 
 const variables = {
