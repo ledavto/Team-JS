@@ -1,3 +1,72 @@
-<section>
-  <h1>Welcome to page FAVORITES</h1>
-</section>
+<section class="container">
+    <h1 class="favorites-title">Favorites</h1>
+        </div>
+        <div class="favorites-container">
+          <div class="favorites-left">
+            <div class="favorites-contain-one">
+              <ul class="ul-box-text-sect-one">
+                  <li><svg class="running-icon" width="25" height="22">
+                          <use href="./img/icons.svg#icon-running-stick-figure"></use>
+                      </svg></li>
+                  <li>
+                      <h3 class="quote-text">Quote of the day</h3>
+                  </li>
+                  <li><svg class="commas-icon" width="24" height="24">
+                          <use href="./img/icons.svg#icon-inverted-commas"></use>
+                      </svg></li>
+                  </li>
+              </ul>
+              <div class="boxAutor">
+                  <p class="js-quoteText boxTextMidle-sect-one"></p>
+                  <p class="js-quoteAutor boxTextDown-sect-one"></p>
+              </div>
+          </div>
+          <div class="favorites-contain-two">
+              <div class="">
+                  <ul class="box-three-list">
+                      <li>
+                        <svg class="fluent-icon" width="20" height="20">
+                              <use href="./img/icons.svg#icon-fluent_food"></use>
+                          </svg>
+                        </li>
+                      <li>
+                          <p class="hundr-minutes">110 min</p>
+                      </li>
+                  </ul>
+              </div>
+              <div class="box-three-down">
+                  <p class="text-daily-norm">Daily norm of sports</p>
+              </div>
+          </div>
+          <div class="favorites-contain-photo">
+
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcset="
+                ./img/mobile/women-sportswear-working-mobile.png 1x, ./img/mobile/women-sportswear-working-mobile@2x.png 2x"
+              />
+              <source
+                media="(max-width: 1439px)"
+                srcset="
+                ./img/tablet/women-sportswear-working-tablet.png 1x, ./img/tablet/women-sportswear-working-tablet@2x.png 2x"
+              />
+              <source
+                media="(min-width: 1440px)"
+                srcset="./img/desktop/women-sportswear-working.png 1x, ./img/desktop/women-sportswear-working@2x.png 2x"
+              />
+              <img
+                class="favorites-photo-mob"
+                src="./img/desktop/women-sportswear-working.png"
+                alt="Women sportswear working"
+                width="335"/>
+            </div>
+          </div>
+          
+          <div class="favorites-right">
+    <p class="favoritesMessage js-favorites-message" hidden>It appears that you haven't added any exercises to your favorites yet. To get started, you can add exercises that you like to your favorites for easier access in the future.</p>
+      </ul><ul class="favorites js-favorites"></ul>
+      <!-- <div id="pagination"></div> -->
+          </div>
+    </section>
+    <script type="module" src="../js/favorites.js"></script>
