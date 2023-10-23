@@ -39,6 +39,8 @@
     width: 444px;
     height: 851px;
   } */
+
+
 }
 
 /* Nikita */
@@ -60,6 +62,12 @@
   border-radius: 12px;
   width: 335px;
   height: 225px;
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .category-title {
