@@ -1,6 +1,17 @@
 // const homepage = document.querySelector('.homepageitem');
 // const favoritespageitem = document.querySelector('.favoritespageitem');
 
+
+//Виділення активної сторінки
+if (window.location.pathname === "/index.html") {
+  document.querySelector(".homepage").classList.add("active");
+  document.querySelector(".favorites").classList.remove("active");
+}
+if (window.location.pathname === "/favorites.html") {
+  document.querySelector(".homepage").classList.remove("active");
+  document.querySelector(".favorites").classList.add("active");
+}
+
 // Mobile menu function
 (() => {
   const mobileMenu = document.querySelector('.js-menu-container');
