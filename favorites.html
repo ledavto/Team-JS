@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
     
-    <script type="module" crossorigin src="/Team-JS/assets/go-top-7a4bf0be.js"></script>
-    <link rel="stylesheet" href="/Team-JS/assets/go-top-8b3283c9.css">
+    <script type="module" crossorigin src="/Team-JS/assets/go-top-6751d92b.js"></script>
+    <link rel="stylesheet" href="/Team-JS/assets/go-top-cdcc926f.css">
   </head>
   <body>
     <!-- <link rel="stylesheet" href="../css/header.css"> -->
@@ -216,8 +216,83 @@
     ENOENT: no such file or directory, open '/home/runner/work/Team-JS/Team-JS/src/partials/mobile-menu.html'
 
     <main>
-      <section>
-  <h1>Welcome to page FAVORITES</h1>
+      <section class="container">
+  <h1 class="favorites-title">Favorites</h1>
+
+  <div class="favorites-container">
+    <div class="favorites-left">
+      <div class="favorites-contain-one">
+        <ul class="ul-box-text-sect-one">
+          <li>
+            <svg class="running-icon" width="25" height="22">
+              <use href="/Team-JS/assets/icons-b719acf1.svg#icon-running-stick-figure"></use>
+            </svg>
+          </li>
+          <li>
+            <h3 class="quote-text">Quote of the day</h3>
+          </li>
+          <li>
+            <svg class="commas-icon" width="24" height="24">
+              <use href="/Team-JS/assets/icons-b719acf1.svg#icon-inverted-commas"></use>
+            </svg>
+          </li>
+        </ul>
+        <div class="boxAutor">
+          <p class="js-quoteText boxTextMidle-sect-one"></p>
+          <p class="js-quoteAutor boxTextDown-sect-one"></p>
+        </div>
+      </div>
+      <div class="favorites-contain-two">
+        <div class="">
+          <ul class="box-three-list">
+            <li>
+              <svg class="fluent-icon" width="20" height="20">
+                <use href="/Team-JS/assets/icons-b719acf1.svg#icon-fluent_food"></use>
+              </svg>
+            </li>
+            <li>
+              <p class="hundr-minutes">110 min</p>
+            </li>
+          </ul>
+        </div>
+        <div class="box-three-down">
+          <p class="text-daily-norm">Daily norm of sports</p>
+        </div>
+      </div>
+    </div>
+    <div class="favorites-contain-photo">
+      <picture>
+        <source
+          media="(max-width: 767px)"
+          srcset="/Team-JS/assets/women-sportswear-working-mobile-86e2530d.png 1x, /Team-JS/assets/women-sportswear-working-mobile@2x-b3aa0c9a.png 2x"
+        />
+        <source
+          media="(max-width: 1439px)"
+          srcset="/Team-JS/assets/women-sportswear-working-tablet-594231e6.png 1x, /Team-JS/assets/women-sportswear-working-tablet@2x-70e29f92.png 2x"
+        />
+        <source
+          media="(min-width: 1440px)"
+          srcset="/Team-JS/assets/women-sportswear-working-c68274e7.png 1x, /Team-JS/assets/women-sportswear-working@2x-33fba906.png 2x"
+        />
+        <img
+          class="favorites-photo-mob"
+          src="/Team-JS/assets/women-sportswear-working-c68274e7.png"
+          alt="Women sportswear working"
+          width="335"
+        />
+      </picture>
+    </div>
+  </div>
+
+  <div class="favorites-right">
+    <p class="favoritesMessage js-favorites-message" hidden>
+      It appears that you haven't added any exercises to your favorites yet. To
+      get started, you can add exercises that you like to your favorites for
+      easier access in the future.
+    </p>
+    <!-- </ul><ul class="favorites js-favorites"></ul>
+      <div id="pagination"></div> -->
+  </div>
 </section>
 
     </main>
@@ -290,6 +365,14 @@
 </footer>
 
     
+    <div class="go-top">
+  <button type="button" class="go-top-btn">
+    <svg class="go-top-btn-icon" width="18" height="18">
+      <use href="../img/icons.svg#go-top-icon"></use>
+    </svg>
+  </button>
+</div>
+
 
     
     <script
