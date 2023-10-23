@@ -1,7 +1,4 @@
 import api from './api.js';
-// Rating
-
-// TODO: Доробити код для модалки rating
 
 const refsRating = {
   ratingModal: document.querySelector('[data-rating-modal]'),
@@ -33,9 +30,11 @@ function handleHover(event) {
       break;
   }
   if (value) {
-    for (let i = 0; i < value; i++) {
-      refsRating.stars[i].classList.add('icon-star-highlight');
-    }
+    refsRating.stars.forEach((star, i) => {
+      if (value > i) {
+        star.classList.add('icon-star-highlight');
+      }
+    });
   }
 }
 
@@ -66,7 +65,7 @@ function handleChange(event) {
 }
 
 refsRating.form.addEventListener('submit', handleRatigSubmit);
-function handleRatigSubmit(event) {
+async function handleRatigSubmit(event) {
   event.preventDefault();
   const id = variables.exerciseId;
   const body = {};
@@ -74,15 +73,17 @@ function handleRatigSubmit(event) {
   body.review = refsRating.form.elements.comment.value;
   body.rate = variables.rate / 1;
 
-  api.setRating(id, body);
+  const response = await api.setRating(id, body);
 
-  refsRating.form.reset();
-  refsRating.stars.forEach(star => {
-    star.classList.remove('icon-star-highlight');
-  });
-  refsRating.ratingChoosed.textContent = '0.0';
-  variables.rate = 0;
-  handleRatingClose();
+  if (response) {
+    refsRating.form.reset();
+    refsRating.stars.forEach(star => {
+      star.classList.remove('icon-star-highlight');
+    });
+    refsRating.ratingChoosed.textContent = '0.0';
+    variables.rate = 0;
+    handleRatingClose();
+  }
 }
 
 refsRating.ratingCloseBtn.addEventListener('click', handleRatingClose);
