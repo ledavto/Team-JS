@@ -178,7 +178,7 @@ function createMarkup(exercises) {
             </div>
             <div class="favorites-name-text">${name}</div>
           </div>
-          <div clasdescription">
+          <div class="description">
           <p class="description-burned-grey">Burned calories:</p>
           <p class="description-burned-normal">${burnedCalories} / ${time} min</p>
           <p class="description-part-grey">Body part:</p>
