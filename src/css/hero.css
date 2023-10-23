@@ -9,8 +9,8 @@
 }
 
 .hero-title::before {
-  width: 60px;
-  height: 60px;
+  width: 38px;
+  height: 38px;
   content: '';
   display: inline-block;
   background-image: url('../img/star.png');
@@ -85,10 +85,10 @@
     letter-spacing: -1.48px;
     min-width: 593px;
   }
-  /* .hero-title::before {
+   .hero-title::before {
     width: 60px;
     height: 60px;
-  } */
+  } 
 
   .hero-text {
     font-size: 18px;
