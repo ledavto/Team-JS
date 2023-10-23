@@ -34,7 +34,7 @@ function handleHover(event) {
   }
   if (value) {
     for (let i = 0; i < value; i++) {
-      refsRating.stars[i].classList.add('icon-star-hover');
+      refsRating.stars[i].classList.add('icon-star-highlight');
     }
   }
 }
@@ -44,40 +44,24 @@ function handleOut() {
   refsRating.stars.forEach(star => {
     const value = star.parentNode.previousElementSibling.value;
     if (value > variables.rate) {
-      star.classList.remove('icon-star-hover');
+      star.classList.remove('icon-star-highlight');
     }
   });
 }
 
-refsRating.rateList.addEventListener('click', handleSetRating);
-function handleSetRating(event) {
+refsRating.form.addEventListener('change', handleChange);
+function handleChange(event) {
   const target = event.target;
-  let value = 0;
-
-  switch (target.tagName) {
-    case 'use':
-      value = target.parentNode.parentNode.previousElementSibling.value;
-      break;
-    case 'svg':
-      value = target.parentNode.previousElementSibling.value;
-      break;
-    case 'LABEL':
-      value = target.previousElementSibling.value;
-      break;
-  }
-
-  if (value) {
-    for (let i = 0; i < value; i++) {
-      refsRating.stars[i].classList.add('icon-star-hover');
-    }
-    variables.rate = value;
-    refsRating.stars.forEach(star => {
-      const value = star.parentNode.previousElementSibling.value;
-      if (value > variables.rate) {
-        star.classList.remove('icon-star-hover');
+  if (target.type === 'radio') {
+    variables.rate = target.value;
+    refsRating.ratingChoosed.textContent = target.value + '.0';
+    refsRating.stars.forEach((star, i) => {
+      if (target.value > i) {
+        star.classList.add('icon-star-highlight');
+      } else {
+        star.classList.remove('icon-star-highlight');
       }
     });
-    refsRating.ratingChoosed.textContent = variables.rate + '.0';
   }
 }
 
@@ -94,10 +78,11 @@ function handleRatigSubmit(event) {
 
   refsRating.form.reset();
   refsRating.stars.forEach(star => {
-    star.classList.remove('icon-star-hover');
+    star.classList.remove('icon-star-highlight');
   });
   refsRating.ratingChoosed.textContent = '0.0';
   variables.rate = 0;
+  handleRatingClose();
 }
 
 refsRating.ratingCloseBtn.addEventListener('click', handleRatingClose);
