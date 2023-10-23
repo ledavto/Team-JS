@@ -202,15 +202,17 @@ body {
   }
 
   .contain-two-foto {
-    display: block;
+    /* display: block; */
     /* position: relative; */
     /* position: absolute; */
     border-radius: 20px;
-    background-image: url(../img/women-sportswear-taking-break-from-workout.png);
+    /* object-fit: fill; */
+    background-image: url(../img/tablet/women-sportswear-taking-tablet@2x.png);
     /* background-repeat: no-repeat; */
     max-width: 288px;
     min-height: 258px;
     border: 1.5px solid #29adce;
+    background-size: cover;
     /* margin-bottom: 32px; */
   }
 
