@@ -14,10 +14,10 @@ function trackScroll() {
   // если вышли за пределы первого окна
   if (scrolled > coords) {
     // кнопка появляется
-    goTopBtn.classList.add('go-top--show');
+    goTopBtn.classList.add('go-top-show');
   } else {
     // иначе исчезает
-    goTopBtn.classList.remove('go-top--show');
+    goTopBtn.classList.remove('go-top-show');
   }
 }
 

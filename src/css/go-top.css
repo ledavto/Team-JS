@@ -6,7 +6,7 @@
   display: none;
 }
 
-.go-top--show {
+.go-top-show {
   display: block;
 }
 
@@ -25,7 +25,7 @@
   cursor: pointer;
   margin: 0 auto;
   display: block;
-  border-color: transparent;
+  border: 2px solid var(--primary-background-color);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -40,8 +40,9 @@
 }
 
 .go-top-btn:hover,
-.go-top-btn:focus {
-  background-color: var(--footer-background-color);
+.go-top-btn:focus .go-top-btn-icon {
+  height: 50px;
+  width: 50px;
 }
 
 @media screen and (min-width: 768px) {
