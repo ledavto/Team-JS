@@ -69,7 +69,7 @@
 }
 .favorites {
   background-color: var(--primary-fontcolor);
-  color: #f4f4f4;
+  color: var(--primary-background-color);
   width: 87px;
   height: 36px;
   border-radius: 30px;
@@ -83,7 +83,7 @@
 .homepage {
   width: 66px;
   height: 36px;
-  background-color: #f4f4f4;
+  background-color: var(--primary-background-color);
   border-radius: 30px;
   display: flex;
   justify-content: center;
@@ -94,12 +94,12 @@
 }
 
 .favorites:active {
-  background-color: #f4f4f4;
+  background-color: var(--primary-background-color);
   color: #242424;
 }
 .favorites:active .homepage {
-  background-color: #242424;
-  color: #f4f4f4;
+  background-color: var(--primary-fontcolor);
+  color: var(--primary-background-color);
 }
 
 .header-nav {
@@ -110,7 +110,7 @@
 .header-nav-link {
   width: 66px;
   height: 36px;
-  background-color: #f4f4f4;
+  background-color: var(--primary-background-color);
   border-radius: 30px;
   display: flex;
   justify-content: center;
@@ -191,7 +191,7 @@
 }
 
 .menu-container {
-  background-color: #242424;
+  background-color: var(--primary-fontcolor);
   width: 210px;
   height: 100%;
   display: flex;
