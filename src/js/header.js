@@ -1,5 +1,5 @@
-const homepage = document.querySelector('.homepageitem');
-const favoritespageitem = document.querySelector('.favoritespageitem');
+// const homepage = document.querySelector('.homepageitem');
+// const favoritespageitem = document.querySelector('.favoritespageitem');
 
 // Mobile menu function
 (() => {
@@ -32,23 +32,23 @@ const favoritespageitem = document.querySelector('.favoritespageitem');
 })();
 
 // changing style for navigation header
-const changeTextColor = () => {
-  homepage.style.backgroundColor = '#242424';
-  homepage.style.color = '#F4F4F4';
-  homepage.style.padding = '0';
-  favoritespageitem.style.padding = '0';
-  favoritespageitem.style.backgroundColor = '#F4F4F4';
-  favoritespageitem.style.color = '#242424';
-  favoritespageitem.style.width = '87px';
-};
+// const changeTextColor = () => {
+//   homepage.style.backgroundColor = '#242424';
+//   homepage.style.color = '#F4F4F4';
+//   homepage.style.padding = '0';
+//   favoritespageitem.style.padding = '0';
+//   favoritespageitem.style.backgroundColor = '#F4F4F4';
+//   favoritespageitem.style.color = '#242424';
+//   favoritespageitem.style.width = '87px';
+// };
 
-const changeTextColorHome = () => {
-  homepage.style.backgroundColor = '#F4F4F4';
-  homepage.style.color = '#242424';
+// const changeTextColorHome = () => {
+//   homepage.style.backgroundColor = '#F4F4F4';
+//   homepage.style.color = '#242424';
 
-  favoritespageitem.style.backgroundColor = '#242424';
-  favoritespageitem.style.color = '#F4F4F4';
-};
+//   favoritespageitem.style.backgroundColor = '#242424';
+//   favoritespageitem.style.color = '#F4F4F4';
+// };
 
-homepage.addEventListener('click', changeTextColorHome);
-favoritespageitem.addEventListener('click', changeTextColor);
+// homepage.addEventListener('click', changeTextColorHome);
+// favoritespageitem.addEventListener('click', changeTextColor);
