@@ -193,19 +193,18 @@ body {
 }
 
 .text-the-world-health {
-  /* display: inline-block; */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  /* word-wrap: break-word; */
-  /* word-break: break-all; */
-  /* vertical-align: top; */
   color: var(--primary-fontcolor);
-  white-space: nowrap;
   font-family: Neue Montreal;
   font-size: 14px;
   font-style: normal;
   font-weight: var(--primary-fontweight);
   line-height: 1.28; /* line-height:18px (calc(18/14 fontsize)*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
 }
 
 /*  ****************************  @MEDIA ********************************/
@@ -334,14 +333,18 @@ body {
     margin-bottom: 16px;
   }
   .text-the-world-health {
-    overflow: hidden;
     color: var(--primary-fontcolor);
-    /* text-overflow: ellipsis; */
     white-space: unset;
     font-family: Neue Montreal;
     font-size: 14px;
     font-style: normal;
     font-weight: var(--primary-fontweight);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
   }
 }
 
@@ -426,6 +429,11 @@ body {
     /* border: 1.5px solid #29adce; */
     /* overflow-x: hidden; */
   }
+
+  .hundr-minutes {
+    /* display: block; */
+    margin-left: 0;
+  }
   .box-three-list {
     display: flex;
     color: var(--primary-fontcolor);
@@ -442,28 +450,23 @@ body {
     /* column-gap: 16px; */
   }
   .box-three-down {
-    /* line-height: 18px; 128.571% */
-    max-width: 270px;
-    /* width: 100%; */
+    max-width: 314px;
+    width: 100%;
     margin-left: 90px;
     margin-right: 40px;
     margin-bottom: 40px;
-    /* padding-bottom: 40px; */
-    /* margin: 6px, 40px, 40px, 90px; */
   }
   .text-daily-norm {
     color: rgba(36, 36, 36, 0.6);
   }
   .text-the-world-health {
-    /* overflow: hidden; */
     color: var(--primary-fontcolor);
-    /* text-overflow: ellipsis; */
     white-space: unset;
     font-family: Neue Montreal;
     font-size: 14px;
     font-style: normal;
     font-weight: var(--primary-fontweight);
-    /* max-width: 314px; */
-    /* width: 100%; */
+    -webkit-box-orient: unset;
+    word-break: unset;
   }
 }
