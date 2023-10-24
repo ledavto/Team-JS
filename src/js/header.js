@@ -2,6 +2,8 @@
 // const favoritespageitem = document.querySelector('.favoritespageitem');
 
 //Виділення активної сторінки
+
+console.log(window.location.pathname);
 if (
   window.location.pathname === '/index.html' ||
   window.location.pathname === '/'
