@@ -14,23 +14,23 @@ import api from './api.js';
     time:'',
     popularity:''
   };
-  localStorage.setItem(FAVORITES_LS_KEY, JSON.stringify(favoriteObject));
+  //localStorage.setItem(FAVORITES_LS_KEY, JSON.stringify(favoriteObject));
 
-  fetch("https://your-energy.b.goit.study/api/exercises/")
-  .then((response) => {
-    if(!response.ok){
-      throw new Error (`Вимушена помилка статусу: ${response.status}`);
-    }
-  return response.json();
-  })
-  .then((idEx) => console.log(idEx))
-  .catch((err) => console.log(err));
+ // fetch("https://your-energy.b.goit.study/api/exercises/")
+  //.then((response) => {
+ //   if(!response.ok){
+ //     throw new Error (`Вимушена помилка статусу: ${response.status}`);
+ //   }
+//  return response.json();
+ // })
+ // .then((idEx) => console.log(idEx))
+ // .catch((err) => console.log(err));
 
-  function favoriteExr (e){
-  e.preventDefault();
-  const {} = e.currentTarget.elements;
-  console.log()
-  }
+ // function favoriteExr (e){
+ // e.preventDefault();
+ // const {} = e.currentTarget.elements;
+ // console.log()
+ // }
   
  
     const refs = {
