@@ -36,7 +36,7 @@ import api from './api.js';
     const refs = {
     generalModals: document.querySelector('[data-modal-general]'),
     modalCloseBtn: document.querySelector('.modal-general-close-btn'),
-    modalOpenBtn: document.querySelector('.exr-item-header-start'),
+    //modalOpenBtn: document.querySelector('.exr-item-header-start'),
     favoritExercise: document.querySelector('.exr-item'),
     
 };
