@@ -2,17 +2,20 @@
 // const favoritespageitem = document.querySelector('.favoritespageitem');
 
 //Виділення активної сторінки
-console.log(window.location.pathname);
 if (
   window.location.pathname === '/index.html' ||
   window.location.pathname === '/'
 ) {
   document.querySelector('.homepage').classList.add('active');
   document.querySelector('.favorites').classList.remove('active');
+  document.querySelector('.homepage-mob').classList.add('active');
+  document.querySelector('.favorites-mob').classList.remove('active');
 }
 if (window.location.pathname === '/favorites.html') {
   document.querySelector('.homepage').classList.remove('active');
   document.querySelector('.favorites').classList.add('active');
+  document.querySelector('.homepage-mob').classList.remove('active');
+  document.querySelector('.favorites-mob').classList.add('active');
 }
 
 // Mobile menu function

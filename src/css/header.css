@@ -68,7 +68,8 @@
   align-items: center; */
 }
 
-.favorites {
+.favorites,
+.favorites-mob {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,7 +77,8 @@
   font-size: 16px;
 }
 
-.favorites.active {
+.favorites.active,
+.favorites-mob.active {
   background-color: var(--primary-background-color);
   border-radius: 30px;
   color: #242424;
@@ -84,7 +86,8 @@
   height: 36px;
 }
 
-.homepage {
+.homepage,
+.homepage-mob {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,7 +95,8 @@
   font-size: 16px;
 }
 
-.homepage.active {
+.homepage.active,
+.homepage-mob.active {
   width: 66px;
   height: 36px;
   background-color: var(--primary-background-color);
