@@ -33,7 +33,7 @@
 .favorites-contain-two {
   box-sizing: border-box;
   display: inline-flex;
-  padding: 20px 196px 20px 20px;
+  padding: 20px;
   width: 335px;
   flex-direction: column;
   align-items: flex-start;
@@ -218,7 +218,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  favorites-container {
+  .favorites-container {
     width: 768px;}
   .favorites-parts-container {
     width: 768px;
@@ -242,7 +242,7 @@
   .favorites-contain-two {
     display: flex;
     width: 344px;
-    padding: 25px 200px 25px 25px;
+    padding: 25px;
   }
   .favorites-contain-photo {
     height: 141px;
@@ -327,7 +327,7 @@
   .favorites-contain-two {
     display: inline-flex;
     width: 239px;
-    padding: 25px 95px 25px 25px;
+    padding: 25px;
   }
   .favorites-contain-photo {
     width: 239px;
