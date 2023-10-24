@@ -6,14 +6,6 @@
   width: 375px;
 }
 
-.exr-left {
-  /* margin: 0 15px;
-  width: 335px;
-  height: 673px;
-  border-radius: 10px;
-  background: #fff; */
-}
-
 @media screen and (min-width: 768px) {
   .container-exr {
     width: 768px;
@@ -39,8 +31,6 @@
     width: 444px;
     height: 851px;
   } */
-
-
 }
 
 /* Nikita */
