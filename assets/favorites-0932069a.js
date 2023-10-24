@@ -1,0 +1,33 @@
+import"./go-top-fff4f649.js";const l=document.querySelector(".js-favorites"),d=document.querySelector(".js-favorites-message"),n="checkout",u=[{_id:"64f389465ae26083f39b17a2",bodyPart:"waist",equipment:"body weight",gifUrl:"https://ftp.goit.study/img/power-pulse/gifs/0001.gif",name:"3/4 sit-up",target:"abs",description:"This refers to your core muscles, which include the rectus abdominis, obliques, and transverse abdominis. They're essential for maintaining posture, stability, and generating force in many movements. Exercises that target the abs include crunches, leg raises, and planks.",rating:4.5,burnedCalories:220,time:3,popularity:1322},{_id:"64f389465ae26083f39b17a7",bodyPart:"chest",equipment:"leverage machine",gifUrl:"https://ftp.goit.study/img/power-pulse/gifs/0009.gif",name:"assisted chest dip (kneeling)",target:"pectorals",description:"These are the large chest muscles responsible for shoulder adduction and horizontal adduction. Bench press, push-ups, and chest flies target these muscles.",rating:3,burnedCalories:329,time:3,popularity:99},{_id:"64f389465ae26083f39b17a3",bodyPart:"waist",equipment:"body weight",gifUrl:"https://ftp.goit.study/img/power-pulse/gifs/0002.gif",name:"45° side bend",target:"abs",description:"This refers to your core muscles, which include the rectus abdominis, obliques, and transverse abdominis. They're essential for maintaining posture, stability, and generating force in many movements. Exercises that target the abs include crunches, leg raises, and planks.",rating:3,burnedCalories:323,time:3,popularity:263},{_id:"64f389465ae26083f39b17a4",bodyPart:"waist",equipment:"body weight",gifUrl:"https://ftp.goit.study/img/power-pulse/gifs/0003.gif",name:"air bike",target:"abs",description:"This refers to your core muscles, which include the rectus abdominis, obliques, and transverse abdominis. They're essential for maintaining posture, stability, and generating force in many movements. Exercises that target the abs include crunches, leg raises, and planks.",rating:4.64,burnedCalories:312,time:3,popularity:638},{_id:"64f389465ae26083f39b17a5",bodyPart:"waist",equipment:"body weight",gifUrl:"https://ftp.goit.study/img/power-pulse/gifs/0006.gif",name:"alternate heel touchers",target:"abs",description:"This refers to your core muscles, which include the rectus abdominis, obliques, and transverse abdominis. They're essential for maintaining posture, stability, and generating force in many movements. Exercises that target the abs include crunches, leg raises, and planks.",rating:3,burnedCalories:116,time:3,popularity:74},{_id:"64f389465ae26083f39b17ac",bodyPart:"waist",equipment:"medicine ball",gifUrl:"https://ftp.goit.study/img/power-pulse/gifs/0014.gif",name:"assisted motion russian twist",target:"abs",description:"This refers to your core muscles, which include the rectus abdominis, obliques, and transverse abdominis. They're essential for maintaining posture, stability, and generating force in many movements. Exercises that target the abs include crunches, leg raises, and planks.",rating:3,burnedCalories:212,time:3,popularity:0},{_id:"64f389465ae26083f39b17b7",bodyPart:"upper legs",equipment:"barbell",gifUrl:"https://ftp.goit.study/img/power-pulse/gifs/0026.gif",name:"barbell bench squat",target:"quads",description:"Located at the front of the upper leg, the quads are responsible for knee extension and hip flexion. Exercises include squats, leg press, and lunges.",rating:3,burnedCalories:259,time:3,popularity:60},{_id:"64f389465ae26083f39b17ba",bodyPart:"upper legs",equipment:"barbell",gifUrl:"https://ftp.goit.study/img/power-pulse/gifs/0029.gif",name:"barbell clean-grip front squat",target:"glutes",description:"Located in the buttocks, these are powerful muscles used in hip extension, abduction, and external rotation. Exercises like squats, deadlifts, and hip thrusts target the glutes.",rating:3,burnedCalories:128,time:3,popularity:56},{_id:"64f389465ae26083f39b17bc",bodyPart:"upper arms",equipment:"barbell",gifUrl:"https://ftp.goit.study/img/power-pulse/gifs/0031.gif",name:"barbell curl",target:"biceps",description:"Located on the front part of the upper arm, the biceps are responsible for elbow flexion and supination of the forearm. Exercises that target biceps include bicep curls, hammer curls, and chin-ups.",rating:3,burnedCalories:245,time:3,popularity:160},{_id:"64f389465ae26083f39b17c1",bodyPart:"chest",equipment:"barbell",gifUrl:"https://ftp.goit.study/img/power-pulse/gifs/0036.gif",name:"barbell decline wide-grip press",target:"pectorals",description:"These are the large chest muscles responsible for shoulder adduction and horizontal adduction. Bench press, push-ups, and chest flies target these muscles.",rating:3,burnedCalories:209,time:3,popularity:5}];localStorage.setItem(n,JSON.stringify(u));let o=JSON.parse(localStorage.getItem(n))??[];o.length===0?d.hidden=!1:l.insertAdjacentHTML("beforeend",p(o));function p(s){return s.map(({_id:i,name:a,burnedCalories:e,time:r,bodyPart:t,target:c})=>`
+    <li data-id="${i}"class="favorites-card-item">
+    <div class="favorites-card-workout">
+    <p class="favorites-workout">WORKOUT</p>
+    <svg class="trash-icon" width="16" height="16">
+     <use href="./img/icons.svg#icon-trash"></use>
+    </svg> 
+    <div class="favorites-start">Start</div>
+            <div>
+              <svg class="favorites-header-arrow" width="16" height="16">
+                <use href="./img/icons.svg#icon-arrow"></use>
+              </svg>
+            </div>
+            </div>
+
+            <div class="favorites-name">
+            <div class="favorites-name-svg">
+              <svg class="favorites-name-svg-svg" width="20" height="20">
+                <use href="./img/icons.svg#icon-running-stick-figure"></use>
+              </svg>
+            </div>
+            <div class="favorites-name-text">${a}</div>
+          </div>
+          <div class="description">
+          <p class="description-burned-grey">Burned calories:</p>
+          <p class="description-burned-normal">${e} / ${r} min</p>
+          <p class="description-part-grey">Body part:</p>
+          <p class="description-part-normal">${t}</p>
+          <p class="description-target-grey">Target:</p>
+          <p class="description-target-normal">${c}</p>
+          </div>
+    </li>
+    `).join("")}let g=o.length/8;updatePaginationExercises(g);l.addEventListener("click",f);function f(s){if(!s.target.classList.contains("trash-icon"))return;const i=s.target.closest(".favorites-card-item"),a=i.dataset.id;let e=JSON.parse(localStorage.getItem(n))??[];e.find(({_id:t})=>t===a);const r=e.findIndex(({_id:t})=>t===a);r!==-1&&(e.splice(r,1),localStorage.setItem(n,JSON.stringify(e)),i.remove()),e.length===0&&(d.hidden=!1)}
