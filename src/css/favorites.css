@@ -1,18 +1,23 @@
-.favorites-container {
+.favorites-container
+{
+  width: 375px;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 80px;
+}
+.favorites-parts-container {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   width: 375px;
 }
-/* .favorites{
-    padding-bottom: 100px;
-  } */
+
 .favorites-left {
   margin: 0 20px;
   width: 335px;
   height: 437px;
   border-radius: 10px;
-  background: #fff;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -45,11 +50,9 @@
 }
 .favorites-right {
   margin: 5px 20px;
-  padding-bottom: 80px;
   width: 335px;
   height: 670px;
   border-radius: 10px;
-  background: #fff;
 }
 
 .favorites-title {
@@ -71,7 +74,7 @@
   text-align: center;
   margin: o auto;
 }
-.favorites {
+.favorites-list {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -79,6 +82,8 @@
   margin: 0 auto;
 }
 .favorites-card-item {
+  box-sizing: border-box;
+  padding: 16px 16px;
   width: 335px;
   height: 141px;
   justify-content: center;
@@ -88,7 +93,14 @@
   border-radius: 15px;
   background: #fff;
 }
-.workout {
+.favorites-card-workout {
+  margin-bottom: 27px;
+  display: flex;
+  align-content: center;
+  text-align: center;
+}
+.favorites-workout {
+  box-sizing: border-box;
   width: 75px;
   height: 24px;
   color: var(--footer-background-color);
@@ -99,10 +111,10 @@
   padding: 5px 7.5px;
   border-radius: 15px;
   border: 1px solid var(--footer-background-color);
-  margin-right: 16px;
 }
 .trash-icon {
   margin-left: 8px;
+  margin-right: 150px;
 }
 .favorites-start {
   color: var(--footer-background-color);
@@ -206,7 +218,9 @@
 }
 
 @media screen and (min-width: 768px) {
-  .favorites-container {
+  favorites-container {
+    width: 768px;}
+  .favorites-parts-container {
     width: 768px;
     display: flex;
     flex-direction: column;
@@ -245,7 +259,6 @@
     line-height: 1.09;
     letter-spacing: -0.002em;
     padding-bottom: 32px;
-    padding-top: 68px;
   }
 
   .favoritesMessage {
@@ -253,7 +266,7 @@
     line-height: 1.33;
     width: 554px;
   }
-  .favorites {
+  .favorites-list {
     flex-direction: row;
     flex-wrap: wrap;
     row-gap: 32px;
@@ -289,7 +302,10 @@
 }
 
 @media screen and (min-width: 1440px) {
+
   .favorites-container {
+    width: 1378px;}
+  .favorites-parts-container {
     display: flex;
     flex-direction: row;
     gap: 32px;

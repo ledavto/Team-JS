@@ -1,6 +1,8 @@
 import axios from "axios";
 import Pagination from 'tui-pagination';
-// import '../node_modules/tui-pagination/dist/tui-pagination';
+import 'tui-pagination/dist/tui-pagination.css';
+
+
 const favorites=document.querySelector('.js-favorites');
 const favoritesMessage=document.querySelector('.js-favorites-message');
 
@@ -143,11 +145,8 @@ localStorage.setItem(FAVORITES_LS_KEY, JSON.stringify(checkoutProducts));
 
     let checkoutFavorites = JSON.parse(localStorage.getItem(FAVORITES_LS_KEY)) ?? [];
     
-    console.log(checkoutFavorites);
-
     checkoutFavorites.length===0
-    ?
-    favoritesMessage.hidden = false
+    ?favoritesMessage.hidden = false
     :favorites.insertAdjacentHTML("beforeend", createMarkup(checkoutFavorites))
 
 
@@ -157,23 +156,23 @@ function createMarkup(exercises) {
       ({ _id, name, burnedCalories, time, bodyPart, target }) =>
         `
     <li data-id="${_id}"class="favorites-card-item">
-    <h2 class="workout">WORKOUT</h2>
+    <div class="favorites-card-workout">
+    <p class="favorites-workout">WORKOUT</p>
     <svg class="trash-icon" width="16" height="16">
-     <use href="../img/icons.svg#icon-trash"></use>
-    </svg>        
-    <svg class="trash-icon" width="16" height="16">
-     <use href="./images/icons.svg#icon-trash"></use>
-    </svg>
-    <p class="favorites-start">Start</p>
+     <use href="./img/icons.svg#icon-trash"></use>
+    </svg> 
+    <div class="favorites-start">Start</div>
             <div>
               <svg class="favorites-header-arrow" width="16" height="16">
-                <use href="../img/icons.svg#icon-arrow"></use>
+                <use href="./img/icons.svg#icon-arrow"></use>
               </svg>
             </div>
+            </div>
+
             <div class="favorites-name">
             <div class="favorites-name-svg">
               <svg class="favorites-name-svg-svg" width="20" height="20">
-                <use href="../img/icons.svg#icon-running-stick-figure"></use>
+                <use href="./img/icons.svg#icon-running-stick-figure"></use>
               </svg>
             </div>
             <div class="favorites-name-text">${name}</div>
@@ -191,7 +190,11 @@ function createMarkup(exercises) {
     )
     .join("");
     
+  
 }
+
+let totalPages=checkoutFavorites.length / 8;
+updatePaginationExercises(totalPages);
 
 favorites.addEventListener('click', trashcard);
 
@@ -202,11 +205,9 @@ function trashcard(event) {
   const card = event.target.closest(".favorites-card-item") // отримаємо посилання на всю лішку
 
   const cardId = card.dataset.id; // через дата атрибут отримали id поточної вправи
-console.log(cardId);
 
 let checkoutFavorites = JSON.parse(localStorage.getItem(FAVORITES_LS_KEY)) ?? [];
   const currentCard = checkoutFavorites.find(({ _id }) => _id === cardId); // знайшли обʼєкт поточного товару в масиві всіх товарів за id
-  console.log(currentCard);
 
   const newCardIdx = checkoutFavorites.findIndex(
     ({_id }) =>_id === cardId
@@ -222,48 +223,7 @@ let checkoutFavorites = JSON.parse(localStorage.getItem(FAVORITES_LS_KEY)) ?? []
     {favoritesMessage.hidden = false};
     
   }
-  // let totalPages=checkoutFavorites.length / 8;
-  // updatePaginationExercises(totalPages);
-// const itemsPerPage=8
-// let currentPage = 1;
-// updatePagination(3);
 
-// function updatePagination(totalPages) {
-//   const paginationContainer = document.getElementById('pagination');
 
-//   const options = {
-//     totalItems: totalPages * itemsPerPage,
-//     itemsPerPage: itemsPerPage,
-//     visiblePages: 3,
-//     page: currentPage,
-//   };
 
-//   const pagination = new Pagination(paginationContainer, options);
-
-//   pagination.on('beforeMove', event => {
-//     const newPage = event.page;
-//     currentPage = newPage;
-//   });
-// }
-
-// function updatePaginationExercises(totalPages) {
-//   const paginationContainer = document.getElementById('pagination');
-//   paginationContainer.innerHTML = '';
-
-//   const options = {
-//     totalItems: totalPages * itemsPerPage,
-//     itemsPerPage: itemsPerPage,
-//     visiblePages: 5,
-//     page: currentPage,
-//   };
-
-//   const pagination = new Pagination(paginationContainer, options);
-
-//   pagination.on('beforeMove', event => {
-//     const newPage = event.page;
-//     currentPage = newPage;
-//     showExercises(
-//       newPage
-//     );
-//   });
-// }
+  
