@@ -1,8 +1,6 @@
 // считываем кнопку
 const goTopBtn = document.querySelector('.go-top');
 
-console.log(goTopBtn);
-
 // обработчик на скролл окна
 window.addEventListener('scroll', trackScroll);
 // обработчик на нажатии

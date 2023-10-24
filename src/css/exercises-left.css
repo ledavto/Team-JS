@@ -26,16 +26,23 @@ body {
   margin-bottom: 6px;
   padding-top: 20px;
 }
+.running-item {
+  background: rgb(108, 110, 114);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+}
 
 .running-icon {
   /* stroke-width: 1.6px; */
   fill: var(--primary-background-color);
   stroke: rgba(244, 244, 244, 0.2);
-  background: rgb(108, 110, 114);
-  width: 34px;
-  height: 32px;
-  border-radius: 50%;
-  display: block;
+
   /* text-align: center; */
 }
 
