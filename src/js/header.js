@@ -3,7 +3,7 @@
 
 //Виділення активної сторінки
 
-console.log(window.location.pathname);
+console.log(window.location);
 if (
   window.location.pathname === '/index.html' ||
   window.location.pathname === '/'
