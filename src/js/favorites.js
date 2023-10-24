@@ -8,7 +8,6 @@ const favoritesMessage=document.querySelector('.js-favorites-message');
 
 const FAVORITES_LS_KEY = "checkout";
 
-
 const checkoutProducts=[
   {
     "_id": "64f389465ae26083f39b17a2",
