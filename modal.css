@@ -1,0 +1,88 @@
+.backdrop-modal-general{
+    position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(4, 4, 4, 0.4);
+  top: 0;
+  left: 0; 
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px; 
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+  }
+  .backdrop-modal-general:open {
+      opacity: 1;
+      visibility: visible;
+  }
+  .modal-general{
+   background-color:rgba(36, 36, 36, 1);
+   color: rgba(244, 244, 244, 1);
+   max-width: 335px; ;
+   padding:30px  20px;
+   position: relative;
+   border-radius: 20px;
+  }
+  
+  .modal-general-close-btn{
+      position: absolute;
+      right: 14px;
+      top: 14px;
+      width: 100%;
+      height: 100%;
+      max-width: 24px;
+      max-height: 24px;
+      font-size: 0;
+      border: 0;
+      background-color: transparent;
+      padding: auto;
+  }
+  .modal-general-close-icon{
+      stroke: #f4f4f4;
+      width: 24px;
+      height: 24px;
+  
+  }
+  .modal-general-info{
+  
+  }
+  .modal-button{
+     display: flex;
+     align-items: center;
+  justify-content: center;
+  padding: 20px 0px 0px 0px;
+  }
+  .modal-add-favorates-btn{
+     display:block;
+      border: 0;
+      border-radius: 30px;
+      background: #f4f4f4;
+      color:rgba(36, 36, 36, 1); 
+      margin-right: 6px;   
+      align-items: center;
+      justify-content: center;
+      height: 42px;
+      width: 167px;
+  }
+  .icon-heard{
+      stroke: hsl(0, 0%, 3%);
+      width: 24px;
+      height: 24px;
+      
+  }
+  .modal-giv-rating-btn{
+  
+      border: 1px, color #f4f4f4;;
+      border-color: #f4f4f4;
+      border-radius: 30px;
+      background:rgba(36, 36, 36, 1);
+      color: #f4f4f4;
+      height: 42px;
+      width: 122px;
+  }
+  
