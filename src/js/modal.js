@@ -48,7 +48,7 @@ import api from './api.js';
    //}
 
 
-const exId= `64f389465ae26083f39b17a2`;
+//const exId= `64f389465ae26083f39b17a2`;
 
 generalModals.form.addEventListener('submit', handlExSubmit);
 async function handlExSubmit(event) {
