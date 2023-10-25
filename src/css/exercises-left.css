@@ -111,7 +111,7 @@ body {
   max-width: 335px;
   width: 100%;
   min-height: 242px;
-  background-image: url(../img/mobile/women-sportswear-taking-mobile.png);
+  background-image: url(./img/mobile/women-sportswear-taking-mobile.png);
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
@@ -123,7 +123,7 @@ body {
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .contain-two-foto {
-    background-image: url(../img/mobile/women-sportswear-taking-mobile@2x.png);
+    background-image: url(./img/mobile/women-sportswear-taking-mobile@2x.png);
   }
 }
 
@@ -272,7 +272,7 @@ body {
     max-width: 288px;
     width: 100%;
     min-height: 249px;
-    background-image: url(../img/tablet/women-sportswear-taking-tablet.png);
+    background-image: url(./img/tablet/women-sportswear-taking-tablet.png);
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
@@ -283,7 +283,7 @@ body {
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .contain-two-foto {
-      background-image: url(../img/tablet/women-sportswear-taking-tablet@2x.png);
+      background-image: url(./img/tablet/women-sportswear-taking-tablet@2x.png);
     }
   }
 
@@ -404,7 +404,7 @@ body {
     max-width: 444px;
     width: 100%;
     min-height: 242px;
-    background-image: url(../img/desktop/women-sportswear-taking.png);
+    background-image: url(./img/desktop/women-sportswear-taking.png);
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 auto;
@@ -415,7 +415,7 @@ body {
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .contain-two-foto {
-      background-image: url(../img/desktop/women-sportswear-taking@2x.png);
+      background-image: url(./img/desktop/women-sportswear-taking@2x.png);
     }
   }
 

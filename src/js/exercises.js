@@ -199,13 +199,13 @@ function showExercises(category, subCategory, keywords, page = 1) {
             <div class="exr-item-header-rating">${exr.rating}</div>
             <div class="exr-item-header-star">
               <svg width="14" height="13">
-                <use href="../img/icons.svg#star-rate"></use>
+                <use href="./img/icons.svg#star-rate"></use>
               </svg>
             </div>
             <button class="exr-item-header-start" type="button">
               <span class="exr-item-header-text">Start</span>
               <svg class="exr-item-header-arrow" width="16" height="16">
-                <use href="../img/icons.svg#icon-arrow"></use>
+                <use href="./img/icons.svg#icon-arrow"></use>
               </svg>
             </button>
           </div>
