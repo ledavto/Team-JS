@@ -71,9 +71,10 @@ document
     selectedCategory = 'Body parts';
 
     // lm
-    document.querySelector(".exercise-section-title").innerHTML='';
-    document.querySelector(".exercise-section-title").innerHTML='Exercise<span class="exercise-section-title-span"></span>';
-    document.querySelector('.exercise-section-search').style.display='none'
+    document.querySelector('.exercise-section-title').innerHTML = '';
+    document.querySelector('.exercise-section-title').innerHTML =
+      'Exercise<span class="exercise-section-title-span"></span>';
+    document.querySelector('.exercise-section-search').style.display = 'none';
     // lm
 
     showCategories(selectedCategory, currentPage);
@@ -86,9 +87,10 @@ document
     selectedCategory = 'Muscles';
 
     // lm
-    document.querySelector(".exercise-section-title").innerHTML='';
-    document.querySelector(".exercise-section-title").innerHTML='Exercise<span class="exercise-section-title-span"></span>';
-    document.querySelector('.exercise-section-search').style.display='none'
+    document.querySelector('.exercise-section-title').innerHTML = '';
+    document.querySelector('.exercise-section-title').innerHTML =
+      'Exercise<span class="exercise-section-title-span"></span>';
+    document.querySelector('.exercise-section-search').style.display = 'none';
     // lm
 
     showCategories(selectedCategory, currentPage);
@@ -101,9 +103,10 @@ document
     selectedCategory = 'Equipment';
 
     // lm
-    document.querySelector(".exercise-section-title").innerHTML='';
-    document.querySelector(".exercise-section-title").innerHTML='Exercise<span class="exercise-section-title-span"></span>';
-    document.querySelector('.exercise-section-search').style.display='none'
+    document.querySelector('.exercise-section-title').innerHTML = '';
+    document.querySelector('.exercise-section-title').innerHTML =
+      'Exercise<span class="exercise-section-title-span"></span>';
+    document.querySelector('.exercise-section-search').style.display = 'none';
     // lm
 
     showCategories(selectedCategory, currentPage);
@@ -112,11 +115,11 @@ document
 showCategories(selectedCategory);
 
 // Maryna
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const buttons = document.querySelectorAll('.exercise-section-button');
 
   buttons.forEach(button => {
-    button.addEventListener('click', function() {
+    button.addEventListener('click', function () {
       buttons.forEach(btn => {
         btn.classList.remove('js-active-filter-button');
       });
@@ -231,8 +234,10 @@ function showExercises(category, subCategory, keywords, page = 1) {
         categoryCards.appendChild(exrCard);
       });
 
-      document.querySelector(".exercise-section-title").innerHTML=`Exercise / <span class="exercise-section-title-span">${subCategory}</span>`;
-      document.querySelector('.exercise-section-search').style.display=''
+      document.querySelector(
+        '.exercise-section-title'
+      ).innerHTML = `Exercise / <span class="exercise-section-title-span">${subCategory}</span>`;
+      document.querySelector('.exercise-section-search').style.display = '';
 
       updatePaginationExercises(data.totalPages);
     })
@@ -241,22 +246,24 @@ function showExercises(category, subCategory, keywords, page = 1) {
     });
 }
 
-document.querySelector('.exercise-section-search-form').addEventListener('submit', (event) => {
-  event.preventDefault();
+document
+  .querySelector('.exercise-section-search-form')
+  .addEventListener('submit', event => {
+    event.preventDefault();
 
-  const form = event.target;
-  const keyword = form.elements.keyword.value;  
+    const form = event.target;
+    const keyword = form.elements.keyword.value;
 
-  selectedKeyword=keyword.trim();
-  currentPage=1;
+    selectedKeyword = keyword.trim();
+    currentPage = 1;
 
-  showExercises(
-    selectedCategory,
-    selectedSubCategory,
-    selectedKeyword,
-    currentPage
-  );
-})
+    showExercises(
+      selectedCategory,
+      selectedSubCategory,
+      selectedKeyword,
+      currentPage
+    );
+  });
 
 function updatePaginationExercises(totalPages) {
   const paginationContainer = document.getElementById('pagination');
@@ -283,4 +290,3 @@ function updatePaginationExercises(totalPages) {
     );
   });
 }
-
