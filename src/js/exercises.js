@@ -199,13 +199,13 @@ function showExercises(category, subCategory, keywords, page = 1) {
             <div class="exr-item-header-rating">${exr.rating}</div>
             <div class="exr-item-header-star">
               <svg width="14" height="13">
-                <use href="./img/icons.svg#star-rate"></use>
+                <use href="../img/icons.svg#star-rate"></use>
               </svg>
             </div>
             <button class="exr-item-header-start" type="button">
               <span class="exr-item-header-text">Start</span>
               <svg class="exr-item-header-arrow" width="16" height="16">
-                <use href="./img/icons.svg#icon-arrow"></use>
+                <use href="../img/icons.svg#icon-arrow"></use>
               </svg>
             </button>
           </div>
@@ -232,6 +232,21 @@ function showExercises(category, subCategory, keywords, page = 1) {
         `;
 
         categoryCards.appendChild(exrCard);
+
+        //Слухач на натискання скнопки START
+        exrCard.addEventListener('click', (event) => {
+          //localStorage.setItem(id_exr_start, event.currentTarget.);
+          console.log("event.currentTarget: ", event.currentTarget);
+          document.querySelector('.backdrop-modal').classList.remove('is-hidden');
+        });
+
+        //Слухач кнопки CLOSE
+
+
+document.querySelector('.modal-general-close-btn').addEventListener('click', 
+          document.querySelector('.backdrop-modal').classList.add('is-hidden')
+        );
+
       });
 
       document.querySelector(

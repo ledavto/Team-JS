@@ -22,18 +22,27 @@ const refs = {
   favoritExercise: document.querySelector('.exr-item'),
 };
 
-//
-refs.modalOpenBtn.addEventListener('click', showModal);
-console.log(generalModals);
+console.log(refs.modalCloseBtn);
 
-const showModal = event => {
-  generalModals.classList.add('show');
-};
+// const showModal =() =>(event) {
+  
+//           //localStorage.setItem(id_exr_start, event.currentTarget.);
+//           console.log("event.target: ", event.target);
+//           console.log("event.currentTarget: ", event.currentTarget);
+        
+// }
 
-refs.modalCloseBtn.addEventListener('click', e => {
-  e.preventDefault();
-  refs.generalModals.classList.toggle('is-hidden');
-});
+// refs.modalOpenBtn.addEventListener('click', showModal);
+// console.log(generalModals);
+
+// const showModal = event => {
+//   generalModals.classList.add('show');
+// };
+
+// refs.modalCloseBtn.addEventListener('click', e => {
+//   e.preventDefault();
+//   refs.generalModals.classList.toggle('is-hidden');
+// });
 
 // function favoriteExr (e){
 
