@@ -1,11 +1,7 @@
-.hero-title-icon {
-}
 .container-hero {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 40px;
-}
-.title-icon {
 }
 
 .hero-title::before {
@@ -85,10 +81,11 @@
     letter-spacing: -1.48px;
     min-width: 593px;
   }
-   .hero-title::before {
+
+  .hero-title::before {
     width: 60px;
     height: 60px;
-  } 
+  }
 
   .hero-text {
     font-size: 18px;
@@ -110,9 +107,13 @@
     line-height: 1.5;
   }
 
+
   .hero-list {
     justify-content: flex-end;
+
   }
+
+
 }
 
 @media screen and (min-width: 1440px) {
@@ -130,12 +131,13 @@
     right: 50px;
     display: flex;
     flex-direction: column;
-    max-width: 182px;
+    max-width: 185px;
   }
 
   .hero-list {
     flex-wrap: wrap;
     justify-content: right;
+    gap: 8px;
   }
 
   .list-img {
