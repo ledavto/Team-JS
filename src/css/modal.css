@@ -52,11 +52,13 @@
   
   }
   .modal-button{
+
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px 0px 0px 0px;
   font-size: 14px;
+
   }
   .modal-add-favorates-btn{
      display:block;
@@ -67,7 +69,7 @@
       color:rgba(36, 36, 36, 1); 
       margin-right: 6px;   
       align-items: center;
-      justify-content: center;
+      justify-content: center
       line-height: 18px;
       height: 42px;
       width: 167px;
@@ -84,6 +86,7 @@
       fill: none;
       margin-left: 6px;
 
+
   }
   .modal-giv-rating-btn{
   
@@ -95,6 +98,7 @@
       height: 42px;
       width: 122px;
   }
+
   @media only screen and (min-width: 768px){
     .backdrop-modal-general{
 

@@ -1,6 +1,21 @@
-const homepage = document.querySelector('.homepageitem');
-const favoritespageitem = document.querySelector('.favoritespageitem');
+// const homepage = document.querySelector('.homepageitem');
+// const favoritespageitem = document.querySelector('.favoritespageitem');
 
+//Виділення активної сторінки
+
+//console.log(window.location.pathname.includes('favorites.html'));
+
+if (window.location.pathname.includes('favorites.html')) {
+  document.querySelector('.homepage').classList.remove('active');
+  document.querySelector('.favorites').classList.add('active');
+  document.querySelector('.homepage-mob').classList.remove('active');
+  document.querySelector('.favorites-mob').classList.add('active');
+} else {
+  document.querySelector('.homepage').classList.add('active');
+  document.querySelector('.favorites').classList.remove('active');
+  document.querySelector('.homepage-mob').classList.add('active');
+  document.querySelector('.favorites-mob').classList.remove('active');
+}
 // Mobile menu function
 (() => {
   const mobileMenu = document.querySelector('.js-menu-container');
@@ -32,23 +47,23 @@ const favoritespageitem = document.querySelector('.favoritespageitem');
 })();
 
 // changing style for navigation header
-const changeTextColor = () => {
-  homepage.style.backgroundColor = '#242424';
-  homepage.style.color = '#F4F4F4';
-  homepage.style.padding = '0';
-  favoritespageitem.style.padding = '0';
-  favoritespageitem.style.backgroundColor = '#F4F4F4';
-  favoritespageitem.style.color = '#242424';
-  favoritespageitem.style.width = '87px';
-};
+// const changeTextColor = () => {
+//   homepage.style.backgroundColor = '#242424';
+//   homepage.style.color = '#F4F4F4';
+//   homepage.style.padding = '0';
+//   favoritespageitem.style.padding = '0';
+//   favoritespageitem.style.backgroundColor = '#F4F4F4';
+//   favoritespageitem.style.color = '#242424';
+//   favoritespageitem.style.width = '87px';
+// };
 
-const changeTextColorHome = () => {
-  homepage.style.backgroundColor = '#F4F4F4';
-  homepage.style.color = '#242424';
+// const changeTextColorHome = () => {
+//   homepage.style.backgroundColor = '#F4F4F4';
+//   homepage.style.color = '#242424';
 
-  favoritespageitem.style.backgroundColor = '#242424';
-  favoritespageitem.style.color = '#F4F4F4';
-};
+//   favoritespageitem.style.backgroundColor = '#242424';
+//   favoritespageitem.style.color = '#F4F4F4';
+// };
 
-homepage.addEventListener('click', changeTextColorHome);
-favoritespageitem.addEventListener('click', changeTextColor);
+// homepage.addEventListener('click', changeTextColorHome);
+// favoritespageitem.addEventListener('click', changeTextColor);

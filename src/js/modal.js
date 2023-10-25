@@ -32,11 +32,11 @@ refs.modalCloseBtn.addEventListener('click', (e) => {
 
 
 // function favoriteExr (e){
+
  // e.preventDefault();
  // const {} = e.currentTarget.elements;
  // console.log()
  // }
-
 
 //  refs.modalOpenBtn.addEventListener("click",clickOpen);
 //   function clickOpen(e){
@@ -49,11 +49,8 @@ refs.modalCloseBtn.addEventListener('click', (e) => {
 //const exId= `64f389465ae26083f39b17a2`;
 
 
-
 let unlock = true;
 const timeout = 800;
-
-
 
 //////////Button/////////
 
@@ -66,6 +63,7 @@ const timeout = 800;
 ////////////////////////////////////     
     
   //});
+
 
 //refs.generalModals.addEventListener("click",toggleModal);
 //function toggleModal() {

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import api from './api';
 import Pagination from 'tui-pagination';
-import 'tui-pagination/dist/tui-pagination.css';
+// import 'tui-pagination/dist/tui-pagination.css';
 
 let currentPage = 1;
 let selectedCategory = 'Body parts';
@@ -69,6 +69,13 @@ document
   .addEventListener('click', function () {
     currentPage = 1;
     selectedCategory = 'Body parts';
+
+    // lm
+    document.querySelector(".exercise-section-title").innerHTML='';
+    document.querySelector(".exercise-section-title").innerHTML='Exercise<span class="exercise-section-title-span"></span>';
+    document.querySelector('.exercise-section-search').style.display='none'
+    // lm
+
     showCategories(selectedCategory, currentPage);
   });
 
@@ -77,6 +84,13 @@ document
   .addEventListener('click', function () {
     currentPage = 1;
     selectedCategory = 'Muscles';
+
+    // lm
+    document.querySelector(".exercise-section-title").innerHTML='';
+    document.querySelector(".exercise-section-title").innerHTML='Exercise<span class="exercise-section-title-span"></span>';
+    document.querySelector('.exercise-section-search').style.display='none'
+    // lm
+
     showCategories(selectedCategory, currentPage);
   });
 
@@ -85,6 +99,13 @@ document
   .addEventListener('click', function () {
     currentPage = 1;
     selectedCategory = 'Equipment';
+
+    // lm
+    document.querySelector(".exercise-section-title").innerHTML='';
+    document.querySelector(".exercise-section-title").innerHTML='Exercise<span class="exercise-section-title-span"></span>';
+    document.querySelector('.exercise-section-search').style.display='none'
+    // lm
+
     showCategories(selectedCategory, currentPage);
   });
 
@@ -161,8 +182,6 @@ function showExercises(category, subCategory, keywords, page = 1) {
   api
     .getFiltered(parameters)
     .then(data => {
-      console.log(data);
-
       const categoryCards = document.getElementById('category-cards');
       categoryCards.innerHTML = '';
 
@@ -177,21 +196,21 @@ function showExercises(category, subCategory, keywords, page = 1) {
             <div class="exr-item-header-rating">${exr.rating}</div>
             <div class="exr-item-header-star">
               <svg width="14" height="13">
-                <use href="../img/icons.svg#star-rate"></use>
+                <use href="./img/icons.svg#star-rate"></use>
               </svg>
             </div>
-            <div class="exr-item-header-start">Start</div>
-            <div>
+            <button class="exr-item-header-start" type="button">
+              <span class="exr-item-header-text">Start</span>
               <svg class="exr-item-header-arrow" width="16" height="16">
-                <use href="../img/icons.svg#icon-arrow"></use>
+                <use href="./img/icons.svg#icon-arrow"></use>
               </svg>
-            </div>
+            </button>
           </div>
 
           <div class="exr-item-name">
             <div class="exr-item-name-svg">
-              <svg class="exr-item-name-svg-svg" width="20" height="20">
-                <use href="../img/icons.svg#icon-running-stick-figure"></use>
+              <svg class="exr-item-name-svg-svg" width="15" height="15">
+                <use href="./img/icons.svg#icon-running-stick-figure"></use>
               </svg>
             </div>
             <div class="exr-item-name-text">${exr.name}</div>
@@ -212,12 +231,32 @@ function showExercises(category, subCategory, keywords, page = 1) {
         categoryCards.appendChild(exrCard);
       });
 
+      document.querySelector(".exercise-section-title").innerHTML=`Exercise / <span class="exercise-section-title-span">${subCategory}</span>`;
+      document.querySelector('.exercise-section-search').style.display=''
+
       updatePaginationExercises(data.totalPages);
     })
     .catch(error => {
       console.error(error);
     });
 }
+
+document.querySelector('.exercise-section-search-form').addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const form = event.target;
+  const keyword = form.elements.keyword.value;  
+
+  selectedKeyword=keyword.trim();
+  currentPage=1;
+
+  showExercises(
+    selectedCategory,
+    selectedSubCategory,
+    selectedKeyword,
+    currentPage
+  );
+})
 
 function updatePaginationExercises(totalPages) {
   const paginationContainer = document.getElementById('pagination');

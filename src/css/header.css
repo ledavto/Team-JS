@@ -1,10 +1,13 @@
 .header {
   display: block;
+  margin: 0;
+  padding: 0;
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
@@ -17,6 +20,7 @@
     padding-left: 32px;
     padding-right: 32px;
     padding-bottom: 100px;
+    max-height: 176px;
   }
 }
 @media only screen and (min-width: 1440px) {
@@ -37,16 +41,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 132px;
+  max-height: 24px;
+}
+.logo-link {
+  max-width: 132px;
+  max-height: 24px;
 }
 
 @media only screen and (min-width: 768px) {
   .header-nav-list {
     display: flex;
     gap: 20px;
-    border: solid;
+    border: solid 1px;
     border-radius: 60px;
     width: 265px;
-    height: 52px;
+    max-height: 52px;
     justify-content: center;
     align-items: center;
     background-color: var(--primary-fontcolor);
@@ -55,37 +65,91 @@
   }
   .header-addresses {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 156px;
+    max-height: 44px;
+  }
+  .header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 265px;
+    max-height: 52px;
   }
 }
-.homepageitem {
-  color: #242424;
+
+.favorites,
+.favorites-mob {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  height: 36px;
+  min-width: 87px;
 }
 
+.favorites.active,
+.favorites-mob.active {
+  background-color: var(--primary-background-color);
+  border-radius: 30px;
+  color: #242424;
+  max-height: 36px;
+}
+
+.homepage,
+.homepage-mob {
+  min-width: 66px;
+  min-height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.homepage.active,
+.homepage-mob.active {
+  min-width: 66px;
+  min-height: 36px;
+  background-color: var(--primary-background-color);
+  border: solid 1px;
+  border-radius: 30px;
+  color: #242424;
+}
+/* .favorites:active {
+  background-color: var(--primary-background-color);
+  color: #242424;
+}
+.favorites:active .homepage {
+  background-color: var(--primary-fontcolor);
+  color: var(--primary-background-color);
+} */
+
+/* .header-nav {
+  display: block;
+} */
 .header-nav-item {
-  width: 66px;
-  height: 36px;
-  background-color: #f4f4f4;
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  /* align-items: center;
+  justify-content: center; */
+  min-height: 36px;
+}
+/* .header-nav-link {
+  max-width: 66px;
+  max-height: 36px;
+  background-color: var(--primary-background-color);
   border-radius: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.favoritespageitem {
-  background-color: var(--primary-fontcolor);
-  color: #f4f4f4;
-}
-
-.header-nav {
-  display: flex;
-  align-items: center;
-}
-
-.header-nav-link {
-  display: block;
-  /* height: 100%; */
   font-weight: 400;
   font-size: 16px;
-}
+} */
 
 /* Addresses */
 
@@ -100,7 +164,6 @@
   border-radius: 10px;
 }
 
-.header-socials-link:focus,
 .header-socials-link:hover {
   background-color: #242424cc;
 }
@@ -108,24 +171,23 @@
 .header-socials-link:hover .header-social-icon {
   fill: var(--primary-background-color);
 }
-.header-socials-link:focus .header-social-icon {
-  fill: var(--primary-background-color);
-}
+
 .header-social-icon {
   fill: #242424cc;
   transition: fill 0.5s;
 }
 
 .header-socials-list {
+  max-width: 156px;
+  max-height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
 }
 .header-socials-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-width: 44px;
+  max-height: 44px;
 }
 
 /* Mobile menu */
@@ -162,7 +224,7 @@
 }
 
 .menu-container {
-  background-color: #242424;
+  background-color: var(--primary-fontcolor);
   width: 210px;
   height: 100%;
   display: flex;
@@ -225,14 +287,10 @@
 }
 /* .mobile-socials-item {
 } */
-.mobile-socials-link:hover,
-.mobile-socials-link:focus {
+.mobile-socials-link:hover {
   background-color: var(--primary-background-color);
 }
 .mobile-socials-link:hover .social-icon {
-  fill: #242424cc;
-}
-.mobile-socials-link:focus .social-icon {
   fill: #242424cc;
 }
 
