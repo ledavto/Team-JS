@@ -54,11 +54,11 @@ body {
 }
 
 .quote-text {
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-feature-settings: 'clig' off, 'liga' off;
   font-weight: 500;
-  line-height: 1.33; /* line-height:32px (calc(32/24 fontsize)*/
+  line-height: 1; /* line-height:20px (calc(20/20 fontsize)*/
   color: var(--primary-background-color);
   list-style: none;
   display: block;
@@ -68,15 +68,13 @@ body {
 .commas-icon {
   stroke-width: 1.6px;
   fill: var(--primary-background-color);
-  width: 32px;
-  height: 32px;
-  /* display: block; */
-  margin-right: 20px;
-  /* text-align: center; */
+  width: 20px;
+  height: 20px;
+  margin-left: 40px;
 }
 .boxAutor {
-  margin-left: 90px;
-  margin-right: 40px;
+  margin-left: 72px;
+  margin-right: 20px;
 }
 
 .boxTextMidle-sect-one {
@@ -91,10 +89,10 @@ body {
 
 .boxTextDown-sect-one {
   font-family: Neue Montreal;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: var(--primary-fontweight);
-  line-height: 1.5; /* line-height:24px (calc(24/16 fontsize)*/
+  line-height: 1.28; /* line-height:18px (calc(24/14 fontsize)*/
   color: var(--primary-background-color);
   text-align: left;
 }
@@ -135,18 +133,13 @@ body {
   background-color: #fff;
   max-width: 335px;
   width: 100%;
-  /* min-height: 203px; */
-  /* max-height: 203px; */
   height: 203px;
-  /* max-height: 315px; */
   overflow-x: hidden;
   margin: 0 auto;
 }
 
 .box-three-list {
   align-items: center;
-  /* margin: 0px, 50px, 10px, 0px; */
-  /* margin-left: 0px; */
   margin: auto;
   gap: 16px;
   padding-left: 20px;
@@ -164,7 +157,7 @@ body {
 }
 
 .hundr-minutes {
-  display: block;
+  /* display: block; */
   margin: auto;
 }
 
@@ -200,19 +193,18 @@ body {
 }
 
 .text-the-world-health {
-  /* display: inline-block; */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  /* word-wrap: break-word; */
-  /* word-break: break-all; */
-  /* vertical-align: top; */
   color: var(--primary-fontcolor);
-  white-space: nowrap;
   font-family: Neue Montreal;
   font-size: 14px;
   font-style: normal;
   font-weight: var(--primary-fontweight);
   line-height: 1.28; /* line-height:18px (calc(18/14 fontsize)*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
 }
 
 /*  ****************************  @MEDIA ********************************/
@@ -227,6 +219,7 @@ body {
     /* margin: 32px; */
     max-width: 768px;
     max-width: 100%;
+    /* max-height: 258px; */
   }
 
   .contain-one {
@@ -242,14 +235,38 @@ body {
     margin-bottom: 32px;
   }
 
-  /* .contain-two-foto {
-    border-radius: 20px;
-    background-image: url(../img/tablet/women-sportswear-taking-tablet.png);
-    max-width: 288px;
-    min-height: 258px;
-    background-size: cover;
-  } */
-
+  .ul-box-text-sect-one {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: 40px;
+    padding-top: 40px;
+    margin-bottom: 6px;
+  }
+  .quote-text {
+    font-size: 24px;
+    font-style: normal;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-weight: 500;
+    line-height: 1.33; /* line-height:32px (calc(32/24 fontsize)*/
+    color: var(--primary-background-color);
+    list-style: none;
+    display: block;
+    font-family: Neue Montreal;
+  }
+  .commas-icon {
+    stroke-width: 1.6px;
+    fill: var(--primary-background-color);
+    width: 24px;
+    height: 24px;
+    /* display: block; */
+    margin-left: 60px;
+    /* text-align: center; */
+  }
+  .boxAutor {
+    margin-left: 90px;
+    margin-right: 40px;
+  }
   .contain-two-foto {
     border-radius: 20px;
     max-width: 288px;
@@ -282,7 +299,10 @@ body {
     overflow: hidden;
     margin: 0;
   }
-
+  .hundr-minutes {
+    /* display: block; */
+    margin-left: 16px;
+  }
   .box-three-list {
     display: flex;
     color: var(--primary-fontcolor);
@@ -293,32 +313,38 @@ body {
     font-weight: 500;
     line-height: 1.33; /* line-height:32px (calc(32/24 fontsize)*/
     list-style: none;
-    margin-bottom: 16px;
+    margin-bottom: 6px; /* ! 6px */
   }
   .box-three-down {
-    /* line-height: 18px; 128.571% */
     max-width: 270px;
-    /* width: 100%; */
+    width: 100%;
     margin-left: 90px;
     margin-right: 40px;
-    margin-bottom: 40px;
-    /* min-height: 350px; */
-    /* padding-bottom: 40px; */
-    /* margin: 6px, 40px, 40px, 90px; */
+    margin-bottom: 0px;
+    /* padding: 5px; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* word-wrap: break-word; */
+    /* word-wrap: break-word; */
+    word-break: break-all;
   }
   .text-daily-norm {
     color: rgba(36, 36, 36, 0.6);
     margin-bottom: 16px;
   }
   .text-the-world-health {
-    overflow: hidden;
     color: var(--primary-fontcolor);
-    text-overflow: ellipsis;
-    /* white-space: nowrap; */
+    white-space: unset;
     font-family: Neue Montreal;
     font-size: 14px;
     font-style: normal;
     font-weight: var(--primary-fontweight);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
   }
 }
 
@@ -329,9 +355,9 @@ body {
     flex-wrap: nowrap;
     gap: 16px;
     /* margin: 32px; */
-    max-width: 444px;
-    max-width: 100%;
-    /*max-height: 258px; */
+    width: 444px;
+    margin: 0;
+    /* height: 851px; */
   }
 
   .contain-one {
@@ -350,6 +376,19 @@ body {
     margin-bottom: 6px;
     padding-top: 40px;
   }
+
+  .quote-text {
+    font-size: 24px;
+    font-style: normal;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-weight: 500;
+    line-height: 1.33; /* line-height:32px (calc(32/24 fontsize)*/
+    color: var(--primary-background-color);
+    list-style: none;
+    display: block;
+    font-family: Neue Montreal;
+  }
+
   .commas-icon {
     stroke-width: 1.6px;
     fill: var(--primary-background-color);
@@ -390,6 +429,11 @@ body {
     /* border: 1.5px solid #29adce; */
     /* overflow-x: hidden; */
   }
+
+  .hundr-minutes {
+    /* display: block; */
+    margin-left: 0;
+  }
   .box-three-list {
     display: flex;
     color: var(--primary-fontcolor);
@@ -400,28 +444,29 @@ body {
     font-weight: 500;
     line-height: 1.33; /* line-height:32px (calc(32/24 fontsize)*/
     list-style: none;
+    padding-left: 40px;
+    padding-top: 41px;
+    margin-bottom: 6px;
+    /* column-gap: 16px; */
   }
   .box-three-down {
-    /* line-height: 18px; 128.571% */
-    max-width: 270px;
-    /* width: 100%; */
+    max-width: 314px;
+    width: 100%;
     margin-left: 90px;
     margin-right: 40px;
     margin-bottom: 40px;
-    /* padding-bottom: 40px; */
-    /* margin: 6px, 40px, 40px, 90px; */
   }
   .text-daily-norm {
     color: rgba(36, 36, 36, 0.6);
   }
   .text-the-world-health {
-    overflow: hidden;
     color: var(--primary-fontcolor);
-    text-overflow: ellipsis;
-    /* white-space: nowrap; */
+    white-space: unset;
     font-family: Neue Montreal;
     font-size: 14px;
     font-style: normal;
     font-weight: var(--primary-fontweight);
+    -webkit-box-orient: unset;
+    word-break: unset;
   }
 }
