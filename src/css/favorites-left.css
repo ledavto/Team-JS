@@ -97,6 +97,7 @@ body {
   line-height: 1.5; /* line-height:24px (calc(24/16 fontsize)*/
   color: var(--primary-background-color);
   text-align: left;
+  display: none;
 }
 
 /* todo DIV №2   */
@@ -165,7 +166,8 @@ body {
 
 .hundr-minutes {
   display: block;
-  margin: auto;
+  padding-top: 15px;
+  padding-bottom: 6px;
 }
 
 .box-three-list {
@@ -241,7 +243,9 @@ body {
     margin: 0;
     margin-bottom: 32px;
   }
-
+  .boxTextDown-sect-one {
+    display: inline;
+  }
   /* .contain-two-foto {
     border-radius: 20px;
     background-image: url(../img/tablet/women-sportswear-taking-tablet.png);

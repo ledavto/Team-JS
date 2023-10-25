@@ -8,6 +8,7 @@ const favoritesMessage=document.querySelector('.js-favorites-message');
 
 const FAVORITES_LS_KEY = "checkout";
 
+
 const checkoutProducts=[
   {
     "_id": "64f389465ae26083f39b17a2",
@@ -144,56 +145,63 @@ localStorage.setItem(FAVORITES_LS_KEY, JSON.stringify(checkoutProducts));
 
     let checkoutFavorites = JSON.parse(localStorage.getItem(FAVORITES_LS_KEY)) ?? [];
     
-    checkoutFavorites.length===0
-    ?favoritesMessage.hidden = false
-    :favorites.insertAdjacentHTML("beforeend", createMarkup(checkoutFavorites))
-
+    if (checkoutFavorites.length===0)
+    {favorites.insertAdjacentHTML("beforeend", `<p class="favoritesMessage js-favorites-message">
+    It appears that you haven't added any exercises to your favorites yet.
+    To get started, you can add exercises that you like to your favorites
+    for easier access in the future.
+  </p>`)}
+    {favorites.insertAdjacentHTML("beforeend", createMarkup(checkoutFavorites))}
 
 function createMarkup(exercises) {
   return exercises
     .map(
       ({ _id, name, burnedCalories, time, bodyPart, target }) =>
         `
-    <li data-id="${_id}"class="favorites-card-item">
-    <div class="favorites-card-workout">
-    <p class="favorites-workout">WORKOUT</p>
-    <svg class="trash-icon" width="16" height="16">
-     <use href="./img/icons.svg#icon-trash"></use>
-    </svg> 
-    <div class="favorites-start">Start</div>
-            <div>
-              <svg class="favorites-header-arrow" width="16" height="16">
-                <use href="./img/icons.svg#icon-arrow"></use>
-              </svg>
-            </div>
-            </div>
-
-            <div class="favorites-name">
-            <div class="favorites-name-svg">
-              <svg class="favorites-name-svg-svg" width="20" height="20">
-                <use href="./img/icons.svg#icon-running-stick-figure"></use>
-              </svg>
-            </div>
-            <div class="favorites-name-text">${name}</div>
-          </div>
-          <div class="description">
-          <p class="description-burned-grey">Burned calories:</p>
-          <p class="description-burned-normal">${burnedCalories} / ${time} min</p>
-          <p class="description-part-grey">Body part:</p>
-          <p class="description-part-normal">${bodyPart}</p>
-          <p class="description-target-grey">Target:</p>
-          <p class="description-target-normal">${target}</p>
-          </div>
-    </li>
+        <div data-id="${_id}"class="favorites-card-item">
+        <div class="favorites-card-workout">
+        <p class="favorites-workout">WORKOUT</p>
+        <img class="trash-icon" src="./img/trash-01.png" alt="icon-trash" width="16"/>
+        <div class="favorites-start exr-item-header-start">Start</div>
+                <div>
+                  <svg class="favorites-header-arrow" width="16" height="16">
+                    <use href="./img/icons.svg#icon-arrow"></use>
+                  </svg>
+                </div>
+                </div>
+    
+                <div class="favorites-name">
+                <div class="favorites-name-svg">
+                  <svg class="favorites-name-svg-svg" width="20" height="20">
+                    <use href="./img/icons.svg#icon-running-stick-figure"></use>
+                  </svg>
+                </div>
+                <div class="favorites-name-text">${name}</div>
+              </div>
+              <div class="description">
+              <p class="description-burned-grey">Burned calories:</p>
+              <p class="description-burned-normal">${burnedCalories} / ${time} min</p>
+              <p class="description-part-grey">Body part:</p>
+              <p class="description-part-normal">${bodyPart}</p>
+              <p class="description-target-grey">Target:</p>
+              <p class="description-target-normal">${target}</p>
+              </div>
+        </div>
     `
     )
     .join("");
     
-  
 }
+// favorites.addEventListener('scroll', scrollcard);
+// function scrollcard(){
+const { height: cardHeight } = favorites
+  .firstElementChild.getBoundingClientRect();
 
-let totalPages=checkoutFavorites.length / 8;
-updatePaginationExercises(totalPages);
+window.scrollBy({
+  top: cardHeight * 2,
+  behavior: "smooth",
+});
+
 
 favorites.addEventListener('click', trashcard);
 
@@ -219,10 +227,10 @@ let checkoutFavorites = JSON.parse(localStorage.getItem(FAVORITES_LS_KEY)) ?? []
     card.remove();
     };
   if (checkoutFavorites.length===0)
-    {favoritesMessage.hidden = false};
+    {favorites.insertAdjacentHTML("beforeend", `<p class="favoritesMessage js-favorites-message">
+    It appears that you haven't added any exercises to your favorites yet.
+    To get started, you can add exercises that you like to your favorites
+    for easier access in the future.
+  </p>`)};
     
   }
-
-
-
-  
