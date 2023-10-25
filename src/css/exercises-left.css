@@ -1,0 +1,474 @@
+
+body {
+  /* background-color: #f4f4f4; */
+}
+
+.exr-left {
+  /* margin: 0 15px;
+  width: 335px;
+  height: 673px;
+  border-radius: 10px;
+  background: #fff; */
+  display: flex;
+  flex-direction: column;
+  max-width: 375px;
+  background-color: var(--primary-background-color);
+}
+
+/* todo DIV №1   */
+.contain-one {
+  border-radius: 20px;
+  background-color: var(--primary-fontcolor);
+  width: 100%;
+  max-width: 335px;
+  height: 188px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+}
+
+.ul-box-text-sect-one {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: 20px;
+  margin-bottom: 6px;
+  padding-top: 20px;
+}
+.running-item {
+  background: rgb(108, 110, 114);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.running-icon {
+  /* stroke-width: 1.6px; */
+  fill: var(--primary-background-color);
+  stroke: rgba(244, 244, 244, 0.2);
+
+  /* text-align: center; */
+}
+
+.quote-text {
+  font-size: 20px;
+  font-style: normal;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-weight: 500;
+  line-height: 1; /* line-height:20px (calc(20/20 fontsize)*/
+  color: var(--primary-background-color);
+  list-style: none;
+  display: block;
+  font-family: Neue Montreal;
+}
+
+.commas-icon {
+  stroke-width: 1.6px;
+  fill: var(--primary-background-color);
+  width: 20px;
+  height: 20px;
+  margin-left: 40px;
+}
+.boxAutor {
+  margin-left: 72px;
+  margin-right: 20px;
+}
+
+.boxTextMidle-sect-one {
+  color: rgba(244, 244, 244, 0.6);
+  font-family: Neue Montreal;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: var(--primary-fontweight);
+  line-height: 1.28; /* line-height:32px (calc(32/18 fontsize)*/
+  margin-bottom: 18px;
+}
+
+.boxTextDown-sect-one {
+  font-family: Neue Montreal;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: var(--primary-fontweight);
+  line-height: 1.28; /* line-height:18px (calc(24/14 fontsize)*/
+  color: var(--primary-background-color);
+  text-align: left;
+}
+
+/* todo DIV №2   */
+
+/* .contain-two-foto {
+  border-radius: 20px;
+  width: 335px;
+  min-height: 242px;
+  background-image: url(../img/mobile/women-sportswear-taking-mobile.png);
+  margin-bottom: 32px;
+} */
+.contain-two-foto {
+  border-radius: 20px;
+  max-width: 335px;
+  width: 100%;
+  min-height: 242px;
+  background-image: url(../img/mobile/women-sportswear-taking-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  background-position: center;
+  margin-bottom: 32px;
+  /* padding-bottom: 32px; */
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .contain-two-foto {
+    background-image: url(../img/mobile/women-sportswear-taking-mobile@2x.png);
+  }
+}
+
+/* todo DIV №3   */
+.contain-three {
+  border-radius: 20px;
+  background-color: #fff;
+  max-width: 335px;
+  width: 100%;
+  height: 203px;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+.box-three-list {
+  align-items: center;
+  margin: auto;
+  gap: 16px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.fluent-icon {
+  fill: rgba(244, 244, 244, 1);
+  stroke: rgba(244, 244, 244, 0.2);
+  background: var(--primary-fontcolor);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: block;
+}
+
+.hundr-minutes {
+  /* display: block; */
+  margin: auto;
+}
+
+.box-three-list {
+  display: flex;
+  color: var(--primary-fontcolor);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Neue Montreal;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.33; /* line-height:32px (calc(32/24 fontsize)*/
+  list-style: none;
+}
+
+.box-three-down {
+  max-width: 314px;
+  /* width: 100%; */
+  min-height: 105px;
+  margin-left: 71px;
+  margin-right: 20px;
+  /* padding: 5px; */
+  /* margin-bottom: 40px; */
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
+  /* word-wrap: break-word; */
+  /* word-break: break-all; */
+}
+
+.text-daily-norm {
+  color: rgba(36, 36, 36, 0.6);
+  margin-bottom: 16px;
+}
+
+.text-the-world-health {
+  color: var(--primary-fontcolor);
+  font-family: Neue Montreal;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: var(--primary-fontweight);
+  line-height: 1.28; /* line-height:18px (calc(18/14 fontsize)*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+
+/*  ****************************  @MEDIA ********************************/
+/*   ********************************************************************/
+/* todo ******************** (min-width: 428px) *************************/
+/* todo ******************** (min-width: 768px) *************************/
+@media screen and (min-width: 768px) {
+  .exr-left {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    /* margin: 32px; */
+    max-width: 768px;
+    max-width: 100%;
+    /* max-height: 258px; */
+  }
+
+  .contain-one {
+    /* display: block; */
+    border-radius: 20px;
+    background-color: var(--primary-fontcolor);
+    /* background-color: #443a3a5b; */
+    max-width: 400px;
+    width: 100%;
+    min-height: 249px;
+    /* border: 1.5px solid#29adce; */
+    margin: 0;
+    margin-bottom: 32px;
+  }
+
+  .ul-box-text-sect-one {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: 40px;
+    padding-top: 40px;
+    margin-bottom: 6px;
+  }
+  .quote-text {
+    font-size: 24px;
+    font-style: normal;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-weight: 500;
+    line-height: 1.33; /* line-height:32px (calc(32/24 fontsize)*/
+    color: var(--primary-background-color);
+    list-style: none;
+    display: block;
+    font-family: Neue Montreal;
+  }
+  .commas-icon {
+    stroke-width: 1.6px;
+    fill: var(--primary-background-color);
+    width: 24px;
+    height: 24px;
+    /* display: block; */
+    margin-left: 60px;
+    /* text-align: center; */
+  }
+  .boxAutor {
+    margin-left: 90px;
+    margin-right: 40px;
+  }
+  .contain-two-foto {
+    border-radius: 20px;
+    max-width: 288px;
+    width: 100%;
+    min-height: 249px;
+    background-image: url(../img/tablet/women-sportswear-taking-tablet.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    background-position: center;
+    margin-bottom: 32px;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .contain-two-foto {
+      background-image: url(../img/tablet/women-sportswear-taking-tablet@2x.png);
+    }
+  }
+
+  .contain-three {
+    display: block;
+    border-radius: 20px;
+    background-color: #fff;
+    max-width: 400px;
+    width: 100%;
+    /* min-height: 249px; */
+    height: 249px;
+    /* border: 1.5px solid #29adce; */
+    overflow: hidden;
+    margin: 0;
+  }
+  .hundr-minutes {
+    /* display: block; */
+    margin-left: 16px;
+  }
+  .box-three-list {
+    display: flex;
+    color: var(--primary-fontcolor);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Neue Montreal;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.33; /* line-height:32px (calc(32/24 fontsize)*/
+    list-style: none;
+    margin-bottom: 6px; /* ! 6px */
+  }
+  .box-three-down {
+    max-width: 270px;
+    width: 100%;
+    margin-left: 90px;
+    margin-right: 40px;
+    margin-bottom: 0px;
+    /* padding: 5px; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* word-wrap: break-word; */
+    /* word-wrap: break-word; */
+    word-break: break-all;
+  }
+  .text-daily-norm {
+    color: rgba(36, 36, 36, 0.6);
+    margin-bottom: 16px;
+  }
+  .text-the-world-health {
+    color: var(--primary-fontcolor);
+    white-space: unset;
+    font-family: Neue Montreal;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: var(--primary-fontweight);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+  }
+}
+
+/* todo ******************** (min-width: 1440px) *************************/
+@media screen and (min-width: 1440px) {
+  .exr-left {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 16px;
+    /* margin: 32px; */
+    width: 444px;
+    margin: 0;
+    /* height: 851px; */
+  }
+
+  .contain-one {
+    border-radius: 20px;
+    background-color: var(--primary-fontcolor);
+    max-width: 444px;
+    min-height: 230px;
+    width: 100%;
+    margin-bottom: 32px;
+  }
+  .ul-box-text-sect-one {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 40px;
+    margin-bottom: 6px;
+    padding-top: 40px;
+  }
+
+  .quote-text {
+    font-size: 24px;
+    font-style: normal;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-weight: 500;
+    line-height: 1.33; /* line-height:32px (calc(32/24 fontsize)*/
+    color: var(--primary-background-color);
+    list-style: none;
+    display: block;
+    font-family: Neue Montreal;
+  }
+
+  .commas-icon {
+    stroke-width: 1.6px;
+    fill: var(--primary-background-color);
+    width: 32px;
+    height: 32px;
+    /* display: block; */
+    margin-left: 80px;
+    /* text-align: center; */
+  }
+
+  .contain-two-foto {
+    border-radius: 20px;
+    max-width: 444px;
+    width: 100%;
+    min-height: 242px;
+    background-image: url(../img/desktop/women-sportswear-taking.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    background-position: center;
+    margin-bottom: 32px;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .contain-two-foto {
+      background-image: url(../img/desktop/women-sportswear-taking@2x.png);
+    }
+  }
+
+  .contain-three {
+    border-radius: 20px;
+    background-color: #fff;
+    max-width: 444px;
+    width: 100%;
+    min-height: 315px;
+    /* max-height: 315px; */
+    /* border: 1.5px solid #29adce; */
+    /* overflow-x: hidden; */
+  }
+
+  .hundr-minutes {
+    /* display: block; */
+    margin-left: 0;
+  }
+  .box-three-list {
+    display: flex;
+    color: var(--primary-fontcolor);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Neue Montreal;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.33; /* line-height:32px (calc(32/24 fontsize)*/
+    list-style: none;
+    padding-left: 40px;
+    padding-top: 41px;
+    margin-bottom: 6px;
+    /* column-gap: 16px; */
+  }
+  .box-three-down {
+    max-width: 314px;
+    width: 100%;
+    margin-left: 90px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+  .text-daily-norm {
+    color: rgba(36, 36, 36, 0.6);
+  }
+  .text-the-world-health {
+    color: var(--primary-fontcolor);
+    white-space: unset;
+    font-family: Neue Montreal;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: var(--primary-fontweight);
+    -webkit-box-orient: unset;
+    word-break: unset;
+  }
+}
+

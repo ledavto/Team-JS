@@ -1,0 +1,95 @@
+<!--  is-hidden -->
+<div class="backdrop is-hidden" data-rating-modal>
+  <div class="modal rating">
+    <button class="rating-close-btn">
+      <svg class="rating-close-icon">
+        <use href="./img/icons.svg#icon-btn-x"></use>
+      </svg>
+    </button>
+    <form class="rating-form">
+      <span class="rating-text">Rating</span>
+      <div class="rate">
+        <span class="rating-choosed">0.0</span>
+
+        <input
+          type="radio"
+          class="radial-button"
+          name="rate"
+          value="1"
+          id="oneStar"
+        />
+        <label for="oneStar">
+          <svg class="icon-star">
+            <use href="./img/icons.svg#star-rate"></use>
+          </svg>
+        </label>
+
+        <input
+          type="radio"
+          class="radial-button"
+          name="rate"
+          value="2"
+          id="twoStar"
+        />
+        <label for="twoStar">
+          <svg class="icon-star">
+            <use href="./img/icons.svg#star-rate"></use>
+          </svg>
+        </label>
+
+        <input
+          type="radio"
+          class="radial-button"
+          name="rate"
+          value="3"
+          id="threeStar"
+        />
+        <label for="threeStar">
+          <svg class="icon-star">
+            <use href="./img/icons.svg#star-rate"></use>
+          </svg>
+        </label>
+        <input
+          type="radio"
+          class="radial-button"
+          name="rate"
+          value="4"
+          id="fourStar"
+        />
+        <label for="fourStar">
+          <svg class="icon-star">
+            <use href="./img/icons.svg#star-rate"></use>
+          </svg>
+        </label>
+        <input
+          type="radio"
+          class="radial-button"
+          name="rate"
+          value="5"
+          id="fiveStar"
+        />
+        <label for="fiveStar">
+          <svg class="icon-star">
+            <use href="./img/icons.svg#star-rate"></use>
+          </svg>
+        </label>
+      </div>
+      <input
+        class="rating-inp-e"
+        type="email"
+        name="email"
+        placeholder="Email"
+        required
+      />
+      <textarea
+        class="rating-inp-com"
+        type="text"
+        name="comment"
+        placeholder="Your comment"
+        rows="4"
+        required
+      ></textarea>
+      <button class="rating-submit" type="submit">Send</button>
+    </form>
+  </div>
+</div>
