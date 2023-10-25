@@ -148,7 +148,11 @@ let checkoutFavorites = JSON.parse(localStorage.getItem(FAVORITES_LS_KEY)) ?? []
 
 function showFavorites(page=1){
   if (checkoutFavorites.length===0){
-    favoritesMessage.hidden = false
+    favorites.insertAdjacentHTML("beforeend", `<p class="favoritesMessage js-favorites-message">
+    It appears that you haven't added any exercises to your favorites yet.
+    To get started, you can add exercises that you like to your favorites
+    for easier access in the future.
+  </p>`)
   } else {
     favorites.innerHTML='';
     favorites.insertAdjacentHTML("beforeend", createMarkup(checkoutFavorites, page))
@@ -278,7 +282,11 @@ let checkoutFavorites = JSON.parse(localStorage.getItem(FAVORITES_LS_KEY)) ?? []
     card.remove();
     };
   if (checkoutFavorites.length===0)
-    {favoritesMessage.hidden = false};
+    {favorites.insertAdjacentHTML("beforeend", `<p class="favoritesMessage js-favorites-message">
+    It appears that you haven't added any exercises to your favorites yet.
+    To get started, you can add exercises that you like to your favorites
+    for easier access in the future.
+  </p>`)};
     
   }
 
