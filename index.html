@@ -10,10 +10,9 @@
       href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
     />
     
-    <script type="module" crossorigin src="/Team-JS/assets/index-d987e570.js"></script>
-    <link rel="modulepreload" crossorigin href="/Team-JS/assets/go-top-8223022c.js">
-    <link rel="stylesheet" href="/Team-JS/assets/go-top-a0b14d8a.css">
-    <link rel="stylesheet" href="/Team-JS/assets/index-f63480eb.css">
+    <script type="module" crossorigin src="/Team-JS/assets/index-99112233.js"></script>
+    <link rel="modulepreload" crossorigin href="/Team-JS/assets/go-top-5c8de0cb.js">
+    <link rel="stylesheet" href="/Team-JS/assets/index-7bf78d10.css">
   </head>
   <body>
     <!-- <link rel="stylesheet" href="../css/header.css"> -->
@@ -233,7 +232,16 @@
     <h2 class="exercise-section-title">
       Exercise<span class="exercise-section-title-span"></span>
     </h2>
-
+    <div class="exercise-section-search" style="display: none">
+      <form class="exercise-section-search-form" >
+        <input type="text" name="keyword" placeholder="Search" class="exercise-section-search-input">
+        <button type="submit" class="exercise-section-search-submit">
+          <svg class="exercise-section-search-svg" width="16" height="16">
+            <use href="/Team-JS/assets/icons-b719acf1.svg#icon-search"></use>
+          </svg>    
+        </button>
+      </form>
+    </div> 
     <ul class="exercise-section-buttons-container">
       <li>
         <button id="bodypart-filter" class="exercise-section-button js-active-filter-button" type="button"
@@ -333,6 +341,7 @@
   </div>
 -->
 </section>
+
     </main>
 
     <footer class="footer">
@@ -424,46 +433,52 @@
   </div>
 </footer>
 
-    <div class="backdrop backdrop-modal-general " data-modal-general>
+    <div class="backdrop backdrop-modal-general is-hidden" data-modal-general>
   <div class="modal-general">
     <button class="modal-general-close-btn">
       <svg class="modal-general-close-icon" width="34" height="32">
-        <use href="../img/icons.svg#icon-btn-x"></use>
+        <use href="/Team-JS/assets/icons-b719acf1.svg#icon-btn-x"></use>
       </svg>
     </button>
-    <div class="modal-genera-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nisi aliquam, eius veritatis assumenda suscipit consequuntur architecto aperiam, voluptatum tempora consequatur. Illo earum inventore magni a corrupti esse suscipit maiores.</div>
+    <div class="modal-genera-info">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nisi
+      aliquam, eius veritatis assumenda suscipit consequuntur architecto
+      aperiam, voluptatum tempora consequatur. Illo earum inventore magni a
+      corrupti esse suscipit maiores.
+    </div>
     <div class="modal-star">
-          <svg class="icon-star">
-           <use href="../img/icons.svg#star-rate"></use>
-          </svg>
-          <svg class="icon-star">
-              <use href="../img/icons.svg#star-rate"></use>
-             </svg>
-             <svg class="icon-star">
-              <use href="../img/icons.svg#star-rate"></use>
-             </svg>
-             <svg class="icon-star">
-              <use href="../img/icons.svg#star-rate"></use>
-             </svg>
-             <svg class="icon-star">
-              <use href="../img/icons.svg#star-rate"></use>
-             </svg>
+      <svg class="icon-star">
+        <use href="/Team-JS/assets/icons-b719acf1.svg#star-rate"></use>
+      </svg>
+      <svg class="icon-star">
+        <use href="/Team-JS/assets/icons-b719acf1.svg#star-rate"></use>
+      </svg>
+      <svg class="icon-star">
+        <use href="/Team-JS/assets/icons-b719acf1.svg#star-rate"></use>
+      </svg>
+      <svg class="icon-star">
+        <use href="/Team-JS/assets/icons-b719acf1.svg#star-rate"></use>
+      </svg>
+      <svg class="icon-star">
+        <use href="/Team-JS/assets/icons-b719acf1.svg#star-rate"></use>
+      </svg>
     </div>
     <div></div>
     <div class="modal-button">
       <button class="modal-add-favorates-btn">
-      <span>Add favorites</span>
-      <svg class="icon-heard">
-        <use href="../img/icons.svg#icon-heard"></use>
-       </svg>
+        <span>Add favorites</span>
+
+        <svg class="icon-heart">
+          <use href="/Team-JS/assets/icons-b719acf1.svg#icon-heart"></use>
+        </svg>
       </button>
       <button class="modal-giv-rating-btn">
-          <span>Giv a rating</span>
-          </button>
+        <span>Giv a rating</span>
+      </button>
     </div>
-
   </div>
 </div>
+
     <!--  is-hidden -->
 <div class="backdrop is-hidden" data-rating-modal>
   <div class="modal rating">
