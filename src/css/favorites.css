@@ -1,9 +1,7 @@
-.favorites-container
-{
-  width: 375px;
+.favorites-container{
   margin: 0 auto;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
   padding-bottom: 80px;
 }
 .favorites-parts-container {
@@ -16,7 +14,6 @@
 .favorites-left {
   margin: 0 20px;
   width: 335px;
-  height: 437px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -37,10 +34,25 @@
   width: 335px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 15px;
   border-radius: 20px;
   background: #fff;
 }
+.favorites-hundr-minutes {
+  color: var(--footer-background-color);
+font-feature-settings: 'clig' off, 'liga' off;
+font-size: 24px;
+font-weight: 500;
+line-height: 1.33;
+padding-top: 15px;
+padding-bottom: 6px;
+}
+.favorites-text-daily-norm {
+  color: rgba(36, 36, 36, 0.60);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.28;
+}
+
 .favorites-contain-photo {
   height: 119px;
   flex-shrink: 0;
@@ -49,7 +61,7 @@
   border-radius: 20px;
 }
 .favorites-right {
-  margin: 5px 20px;
+  margin: 0px 20px;
   width: 335px;
   height: 670px;
   border-radius: 10px;
@@ -62,9 +74,11 @@
   line-height: 1.36;
   letter-spacing: -0.02em;
   padding-bottom: 20px;
+  padding-left: 5px;
 }
 
 .favoritesMessage {
+  padding-top: 40px;
   color: var(--footer-background-color);
   text-align: center;
   font-size: 14px;
@@ -113,6 +127,7 @@
   border: 1px solid var(--footer-background-color);
 }
 .trash-icon {
+  height: 16px;
   margin-left: 8px;
   margin-right: 150px;
 }
@@ -159,6 +174,7 @@
   text-transform: capitalize;
 }
 .description {
+  width: 100%;
   height: 18px;
   display: flex;
   flex-direction: row;
@@ -216,10 +232,15 @@
 .description-target-normal::first-letter {
   text-transform: capitalize;
 }
-
+@media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .contain-two-foto {
+      background-image: url(./img/mobile/women-sportswear-working-mobile@2x.png);
+    }
+  }
 @media screen and (min-width: 768px) {
-  .favorites-container {
-    width: 768px;}
+  
   .favorites-parts-container {
     width: 768px;
     display: flex;
@@ -229,7 +250,6 @@
   .favorites-left {
     margin: 0 32px;
     width: 704px;
-    height: 377px;
     padding-bottom: 64px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -251,7 +271,7 @@
     width: 344px;
   }
   .favorites-right {
-    margin: 5px 32px;
+    margin: 0px 32px;
     width: 704px;
   }
   .favorites-title {
@@ -262,6 +282,7 @@
   }
 
   .favoritesMessage {
+    padding-top: 132px;
     font-size: 18px;
     line-height: 1.33;
     width: 554px;
@@ -300,11 +321,16 @@
     margin-right: 4px;
   }
 }
+@media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .contain-two-foto {
+      background-image: url(./img/tablet/women-sportswear-working-tablet@2x.png);
+    }
+  }
 
 @media screen and (min-width: 1440px) {
 
-  .favorites-container {
-    width: 1378px;}
   .favorites-parts-container {
     display: flex;
     flex-direction: row;
@@ -342,14 +368,27 @@
     min-height: 487px;
     height: 100%;
   }
-
+.favorites-list{
+  height: 487px;
+  overflow: scroll;}
+  
+  .favoritesMessage {
+    padding-top: 102px;
+  }
   .favorites-card-item {
     width: 405px;
   }
+  .trash-icon {
+    margin-right: 216px;
+  }
+
   .favorites-star {
     margin-right: 224px;
   }
-
+  .description-burned-grey {
+    width: 100%;
+    max-width: 83px;
+  }
   .description-burned-normal {
     margin-right: 16px;
     width: 55px;
@@ -357,7 +396,10 @@
     overflow: hidden;
     text-overflow: clip;
   }
-
+  .description-part-grey {
+    width: 100%;
+    max-width: 53px;
+  }
   .description-part-normal {
     margin-right: 16px;
     width: 37px;
@@ -367,3 +409,10 @@
     width: 90px;
   }
 }
+@media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .contain-two-foto {
+      background-image: url(./img/desktop/women-sportswear-working@2x.png);
+    }
+  }
