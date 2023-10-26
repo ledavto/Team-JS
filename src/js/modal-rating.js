@@ -12,7 +12,7 @@ const refsRating = {
 const variables = {
   rate: 0,
   //exerciseId: '64f389465ae26083f39b17a2',
-  exerciseId: document.querySelector('.backdrop-exr').getAttribute('id'),
+  exerciseId: document.querySelector('.backdrop-exr'),
 };
 
 refsRating.rateList.addEventListener('mouseover', handleHover);
@@ -68,7 +68,7 @@ function handleChange(event) {
 refsRating.form.addEventListener('submit', handleRatigSubmit);
 async function handleRatigSubmit(event) {
   event.preventDefault();
-  const id = variables.exerciseId;
+  const id = variables.exerciseId.dataset.id;
   const body = {};
   body.email = refsRating.form.elements.email.value;
   body.review = refsRating.form.elements.comment.value;

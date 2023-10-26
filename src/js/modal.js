@@ -130,6 +130,7 @@ refs.modalRating.addEventListener('click', event => {
     }
 }**/
 
+// Потрібно для роботи функції нижче
 const modalRefs = {
   id: document.querySelector('.backdrop-exr'),
   exName: document.querySelector('.text-title-pop'),
@@ -143,6 +144,7 @@ const modalRefs = {
   exGif: document.querySelector('.img-poppup'),
 };
 
+// Функція встановлює значення з серверу на модлаку
 async function setDetails() {
   const {
     id,
@@ -156,8 +158,6 @@ async function setDetails() {
     exGif,
   } = modalRefs;
   const data = await api.getDetails(id.dataset.id);
-  console.log(id);
-  console.log(data);
   const {
     name,
     target,
@@ -177,5 +177,3 @@ async function setDetails() {
   exAbout.textContent = description;
   exGif.src = gifUrl;
 }
-
-setDetails();
