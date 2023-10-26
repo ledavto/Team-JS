@@ -10,8 +10,11 @@ body {
   background: #fff; */
   display: flex;
   flex-direction: column;
-  max-width: 375px;
+  /* max-width: 375px; */
   background-color: var(--primary-background-color);
+  margin: 0 auto;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 /* todo DIV №1   */
@@ -216,7 +219,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 16px;
-    margin: 64px 32px 100px 32px;
+    margin: 64px 32px 80px 32px;
     max-width: 768px;
     max-width: 100%;
     /* padding: 64px 32px 100px 32px; */
