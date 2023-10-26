@@ -10,9 +10,9 @@
       href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
     />
     
-    <script type="module" crossorigin src="/Team-JS/assets/favorites-fb07bfad.js"></script>
-    <link rel="modulepreload" crossorigin href="/Team-JS/assets/go-top-ebe06be7.js">
-    <link rel="stylesheet" href="/Team-JS/assets/favorites-912ffc87.css">
+    <script type="module" crossorigin src="/Team-JS/assets/favorites-7432d6fa.js"></script>
+    <link rel="modulepreload" crossorigin href="/Team-JS/assets/go-top-742b48e5.js">
+    <link rel="stylesheet" href="/Team-JS/assets/favorites-cc69fa6e.css">
   </head>
   <body>
     <!-- <link rel="stylesheet" href="../css/header.css"> -->
@@ -236,96 +236,75 @@
 </section>
     </main>
 
-    <div class="backdrop is-hidden backdrop-exr" data-modal-general>
-  <div class="popup-body">
-    <div class="modal-general">
-      <button class="modal-general-close-btn">
-        <svg class="modal-general-close-icon" width="34" height="32">
-          <use href="/Team-JS/assets/icons-ce884f8c.svg#icon-btn-x"></use>
+    <div class="modal-exersice-wrapper">
+  <div class="modal-general">
+    <button class="modal-general-close-btn">
+      <svg class="modal-general-close-icon" width="34" height="32">
+        <use href="/Team-JS/assets/icons-ce884f8c.svg#icon-btn-x"></use>
+      </svg>
+    </button>
+    <div class="modal-general-info">
+      <div class="modal-general-img">
+        <img class="img-poppup" id="modal-exersice-img" alt="" width="295" />
+      </div>
+      <div>
+        <div class="modal-title">
+          <h3 class="text-title-pop" id="modal-exersice-title"></h3>
+        </div>
+        <span class="modal-rating" id="modal-exersice-rating-number"></span>
+        <div class="modal-stars" id="modal-exersice-rating"></div>
+        <div class="modal-pup-up">
+          <ul class="modal-pop-up-items">
+            <li>
+              <p class="text-popup-items">Target</p>
+              <p class="target-name popup-items" id="modal-exersice-target"></p>
+            </li>
+            <li>
+              <p class="text-popup-items">Body Part</p>
+              <p
+                class="body-part-name popup-items"
+                id="modal-exersice-bodypart"
+              ></p>
+            </li>
+            <li>
+              <p class="text-popup-items">Equipment</p>
+              <p
+                class="equipment-name popup-items"
+                id="modal-exersice-equipment"
+              ></p>
+            </li>
+            <li>
+              <p class="text-popup-items">Popular</p>
+              <p class="popular popup-items" id="modal-exersice-popularity"></p>
+            </li>
+            <li>
+              <p class="text-popup-items">Burned calories</p>
+              <p
+                class="how-much-calories popup-items"
+                id="modal-exersice-burnedcalories"
+              ></p>
+            </li>
+          </ul>
+        </div>
+        <p class="about-exr" id="modal-exersice-description"></p>
+      </div>
+    </div>
+
+    <div class="modal-button">
+      <button class="modal-add-favorates-btn">
+        Add favorites
+        <svg class="icon-heart">
+          <use href="/Team-JS/assets/icons-ce884f8c.svg#icon-heart"></use>
         </svg>
       </button>
-      <div class="modal-general-info">
-        <div class="modal-general-img">
-          <img
-            class="img-poppup"
-            src="https://ftp.goit.study/img/power-pulse/gifs/0001.gif"
-            alt=""
-            width="295"
-          />
-        </div>
-        <div>
-          <div class="modal-title">
-            <h3 class="text-title-pop">AIR BRAKE</h3>
-          </div>
-          <div class="modal-star">
-            <svg class="icon-star-exr">
-              <use href="/Team-JS/assets/icons-ce884f8c.svg#star-rate"></use>
-            </svg>
-            <svg class="icon-star-exr">
-              <use href="/Team-JS/assets/icons-ce884f8c.svg#star-rate"></use>
-            </svg>
-            <svg class="icon-star-exr">
-              <use href="/Team-JS/assets/icons-ce884f8c.svg#star-rate"></use>
-            </svg>
-            <svg class="icon-star-exr">
-              <use href="/Team-JS/assets/icons-ce884f8c.svg#star-rate"></use>
-            </svg>
-            <svg class="icon-star-exr">
-              <use href="/Team-JS/assets/icons-ce884f8c.svg#star-rate"></use>
-            </svg>
-          </div>
-          <div class="modal-pup-up">
-            <ul class="modal-pop-up-items">
-              <li>
-                <p class="text-popup-items">Target</p>
-                <p class="target-name popup-items">Abs</p>
-              </li>
-              <li>
-                <p class="text-popup-items">Body Part</p>
-                <p class="body-part-name popup-items">Waist</p>
-              </li>
-              <li>
-                <p class="text-popup-items">Equipment</p>
-                <p class="equipment-name popup-items">Body weight</p>
-              </li>
-              <li>
-                <p class="text-popup-items">Popular</p>
-                <p class="popular popup-items">150</p>
-              </li>
-              <li>
-                <p class="text-popup-items">Burned calories</p>
-                <p class="how-much-calories popup-items">323/3 min</p>
-              </li>
-            </ul>
-          </div>
-          <p class="about-exr">
-            This refers to your core muscles, which include the rectus
-            abdominis, obliques, and transverse abdominis. They're essential for
-            maintaining posture, stability, and generating force in many
-            movements. Exercises that target the abs include crunches, leg
-            raises, and planks.
-          </p>
-        </div>
-      </div>
-
-      <div class="modal-button">
-        <button class="modal-add-favorates-btn">
-          Add favorites
-
-          <svg class="icon-heart">
-            <use href="/Team-JS/assets/icons-ce884f8c.svg#icon-heart"></use>
-          </svg>
-        </button>
-        <button class="modal-giv-rating-btn">
-          <span>Giv a rating</span>
-        </button>
-      </div>
+      <button class="modal-giv-rating-btn">
+        <span>Give a rating</span>
+      </button>
     </div>
   </div>
 </div>
 
-    <!--  is-hidden -->
-<div class="backdrop is-hidden" data-rating-modal>
+    <div class="modal-rating-wrapper">
   <div class="modal rating">
     <button class="rating-close-btn">
       <svg class="rating-close-icon">
@@ -335,75 +314,55 @@
     <form class="rating-form">
       <span class="rating-text">Rating</span>
       <div class="rate">
-        <span class="rating-choosed">0.0</span>
-
-        <input
-          type="radio"
-          class="radial-button"
-          name="rate"
-          value="1"
-          id="oneStar"
-        />
-        <label for="oneStar">
-          <svg class="icon-star">
-            <use href="/Team-JS/assets/icons-ce884f8c.svg#star-rate"></use>
-          </svg>
-        </label>
-
-        <input
-          type="radio"
-          class="radial-button"
-          name="rate"
-          value="2"
-          id="twoStar"
-        />
-        <label for="twoStar">
-          <svg class="icon-star">
-            <use href="/Team-JS/assets/icons-ce884f8c.svg#star-rate"></use>
-          </svg>
-        </label>
-
-        <input
-          type="radio"
-          class="radial-button"
-          name="rate"
-          value="3"
-          id="threeStar"
-        />
-        <label for="threeStar">
-          <svg class="icon-star">
-            <use href="/Team-JS/assets/icons-ce884f8c.svg#star-rate"></use>
-          </svg>
-        </label>
-        <input
-          type="radio"
-          class="radial-button"
-          name="rate"
-          value="4"
-          id="fourStar"
-        />
-        <label for="fourStar">
-          <svg class="icon-star">
-            <use href="/Team-JS/assets/icons-ce884f8c.svg#star-rate"></use>
-          </svg>
-        </label>
-        <input
-          type="radio"
-          class="radial-button"
-          name="rate"
-          value="5"
-          id="fiveStar"
-        />
-        <label for="fiveStar">
-          <svg class="icon-star">
-            <use href="/Team-JS/assets/icons-ce884f8c.svg#star-rate"></use>
-          </svg>
-        </label>
+        <span id="rating-choosed" class="rating-choosed">0</span>
+        <div class="rate-wrapper">
+          <input
+            class="rate-star"
+            type="radio"
+            id="star5"
+            name="rate"
+            value="5"
+          />
+          <label for="star5" title="text">5 stars</label>
+          <input
+            class="rate-star"
+            type="radio"
+            id="star4"
+            name="rate"
+            value="4"
+          />
+          <label for="star4" title="text">4 stars</label>
+          <input
+            class="rate-star"
+            type="radio"
+            id="star3"
+            name="rate"
+            value="3"
+          />
+          <label for="star3" title="text">3 stars</label>
+          <input
+            class="rate-star"
+            type="radio"
+            id="star2"
+            name="rate"
+            value="2"
+          />
+          <label for="star2" title="text">2 stars</label>
+          <input
+            class="rate-star"
+            type="radio"
+            id="star1"
+            name="rate"
+            value="1"
+          />
+          <label for="star1" title="text">1 star</label>
+        </div>
       </div>
       <input
         class="rating-inp-e"
         type="email"
         name="email"
+        id="rating-email"
         placeholder="Email"
         required
       />
@@ -411,11 +370,14 @@
         class="rating-inp-com"
         type="text"
         name="comment"
+        id="rating-comment"
         placeholder="Your comment"
         rows="4"
         required
       ></textarea>
-      <button class="rating-submit" type="submit">Send</button>
+      <button class="rating-submit" id="rating-submit-button" type="submit">
+        Send
+      </button>
     </form>
   </div>
 </div>
