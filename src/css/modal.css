@@ -63,7 +63,8 @@
 .modal-general {
   background-color: rgba(36, 36, 36, 1);
   color: rgba(244, 244, 244, 1);
-  max-width: calc(100% - 40px);
+  margin: auto;
+  width: calc(100% - 20px);
   padding: 40px 20px;
   border-radius: 20px;
   display: flex;
@@ -73,8 +74,9 @@
   top: 10px;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  /* position: relative; */
+
+  max-width: 350px;
+  position: relative;
 }
 
 /* .modal-open {
@@ -234,6 +236,15 @@
   color: #f4f4f4;
   height: 42px;
   width: 122px;
+}
+
+@media only screen and (max-width: 768px) {
+  .modal-exersice-wrapper {
+    left: 0;
+    top: 0;
+    right: 0;
+    transform: unset;
+  }
 }
 
 @media only screen and (min-width: 768px) {
