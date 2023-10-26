@@ -48,6 +48,14 @@ function updatePagination(totalPages) {
   const paginationContainer = document.getElementById('pagination');
   paginationContainer.innerHTML = '';
 
+  // lm
+  if (totalPages > 0){
+    paginationContainer.style.display = ''
+  } else {
+    paginationContainer.style.display = 'none'
+  }
+  // lm
+
   const options = {
     totalItems: totalPages * itemsPerPage,
     itemsPerPage: itemsPerPage,
@@ -187,7 +195,8 @@ function showExercises(category, subCategory, keywords, page = 1) {
     .then(data => {
       const categoryCards = document.getElementById('category-cards');
       categoryCards.innerHTML = '';
-
+      
+      if (data.totalPages > 0){
       data.results.forEach(exr => {
         const exrCard = document.createElement('div');
         exrCard.classList.add('exr-item');
@@ -248,13 +257,20 @@ document.querySelector('.modal-general-close-btn').addEventListener('click',
         );
 
       });
+      } else {
+        const exrCard = document.createElement('div');
+        exrCard.classList.add('exr-empty-search-list');
+        exrCard.innerHTML = 'Nothing was found for your request.'
+        categoryCards.appendChild(exrCard);
+      }
+
+      updatePaginationExercises(data.totalPages);
 
       document.querySelector(
         '.exercise-section-title'
       ).innerHTML = `Exercise / <span class="exercise-section-title-span">${subCategory}</span>`;
       document.querySelector('.exercise-section-search').style.display = '';
 
-      updatePaginationExercises(data.totalPages);
     })
     .catch(error => {
       console.error(error);
@@ -272,6 +288,8 @@ document
     selectedKeyword = keyword.trim();
     currentPage = 1;
 
+    form.elements.keyword.value='';
+
     showExercises(
       selectedCategory,
       selectedSubCategory,
@@ -283,6 +301,12 @@ document
 function updatePaginationExercises(totalPages) {
   const paginationContainer = document.getElementById('pagination');
   paginationContainer.innerHTML = '';
+
+  if (totalPages > 0){
+    paginationContainer.style.display = ''
+  } else {
+    paginationContainer.style.display = 'none'
+  }
 
   const options = {
     totalItems: totalPages * itemsPerPage,
