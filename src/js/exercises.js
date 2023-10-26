@@ -250,9 +250,11 @@ function showExercises(category, subCategory, keywords, page = 1) {
             document.querySelector('.backdrop').classList.remove('is-hidden');
 
             //Додає ID вправи у карточку
-            document
-              .querySelector('.backdrop-exr')
-              .setAttribute('id', event.currentTarget.getAttribute('data-id'));
+            // document
+            //   .querySelector('.backdrop-exr')
+            //   .setAttribute('id', event.currentTarget.getAttribute('data-id'));
+            document.querySelector('.backdrop-exr').dataset.id =
+              event.currentTarget.getAttribute('data-id');
           });
         });
       } else {
