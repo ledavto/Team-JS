@@ -22,14 +22,21 @@ const refs = {
   favoritExercise: document.querySelector('.exr-item'),
 };
 
-console.log(refs.modalCloseBtn);
+console.log(refs.modalCloseBtn());
+
+//Слухач кнопки CLOSE
+
+refs.modalCloseBtn.addEventListener(
+  'click',
+  document.querySelector('.backdrop').classList.add('is-hidden')
+);
 
 // const showModal =() =>(event) {
-  
+
 //           //localStorage.setItem(id_exr_start, event.currentTarget.);
 //           console.log("event.target: ", event.target);
 //           console.log("event.currentTarget: ", event.currentTarget);
-        
+
 // }
 
 // refs.modalOpenBtn.addEventListener('click', showModal);

@@ -49,10 +49,10 @@ function updatePagination(totalPages) {
   paginationContainer.innerHTML = '';
 
   // lm
-  if (totalPages > 0){
-    paginationContainer.style.display = ''
+  if (totalPages > 0) {
+    paginationContainer.style.display = '';
   } else {
-    paginationContainer.style.display = 'none'
+    paginationContainer.style.display = 'none';
   }
   // lm
 
@@ -195,14 +195,14 @@ function showExercises(category, subCategory, keywords, page = 1) {
     .then(data => {
       const categoryCards = document.getElementById('category-cards');
       categoryCards.innerHTML = '';
-      
-      if (data.totalPages > 0){
-      data.results.forEach(exr => {
-        const exrCard = document.createElement('div');
-        exrCard.classList.add('exr-item');
-        exrCard.dataset.id = `${exr._id}`;
 
-        exrCard.innerHTML = `
+      if (data.totalPages > 0) {
+        data.results.forEach(exr => {
+          const exrCard = document.createElement('div');
+          exrCard.classList.add('exr-item');
+          exrCard.dataset.id = `${exr._id}`;
+
+          exrCard.innerHTML = `
           <div class="exr-item-header">
             <div class="exr-item-header-workout">WORKOUT</div>
             <div class="exr-item-header-rating">${exr.rating}</div>
@@ -240,27 +240,19 @@ function showExercises(category, subCategory, keywords, page = 1) {
           </div>
         `;
 
-        categoryCards.appendChild(exrCard);
+          categoryCards.appendChild(exrCard);
 
-        //Слухач на натискання скнопки START
-        exrCard.addEventListener('click', (event) => {
-          //localStorage.setItem(id_exr_start, event.currentTarget.);
-          console.log("event.currentTarget: ", event.currentTarget);
-          document.querySelector('.backdrop-modal').classList.remove('is-hidden');
+          //Слухач на натискання скнопки START
+          exrCard.addEventListener('click', event => {
+            //localStorage.setItem(id_exr_start, event.currentTarget.);
+            console.log('event.currentTarget: ', event.currentTarget);
+            document.querySelector('.backdrop').classList.remove('is-hidden');
+          });
         });
-
-        //Слухач кнопки CLOSE
-
-
-document.querySelector('.modal-general-close-btn').addEventListener('click', 
-          document.querySelector('.backdrop-modal').classList.add('is-hidden')
-        );
-
-      });
       } else {
         const exrCard = document.createElement('div');
         exrCard.classList.add('exr-empty-search-list');
-        exrCard.innerHTML = 'Nothing was found for your request.'
+        exrCard.innerHTML = 'Nothing was found for your request.';
         categoryCards.appendChild(exrCard);
       }
 
@@ -270,7 +262,6 @@ document.querySelector('.modal-general-close-btn').addEventListener('click',
         '.exercise-section-title'
       ).innerHTML = `Exercise / <span class="exercise-section-title-span">${subCategory}</span>`;
       document.querySelector('.exercise-section-search').style.display = '';
-
     })
     .catch(error => {
       console.error(error);
@@ -288,7 +279,7 @@ document
     selectedKeyword = keyword.trim();
     currentPage = 1;
 
-    form.elements.keyword.value='';
+    form.elements.keyword.value = '';
 
     showExercises(
       selectedCategory,
@@ -302,10 +293,10 @@ function updatePaginationExercises(totalPages) {
   const paginationContainer = document.getElementById('pagination');
   paginationContainer.innerHTML = '';
 
-  if (totalPages > 0){
-    paginationContainer.style.display = ''
+  if (totalPages > 0) {
+    paginationContainer.style.display = '';
   } else {
-    paginationContainer.style.display = 'none'
+    paginationContainer.style.display = 'none';
   }
 
   const options = {
