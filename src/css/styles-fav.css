@@ -13,7 +13,7 @@
 @import url('./tui-pagination.css');
 @import url('./footer.css');
 @import url('./modal.css');
-/* @import url('./modal-rating.css'); */
+@import url('./modal-rating.css');
 @import url('./go-top.css');
 
 @font-face {

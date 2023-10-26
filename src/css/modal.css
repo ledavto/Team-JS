@@ -1,4 +1,5 @@
-.modal-wrapper {
+.modal-exersice-wrapper,
+.modal-rating-wrapper {
   position: fixed;
   left: 50%;
   top: 50%;
@@ -18,7 +19,9 @@
 }
 
 .modal-exercise-open .overlay,
-.modal-exercise-open .modal-wrapper {
+.modal-rating-open .overlay,
+.modal-exercise-open .modal-exersice-wrapper,
+.modal-rating-open .modal-rating-wrapper {
   display: block;
 }
 
@@ -133,6 +136,7 @@
   letter-spacing: 0px;
   text-align: left;
   margin-bottom: 16px;
+  text-transform: capitalize;
 }
 
 .popup-items {
@@ -175,7 +179,7 @@
 }
 
 .modal-add-favorates-btn {
-  display: block;
+  display: flex;
   border: 0;
   font-size: 14px;
   border-radius: 30px;
@@ -191,7 +195,10 @@
 }
 
 .modal-star {
-  margin-bottom: 16px;
+  background: url('../img/star-transparent.png');
+  max-width: 100px;
+  height: 18px;
+  width: 100%;
 }
 
 .icon-star-exr {
@@ -211,8 +218,6 @@
   stroke: white;
 }
 
-.mod-favorite-btn-text {
-}
 .icon-heart {
   stroke: #242424;
   width: 18px;
@@ -221,9 +226,9 @@
   fill: none;
   margin-left: 6px;
 }
+
 .modal-giv-rating-btn {
-  border: 1px, color #f4f4f4;
-  border-color: #f4f4f4;
+  border: 1px solid #f4f4f4;
   border-radius: 30px;
   background: rgba(36, 36, 36, 1);
   color: #f4f4f4;
@@ -260,4 +265,66 @@
   .modal-general-info {
     flex-direction: unset;
   }
+}
+
+.modal-rating {
+  font-size: 12px;
+}
+
+.modal-stars {
+  --star-background: #eea10c;
+  --percent: calc(var(--rating) / 5 * 100%);
+
+  display: inline-block;
+  font-size: 18px;
+  font-family: Times;
+  line-height: 1;
+  margin-bottom: 16px;
+
+  &::before {
+    content: '★★★★★';
+    letter-spacing: 3px;
+    background: linear-gradient(
+      90deg,
+      var(--star-background) var(--percent),
+      #f4f4f42e var(--percent)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.rate-wrapper {
+  height: 18px;
+  padding: 0 10px;
+}
+.rate-wrapper:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+.rate-wrapper:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 18px;
+  color: #ccc;
+}
+.rate-wrapper:not(:checked) > label:before {
+  content: '★ ';
+}
+.rate-wrapper > input:checked ~ label {
+  color: #ffc700;
+}
+.rate-wrapper:not(:checked) > label:hover,
+.rate-wrapper:not(:checked) > label:hover ~ label {
+  color: #deb217;
+}
+.rate-wrapper > input:checked + label:hover,
+.rate-wrapper > input:checked + label:hover ~ label,
+.rate-wrapper > input:checked ~ label:hover,
+.rate-wrapper > input:checked ~ label:hover ~ label,
+.rate-wrapper > label:hover ~ input:checked ~ label {
+  color: #c59b08;
 }
