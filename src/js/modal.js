@@ -56,7 +56,7 @@ function handleAddFav() {
   api
     .getDetails(document.querySelector('.backdrop-exr').getAttribute('data-id'))
     .then(data => {
-      console.log(data);
+      //console.log(data);
 
       getListFavor.push(data);
       localStorage.setItem('checkout', JSON.stringify(getListFavor));
