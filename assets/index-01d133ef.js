@@ -12,7 +12,7 @@ import{a as y,P as b,n as L}from"./go-top-9f2a7146.js";const q="/Team-JS/assets/
             <button class="exr-item-header-start" type="button">
               <span class="exr-item-header-text">Start</span>
               <svg class="exr-item-header-arrow" width="16" height="16">
-                <use href="${q}.svg#icon-arrow"></use>
+                <use href="${q}#icon-arrow"></use>
               </svg>
             </button>
           </div>
