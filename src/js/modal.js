@@ -70,3 +70,36 @@ document
   .addEventListener('click', openRatingModal);
 
 export default { setDataExerciseModal, closeRatingModal };
+
+
+let getListFavor = [];
+if (localStorage.getItem('checkout')) {
+  getListFavor = [...JSON.parse(localStorage.getItem('checkout'))];
+}
+
+//Закриття по ESCAPE
+document.addEventListener("keydown", event => {
+  if (event.key === 'Escape') handleClose();
+});
+
+//Слухач кнопки AddToFavorites
+//console.log(refs.modalAddFavoritesBtn);
+document.querySelector('.modal-add-favorates-btn').addEventListener('click', handleAddFav);
+function handleAddFav() {
+  // api
+  //   .getDetails(document.querySelector('.backdrop-exr').getAttribute('data-id'))
+  //   .then(data => {
+  //     //console.log(data);
+
+  //     getListFavor.push(data);
+  //     localStorage.setItem('checkout', JSON.stringify(getListFavor));
+  //   })
+  //   .catch(error => {
+  //     console.error(error);
+  //   });
+  async id => {
+    const response = await api.getDetails(id);
+    getListFavor.push(response);
+    localStorage.setItem('checkout', JSON.stringify(getListFavor));
+  }
+}
