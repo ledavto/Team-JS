@@ -80,6 +80,11 @@ body {
   font-weight: var(--primary-fontweight);
 }
 
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
 /* .header-container {
   padding-top: 20px;
   padding-left: 20px;
