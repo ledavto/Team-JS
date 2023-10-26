@@ -210,7 +210,7 @@ function showExercises(category, subCategory, keywords, page = 1) {
             <div class="exr-item-header-rating">${exr.rating}</div>
             <div class="exr-item-header-star">
               <svg width="14" height="13">
-                <use href="/img/icons.svg#star-rate"></use>
+                <use href="${svgSprite}#star-rate"></use>
               </svg>
             </div>
             <button class="exr-item-header-start" type="button">
@@ -224,7 +224,7 @@ function showExercises(category, subCategory, keywords, page = 1) {
           <div class="exr-item-name">
             <div class="exr-item-name-svg">
               <svg class="exr-item-name-svg-svg" width="15" height="15">
-                <use href="/img/icons.svg#icon-running-stick-figure"></use>
+                <use href="${svgSprite}#icon-running-stick-figure"></use>
               </svg>
             </div>
             <div class="exr-item-name-text">${exr.name}</div>
