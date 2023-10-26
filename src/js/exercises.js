@@ -3,7 +3,7 @@ import api from './api';
 import Pagination from 'tui-pagination';
 // import 'tui-pagination/dist/tui-pagination.css';
 
-import svgSprite from '../../img/icons.svg';
+import svgSprite from '../img/icons.svg';
 
 let currentPage = 1;
 let selectedCategory = 'Body parts';
