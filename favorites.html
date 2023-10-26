@@ -10,9 +10,9 @@
       href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
     />
     
-    <script type="module" crossorigin src="/Team-JS/assets/favorites-e5fa3ec5.js"></script>
+    <script type="module" crossorigin src="/Team-JS/assets/favorites-b3b5b7da.js"></script>
     <link rel="modulepreload" crossorigin href="/Team-JS/assets/go-top-9f2a7146.js">
-    <link rel="stylesheet" href="/Team-JS/assets/favorites-1e474922.css">
+    <link rel="stylesheet" href="/Team-JS/assets/favorites-2b380c28.css">
   </head>
   <body>
     <!-- <link rel="stylesheet" href="../css/header.css"> -->
@@ -236,25 +236,25 @@
 </section>
     </main>
 
-    <div class="backdrop is-hidden" data-modal-general>
-  <div class="backdrop-exr">
-    <div class="modal-title">
-      <button class="modal-general-close-btn">
+    <div class="backdrop is-hidden backdrop-exr" data-modal-general>
+    <div class="popup-body">      
+      <div class="modal-general">
+        <button class="modal-general-close-btn">
         <svg class="modal-general-close-icon" width="34" height="32">
           <use href="/Team-JS/assets/icons-ce884f8c.svg#icon-btn-x"></use>
         </svg>
-      </button>
-    </div>
-    <div class="modal-general">
-      <div class="modal-general-img">
-        <img
+        </button>
+      <div class="modal-general-info">
+         <div class="modal-general-img">
+          <img class="img-poppup"
           src="https://ftp.goit.study/img/power-pulse/gifs/0001.gif"
           alt=""
           width="295"
-        />
-      </div>
-      <div class="modal-general-info">
-        <h3>AIR BRAKE</h3>
+          />
+         </div>
+         <div class="modal-title">    
+         <h3 class="text-title-pop">AIR BRAKE</h3>
+         </div>
         <div class="modal-star">
           <svg class="icon-star-exr">
             <use href="/Team-JS/assets/icons-ce884f8c.svg#star-rate"></use>
@@ -272,30 +272,32 @@
             <use href="/Team-JS/assets/icons-ce884f8c.svg#star-rate"></use>
           </svg>
         </div>
+        <hr class="line">
         <div class="modal-pup-up">
           <ul class="modal-pop-up-items">
             <li>
-              <div>Target</div>
+              <div class="text-popup-items">Target</div>
               <div class="target-name popup-items">Abs</div>
             </li>
             <li>
-              <div>Body Part</div>
+              <div class="text-popup-items">Body Part</div>
               <div class="body-part-name popup-items">Waist</div>
             </li>
             <li>
-              <div>Equipment</div>
+              <div class="text-popup-items">Equipment</div>
               <div class="equipment-name popup-items">Body weight</div>
             </li>
             <li>
-              <div>Popular</div>
+              <div class="text-popup-items">Popular</div>
               <div class="popular popup-items">150</div>
             </li>
             <li>
-              <div>Burned calories</div>
+              <div class="text-popup-items">Burned calories</div>
               <div class="how-much-calories popup-items">323/3 min</div>
             </li>
           </ul>
         </div>
+        <hr class="line">
         <p class="about-exr">
           This refers to your core muscles, which include the rectus abdominis,
           obliques, and transverse abdominis. They're essential for maintaining
@@ -303,8 +305,8 @@
           that target the abs include crunches, leg raises, and planks.
         </p>
       </div>
-    </div>
-    <div class="modal-button">
+    
+      <div class="modal-button">
       <button class="modal-add-favorates-btn">
         <span>Add favorites</span>
 
@@ -315,6 +317,7 @@
       <button class="modal-giv-rating-btn">
         <span>Giv a rating</span>
       </button>
+      </div>
     </div>
   </div>
 </div>
