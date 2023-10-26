@@ -1,4 +1,4 @@
-import{s as g,P as m}from"./go-top-d669fd5c.js";const v=document.querySelector(".js-favorites");document.querySelector(".js-favorites-message");const f="checkout";let l=1,a=8,u=JSON.parse(localStorage.getItem(f))??[];function p(s=1){if(u.length===0)v.insertAdjacentHTML("beforeend",`<p class="favoritesMessage js-favorites-message">
+import{s as g,P as m}from"./go-top-ff30b396.js";const v=document.querySelector(".js-favorites");document.querySelector(".js-favorites-message");const f="checkout";let l=1,a=8,u=JSON.parse(localStorage.getItem(f))??[];function p(s=1){if(u.length===0)v.insertAdjacentHTML("beforeend",`<p class="favoritesMessage js-favorites-message">
     It appears that you haven't added any exercises to your favorites yet.
     To get started, you can add exercises that you like to your favorites
     for easier access in the future.
