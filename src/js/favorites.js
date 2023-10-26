@@ -17,140 +17,6 @@ let itemsPerPage = 8;
 
 const checkoutProducts = [];
 
-// const checkoutProducts=[
-//   {
-//     "_id": "64f389465ae26083f39b17a2",
-//     "bodyPart": "waist",
-//     "equipment": "body weight",
-//     "gifUrl": "https://ftp.goit.study/img/power-pulse/gifs/0001.gif",
-//     "name": "3/4 sit-up",
-//     "target": "abs",
-//     "description": "This refers to your core muscles, which include the rectus abdominis, obliques, and transverse abdominis. They're essential for maintaining posture, stability, and generating force in many movements. Exercises that target the abs include crunches, leg raises, and planks.",
-//     "rating": 4.5,
-//     "burnedCalories": 220,
-//     "time": 3,
-//     "popularity": 1322
-// },
-// {
-//     "_id": "64f389465ae26083f39b17a7",
-//     "bodyPart": "chest",
-//     "equipment": "leverage machine",
-//     "gifUrl": "https://ftp.goit.study/img/power-pulse/gifs/0009.gif",
-//     "name": "assisted chest dip (kneeling)",
-//     "target": "pectorals",
-//     "description": "These are the large chest muscles responsible for shoulder adduction and horizontal adduction. Bench press, push-ups, and chest flies target these muscles.",
-//     "rating": 3,
-//     "burnedCalories": 329,
-//     "time": 3,
-//     "popularity": 99
-// },
-// {
-//     "_id": "64f389465ae26083f39b17a3",
-//     "bodyPart": "waist",
-//     "equipment": "body weight",
-//     "gifUrl": "https://ftp.goit.study/img/power-pulse/gifs/0002.gif",
-//     "name": "45° side bend",
-//     "target": "abs",
-//     "description": "This refers to your core muscles, which include the rectus abdominis, obliques, and transverse abdominis. They're essential for maintaining posture, stability, and generating force in many movements. Exercises that target the abs include crunches, leg raises, and planks.",
-//     "rating": 3,
-//     "burnedCalories": 323,
-//     "time": 3,
-//     "popularity": 263
-// },
-// {
-//     "_id": "64f389465ae26083f39b17a4",
-//     "bodyPart": "waist",
-//     "equipment": "body weight",
-//     "gifUrl": "https://ftp.goit.study/img/power-pulse/gifs/0003.gif",
-//     "name": "air bike",
-//     "target": "abs",
-//     "description": "This refers to your core muscles, which include the rectus abdominis, obliques, and transverse abdominis. They're essential for maintaining posture, stability, and generating force in many movements. Exercises that target the abs include crunches, leg raises, and planks.",
-//     "rating": 4.64,
-//     "burnedCalories": 312,
-//     "time": 3,
-//     "popularity": 638
-// },
-// {
-//     "_id": "64f389465ae26083f39b17a5",
-//     "bodyPart": "waist",
-//     "equipment": "body weight",
-//     "gifUrl": "https://ftp.goit.study/img/power-pulse/gifs/0006.gif",
-//     "name": "alternate heel touchers",
-//     "target": "abs",
-//     "description": "This refers to your core muscles, which include the rectus abdominis, obliques, and transverse abdominis. They're essential for maintaining posture, stability, and generating force in many movements. Exercises that target the abs include crunches, leg raises, and planks.",
-//     "rating": 3,
-//     "burnedCalories": 116,
-//     "time": 3,
-//     "popularity": 74
-// },
-// {
-//     "_id": "64f389465ae26083f39b17ac",
-//     "bodyPart": "waist",
-//     "equipment": "medicine ball",
-//     "gifUrl": "https://ftp.goit.study/img/power-pulse/gifs/0014.gif",
-//     "name": "assisted motion russian twist",
-//     "target": "abs",
-//     "description": "This refers to your core muscles, which include the rectus abdominis, obliques, and transverse abdominis. They're essential for maintaining posture, stability, and generating force in many movements. Exercises that target the abs include crunches, leg raises, and planks.",
-//     "rating": 3,
-//     "burnedCalories": 212,
-//     "time": 3,
-//     "popularity": 0
-// },
-// {
-//     "_id": "64f389465ae26083f39b17b7",
-//     "bodyPart": "upper legs",
-//     "equipment": "barbell",
-//     "gifUrl": "https://ftp.goit.study/img/power-pulse/gifs/0026.gif",
-//     "name": "barbell bench squat",
-//     "target": "quads",
-//     "description": "Located at the front of the upper leg, the quads are responsible for knee extension and hip flexion. Exercises include squats, leg press, and lunges.",
-//     "rating": 3,
-//     "burnedCalories": 259,
-//     "time": 3,
-//     "popularity": 60
-// },
-// {
-//     "_id": "64f389465ae26083f39b17ba",
-//     "bodyPart": "upper legs",
-//     "equipment": "barbell",
-//     "gifUrl": "https://ftp.goit.study/img/power-pulse/gifs/0029.gif",
-//     "name": "barbell clean-grip front squat",
-//     "target": "glutes",
-//     "description": "Located in the buttocks, these are powerful muscles used in hip extension, abduction, and external rotation. Exercises like squats, deadlifts, and hip thrusts target the glutes.",
-//     "rating": 3,
-//     "burnedCalories": 128,
-//     "time": 3,
-//     "popularity": 56
-// },
-// {
-//   "_id": "64f389465ae26083f39b17bc",
-//   "bodyPart": "upper arms",
-//   "equipment": "barbell",
-//   "gifUrl": "https://ftp.goit.study/img/power-pulse/gifs/0031.gif",
-//   "name": "barbell curl",
-//   "target": "biceps",
-//   "description": "Located on the front part of the upper arm, the biceps are responsible for elbow flexion and supination of the forearm. Exercises that target biceps include bicep curls, hammer curls, and chin-ups.",
-//   "rating": 3,
-//   "burnedCalories": 245,
-//   "time": 3,
-//   "popularity": 160
-// },
-// {
-//   "_id": "64f389465ae26083f39b17c1",
-//   "bodyPart": "chest",
-//   "equipment": "barbell",
-//   "gifUrl": "https://ftp.goit.study/img/power-pulse/gifs/0036.gif",
-//   "name": "barbell decline wide-grip press",
-//   "target": "pectorals",
-//   "description": "These are the large chest muscles responsible for shoulder adduction and horizontal adduction. Bench press, push-ups, and chest flies target these muscles.",
-//   "rating": 3,
-//   "burnedCalories": 209,
-//   "time": 3,
-//   "popularity": 5
-// }
-// ];
-//localStorage.setItem(FAVORITES_LS_KEY, JSON.stringify(checkoutProducts));
-
 let checkoutFavorites =
   JSON.parse(localStorage.getItem(FAVORITES_LS_KEY)) ?? [];
 
@@ -170,6 +36,21 @@ function showFavorites(page = 1) {
       'beforeend',
       createMarkup(checkoutFavorites, page)
     );
+
+    //Слухач на натискання скнопки START
+    const arrFavEl = document.querySelectorAll('.favorites-card-item');
+     
+    arrFavEl.forEach((element) => {
+      element.addEventListener('click', event => {
+        document.querySelector('.backdrop').classList.remove('is-hidden');
+
+        // Додає ID вправи у карточку
+        document
+          .querySelector('.backdrop-exr')
+          .setAttribute('id', event.currentTarget.getAttribute('data-id'));
+      });
+    });
+      
   }
 }
 
@@ -202,8 +83,9 @@ function createMarkup(exercises, page = 1) {
   const arr = [];
 
   for (let i = indStart; i < indEnd; i++) {
-    arr.push(
-      `<div data-id="${exercises[i]._id}"class="favorites-card-item">
+
+    const favCard =
+      `<div data-id="${exercises[i]._id}" class="favorites-card-item">
       <div class="favorites-card-workout">
       <p class="favorites-workout">WORKOUT</p>
       <svg class="trash-icon" width="16" height="16">
@@ -233,8 +115,11 @@ function createMarkup(exercises, page = 1) {
             <p class="description-target-grey">Target:</p>
             <p class="description-target-normal">${exercises[i].target}</p>
             </div>
-      </div>`
-    );
+      </div>`;
+    arr.push(favCard);
+    
+    
+
   }
 
   if (itemsPerPage > 0) {
