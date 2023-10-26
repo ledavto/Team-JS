@@ -35,8 +35,19 @@ if (localStorage.getItem('checkout')) {
 refs.modalCloseBtn.addEventListener('click', handleClose);
 function handleClose() {
   refs.generalModals.classList.add('is-hidden');
-  console.log(refs.modalCloseBtn);
+  //console.log(refs.modalCloseBtn);
 }
+
+//Закриття по ESCAPE
+document.addEventListener("keydown", event => {
+  if (event.key === 'Escape') handleClose();
+});
+
+
+// document.onmouseup(function (e) {
+    
+//   console.log(e.target);
+// });
 
 //Слухач кнопки AddToFavorites
 console.log(refs.modalAddFavoritesBtn);
