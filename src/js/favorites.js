@@ -41,15 +41,62 @@ function showFavorites(page = 1) {
     const arrFavEl = document.querySelectorAll('.favorites-card-item');
      
     arrFavEl.forEach((element) => {
-      element.addEventListener('click', event => {
+
+      //console.log(element.querySelector('.btnStartFav'));
+      element.querySelector('.btnStartFav').addEventListener('click', event => {
         document.querySelector('.backdrop').classList.remove('is-hidden');
 
+        console.log(element);
         // Додає ID вправи у карточку
         document
           .querySelector('.backdrop-exr')
-          .setAttribute('id', event.currentTarget.getAttribute('data-id'));
+          .setAttribute('id', element.getAttribute('data-id'));
       });
     });
+
+    //Слухач на натискання скнопки TRASH
+    const arrFavTrash = document.querySelectorAll('.favorites-card-item');
+    
+    arrFavTrash.forEach((element) => {
+  
+      console.log(element.querySelector('.trash-icon'));
+
+      element.querySelector('.trash-icon').addEventListener('click', event => {
+        
+         console.log(element.getAttribute('data-id'));
+
+        const cardId = element.getAttribute('data-id');
+        
+                
+        let checkoutFavorites =
+          JSON.parse(localStorage.getItem(FAVORITES_LS_KEY)) ?? [];
+        
+  const currentCard = checkoutFavorites.find(({ _id }) => _id === cardId); // знайшли обʼєкт поточного товару в масиві всіх товарів за id
+
+  const newCardIdx = checkoutFavorites.findIndex(({ _id }) => _id === cardId); // знаходимо індекс вправи з масиву favorites (якщо такої вправи немає - повертає -1)
+
+  if (newCardIdx !== -1) {
+    // якщо це вправа є в localStorage
+    checkoutFavorites.splice(newCardIdx, 1);
+    localStorage.setItem(FAVORITES_LS_KEY, JSON.stringify(checkoutFavorites));
+    element.remove();
+  }
+  if (checkoutFavorites.length === 0) {
+    favorites.insertAdjacentHTML(
+      'beforeend',
+      `<p class="favoritesMessage js-favorites-message">
+    It appears that you haven't added any exercises to your favorites yet.
+    To get started, you can add exercises that you like to your favorites
+    for easier access in the future.
+  </p>`
+    );
+        }
+        
+
+        
+      });
+    });
+
       
   }
 }
@@ -88,11 +135,14 @@ function createMarkup(exercises, page = 1) {
       `<div data-id="${exercises[i]._id}" class="favorites-card-item">
       <div class="favorites-card-workout">
       <p class="favorites-workout">WORKOUT</p>
+      <div class="btnTrashFav">
       <svg class="trash-icon" width="16" height="16">
                   <use href="${svgSprite}#icon-trash"></use>
                 </svg>
-      <div class="favorites-start">Start</div>
-              <div>
+                </div>
+              <div class="btnStartFav">
+                <div class="favorites-start">Start</div>
+              
                 <svg class="favorites-header-arrow" width="16" height="16">
                   <use href="${svgSprite}#icon-arrow"></use>
                 </svg>
@@ -158,36 +208,37 @@ function updatePaginationFavorites(totalPages) {
 let totalPages = checkoutFavorites.length / 8;
 // updatePaginationExercises(totalPages);
 
-favorites.addEventListener('click', trashcard);
+// favorites.addEventListener('click', trashcard);
 
-function trashcard(event) {
-  if (!event.target.classList.contains('trash-icon')) {
-    return;
-  }
-  const card = event.target.closest('.favorites-card-item'); // отримаємо посилання на всю лішку
+// function trashcard(event) {
+//   if (!event.target.classList.contains('trash-icon')) {
+//     return;
+//   }
 
-  const cardId = card.dataset.id; // через дата атрибут отримали id поточної вправи
+//   const card = event.target.closest('.favorites-card-item'); // отримаємо посилання на всю лішку
 
-  let checkoutFavorites =
-    JSON.parse(localStorage.getItem(FAVORITES_LS_KEY)) ?? [];
-  const currentCard = checkoutFavorites.find(({ _id }) => _id === cardId); // знайшли обʼєкт поточного товару в масиві всіх товарів за id
+//   const cardId = card.dataset.id; // через дата атрибут отримали id поточної вправи
 
-  const newCardIdx = checkoutFavorites.findIndex(({ _id }) => _id === cardId); // знаходимо індекс вправи з масиву favorites (якщо такої вправи немає - повертає -1)
+//   let checkoutFavorites =
+//     JSON.parse(localStorage.getItem(FAVORITES_LS_KEY)) ?? [];
+//   const currentCard = checkoutFavorites.find(({ _id }) => _id === cardId); // знайшли обʼєкт поточного товару в масиві всіх товарів за id
 
-  if (newCardIdx !== -1) {
-    // якщо це вправа є в localStorage
-    checkoutFavorites.splice(newCardIdx, 1);
-    localStorage.setItem(FAVORITES_LS_KEY, JSON.stringify(checkoutFavorites));
-    card.remove();
-  }
-  if (checkoutFavorites.length === 0) {
-    favorites.insertAdjacentHTML(
-      'beforeend',
-      `<p class="favoritesMessage js-favorites-message">
-    It appears that you haven't added any exercises to your favorites yet.
-    To get started, you can add exercises that you like to your favorites
-    for easier access in the future.
-  </p>`
-    );
-  }
-}
+//   const newCardIdx = checkoutFavorites.findIndex(({ _id }) => _id === cardId); // знаходимо індекс вправи з масиву favorites (якщо такої вправи немає - повертає -1)
+
+//   if (newCardIdx !== -1) {
+//     // якщо це вправа є в localStorage
+//     checkoutFavorites.splice(newCardIdx, 1);
+//     localStorage.setItem(FAVORITES_LS_KEY, JSON.stringify(checkoutFavorites));
+//     card.remove();
+//   }
+//   if (checkoutFavorites.length === 0) {
+//     favorites.insertAdjacentHTML(
+//       'beforeend',
+//       `<p class="favoritesMessage js-favorites-message">
+//     It appears that you haven't added any exercises to your favorites yet.
+//     To get started, you can add exercises that you like to your favorites
+//     for easier access in the future.
+//   </p>`
+//     );
+//   }
+// }
