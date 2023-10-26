@@ -39,10 +39,11 @@ function handleClose() {
 }
 
 //Слухач кнопки AddToFavorites
+console.log(refs.modalAddFavoritesBtn);
 refs.modalAddFavoritesBtn.addEventListener('click', handleAddFav);
 function handleAddFav() {
   api
-    .getDetails(document.querySelector('.backdrop-exr').getAttribute('id'))
+    .getDetails(document.querySelector('.backdrop-exr').getAttribute('data-id'))
     .then(data => {
       console.log(data);
 

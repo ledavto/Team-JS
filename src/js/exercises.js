@@ -246,7 +246,7 @@ function showExercises(category, subCategory, keywords, page = 1) {
           categoryCards.appendChild(exrCard);
 
           //Слухач на натискання скнопки START
-          exrCard.addEventListener('click', event => {
+          exrCard.querySelector('.exr-item-header-start').addEventListener('click', event => {
             document.querySelector('.backdrop').classList.remove('is-hidden');
 
             //Додає ID вправи у карточку
@@ -254,7 +254,7 @@ function showExercises(category, subCategory, keywords, page = 1) {
             //   .querySelector('.backdrop-exr')
             //   .setAttribute('id', event.currentTarget.getAttribute('data-id'));
             document.querySelector('.backdrop-exr').dataset.id =
-              event.currentTarget.getAttribute('data-id');
+              exrCard.getAttribute('data-id');
           });
         });
       } else {

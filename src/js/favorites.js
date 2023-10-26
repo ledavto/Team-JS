@@ -42,7 +42,6 @@ function showFavorites(page = 1) {
      
     arrFavEl.forEach((element) => {
 
-      //console.log(element.querySelector('.btnStartFav'));
       element.querySelector('.btnStartFav').addEventListener('click', event => {
         document.querySelector('.backdrop').classList.remove('is-hidden');
 
@@ -59,15 +58,12 @@ function showFavorites(page = 1) {
     
     arrFavTrash.forEach((element) => {
   
-      console.log(element.querySelector('.trash-icon'));
+      //console.log(element.querySelector('.trash-icon'));
 
       element.querySelector('.trash-icon').addEventListener('click', event => {
         
-         console.log(element.getAttribute('data-id'));
-
-        const cardId = element.getAttribute('data-id');
+         const cardId = element.getAttribute('data-id');
         
-                
         let checkoutFavorites =
           JSON.parse(localStorage.getItem(FAVORITES_LS_KEY)) ?? [];
         
@@ -80,6 +76,7 @@ function showFavorites(page = 1) {
     checkoutFavorites.splice(newCardIdx, 1);
     localStorage.setItem(FAVORITES_LS_KEY, JSON.stringify(checkoutFavorites));
     element.remove();
+    updatePaginationFavorites(arrFavTrash/8);
   }
   if (checkoutFavorites.length === 0) {
     favorites.insertAdjacentHTML(
@@ -167,8 +164,6 @@ function createMarkup(exercises, page = 1) {
             </div>
       </div>`;
     arr.push(favCard);
-    
-    
 
   }
 
