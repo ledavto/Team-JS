@@ -47,7 +47,7 @@ class Api {
 
   async getDetails(id) {
     try {
-      return await this.#getData(`${this.#BASE_URL}/exercises?${id}`);
+      return await this.#getData(`${this.#BASE_URL}/exercises/${id}`);
     } catch (error) {
       this.#handleError(error);
     }

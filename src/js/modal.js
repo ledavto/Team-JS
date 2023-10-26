@@ -1,36 +1,70 @@
 import Notiflix from 'notiflix';
 import api from './api.js';
 
-const FAVORITES_LS_KEY = 'favoritesObject';
-const favoriteObject = {};
-localStorage.setItem(FAVORITES_LS_KEY, JSON.stringify(favoriteObject));
+// const FAVORITES_LS_KEY = 'favoritesObject';
+// const favoriteObject = {};
+// localStorage.setItem(FAVORITES_LS_KEY, JSON.stringify(favoriteObject));
 
-fetch('https://your-energy.b.goit.study/api/exercises/')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error(`Вимушена помилка статусу: ${response.status}`);
-    }
-    return response.json();
-  })
-  .then(idEx => console.log(idEx))
-  .catch(err => console.log(err));
+// fetch('https://your-energy.b.goit.study/api/exercises/')
+//   .then(response => {
+//     if (!response.ok) {
+//       throw new Error(`Вимушена помилка статусу: ${response.status}`);
+//     }
+//     return response.json();
+//   })
+//   .then(idEx => console.log(idEx))
+//   .catch(err => console.log(err));
 
 const refs = {
   generalModals: document.querySelector('[data-modal-general]'),
   modalCloseBtn: document.querySelector('.modal-general-close-btn'),
   modalOpenBtn: document.querySelector('.exr-item-header-start'),
+  modalAddFavoritesBtn: document.querySelector('.modal-add-favorates-btn'),
   favoritExercise: document.querySelector('.exr-item'),
 };
 
-console.log(refs.modalCloseBtn());
+//localStorage.removeItem('checkout');
+let getListFavor = [];
+if (localStorage.getItem('checkout')) {
+  getListFavor = [...JSON.parse(localStorage.getItem('checkout'))];
+}
+console.log(getListFavor);
+
+// getListFavor.push(JSON.parse(localStorage.getItem('checkout')));
+
+// console.log(JSON.parse(getListFavor));
+
+//const parsedListFavor = JSON.parse(listFavorites);
+
+console.log(refs.modalCloseBtn);
 
 //Слухач кнопки CLOSE
+refs.modalCloseBtn.addEventListener('click', handleClose);
+function handleClose() {
+  refs.generalModals.classList.add('is-hidden');
+  console.log(refs.modalCloseBtn);
+}
 
-refs.modalCloseBtn.addEventListener(
-  'click',
-  document.querySelector('.backdrop').classList.add('is-hidden')
-);
+//Слухач кнопки AddToFavorites
+refs.modalAddFavoritesBtn.addEventListener('click', handleAddFav);
+function handleAddFav() {
+  api
+    .getDetails(document.querySelector('.backdrop-exr').getAttribute('id'))
+    .then(data => {
+      console.log(data);
 
+      getListFavor.push(data);
+      localStorage.setItem('checkout', JSON.stringify(getListFavor));
+    })
+    .catch(error => {
+      console.error(error);
+    });
+
+  // console.log(listDetailExr);
+
+  // getListFavor.push(document.querySelector('.backdrop-exr').getAttribute('id'));
+  // console.log(getListFavor);
+}
 // const showModal =() =>(event) {
 
 //           //localStorage.setItem(id_exr_start, event.currentTarget.);
@@ -67,8 +101,8 @@ refs.modalCloseBtn.addEventListener(
 
 //const exId= `64f389465ae26083f39b17a2`;
 
-let unlock = true;
-const timeout = 800;
+// let unlock = true;
+// const timeout = 800;
 
 //////////Button/////////
 

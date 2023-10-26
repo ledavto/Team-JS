@@ -245,8 +245,14 @@ function showExercises(category, subCategory, keywords, page = 1) {
           //Слухач на натискання скнопки START
           exrCard.addEventListener('click', event => {
             //localStorage.setItem(id_exr_start, event.currentTarget.);
-            console.log('event.currentTarget: ', event.currentTarget);
+            // console.log('event.currentTarget: ', event.currentTarget);
+            // console.log(document.querySelector('.backdrop'));
             document.querySelector('.backdrop').classList.remove('is-hidden');
+
+            //Додає ID вправи у карточку
+            document
+              .querySelector('.backdrop-exr')
+              .setAttribute('id', event.currentTarget.getAttribute('data-id'));
           });
         });
       } else {
