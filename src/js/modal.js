@@ -168,10 +168,10 @@ async function setDetails() {
     description,
     gifUrl,
   } = data;
-  exName.textContent = name;
-  exTarget.textContent = target;
-  exBody.textContent = bodyPart;
-  exEquip.textContent = equipment;
+  exName.textContent = name.charAt(0).toUpperCase() + str.slice(1);
+  exTarget.textContent = target.charAt(0).toUpperCase() + str.slice(1);
+  exBody.textContent = bodyPart.charAt(0).toUpperCase() + str.slice(1);
+  exEquip.textContent = equipment.charAt(0).toUpperCase() + str.slice(1);
   exPopular.textContent = popularity;
   exCalories.textContent = burnedCalories + '/3 min';
   exAbout.textContent = description;
