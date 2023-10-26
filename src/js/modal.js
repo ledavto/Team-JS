@@ -21,6 +21,7 @@ const refs = {
   modalOpenBtn: document.querySelector('.exr-item-header-start'),
   modalAddFavoritesBtn: document.querySelector('.modal-add-favorates-btn'),
   favoritExercise: document.querySelector('.exr-item'),
+  modalRating: document.querySelector('.modal-giv-rating-btn'),
 };
 
 //localStorage.removeItem('checkout');
@@ -28,15 +29,7 @@ let getListFavor = [];
 if (localStorage.getItem('checkout')) {
   getListFavor = [...JSON.parse(localStorage.getItem('checkout'))];
 }
-console.log(getListFavor);
-
-// getListFavor.push(JSON.parse(localStorage.getItem('checkout')));
-
-// console.log(JSON.parse(getListFavor));
-
-//const parsedListFavor = JSON.parse(listFavorites);
-
-console.log(refs.modalCloseBtn);
+//console.log(getListFavor);
 
 //Слухач кнопки CLOSE
 refs.modalCloseBtn.addEventListener('click', handleClose);
@@ -59,12 +52,16 @@ function handleAddFav() {
     .catch(error => {
       console.error(error);
     });
-
-  // console.log(listDetailExr);
-
-  // getListFavor.push(document.querySelector('.backdrop-exr').getAttribute('id'));
-  // console.log(getListFavor);
 }
+
+//Слухач RATING
+refs.modalRating.addEventListener('click', event => {
+  //localStorage.setItem(id_exr_start, event.currentTarget.);
+  // console.log('event.currentTarget: ', event.currentTarget);
+  // console.log(document.querySelector('.backdrop'));
+  refs.generalModals.classList.add('is-hidden');
+  document.querySelector('[data-rating-modal]').classList.remove('is-hidden');
+});
 // const showModal =() =>(event) {
 
 //           //localStorage.setItem(id_exr_start, event.currentTarget.);

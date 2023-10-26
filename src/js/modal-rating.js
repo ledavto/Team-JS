@@ -89,4 +89,5 @@ async function handleRatigSubmit(event) {
 refsRating.ratingCloseBtn.addEventListener('click', handleRatingClose);
 function handleRatingClose() {
   refsRating.ratingModal.classList.add('is-hidden');
+  document.querySelector('[data-modal-general]').classList.remove('is-hidden');
 }
