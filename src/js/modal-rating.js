@@ -44,7 +44,6 @@ const submitHandler = async event => {
         : 'Invalid email!';
     Notiflix.Notify.failure(errorMessage);
   }
-};
 
 const starClickHandler = e => {
   document.getElementById('rating-choosed').innerHTML =
