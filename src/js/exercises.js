@@ -30,7 +30,8 @@ function showCategories(subcategory, page = 1) {
 
       data.results.forEach(category => {
         const card = document.createElement('div');
-        card.style.background = `linear-gradient(0deg, rgba(17, 17, 17, 0.50) 0%, rgba(17, 17, 17, 0.50) 100%), url(${category.imgURL}) lightgray -22.462px -5px / 109.595% 107.556% no-repeat`;
+        card.style.background = `linear-gradient(0deg, rgba(17, 17, 17, 0.50) 0%, rgba(17, 17, 17, 0.50) 100%), url(${category.imgURL}) top / cover no-repeat`;
+
         card.classList.add('category-card');
 
         card.innerHTML = `<h3 class="category-title">${category.name}</h3>
@@ -249,9 +250,11 @@ function showExercises(category, subCategory, keywords, page = 1) {
             document.querySelector('.backdrop').classList.remove('is-hidden');
 
             //Додає ID вправи у карточку
-            document
-              .querySelector('.backdrop-exr')
-              .setAttribute('id', event.currentTarget.getAttribute('data-id'));
+            // document
+            //   .querySelector('.backdrop-exr')
+            //   .setAttribute('id', event.currentTarget.getAttribute('data-id'));
+            document.querySelector('.backdrop-exr').dataset.id =
+              event.currentTarget.getAttribute('data-id');
           });
         });
       } else {

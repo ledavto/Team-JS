@@ -129,3 +129,51 @@ refs.modalRating.addEventListener('click', event => {
         })
     }
 }**/
+
+// Потрібно для роботи функції нижче
+const modalRefs = {
+  id: document.querySelector('.backdrop-exr'),
+  exName: document.querySelector('.text-title-pop'),
+  exStars: document.querySelectorAll('.icon-star-exr'),
+  exTarget: document.querySelector('.target-name'),
+  exBody: document.querySelector('.body-part-name'),
+  exEquip: document.querySelector('.equipment-name'),
+  exPopular: document.querySelector('.popular'),
+  exCalories: document.querySelector('.how-much-calories'),
+  exAbout: document.querySelector('.about-exr'),
+  exGif: document.querySelector('.img-poppup'),
+};
+
+// Функція встановлює значення з серверу на модлаку
+async function setDetails() {
+  const {
+    id,
+    exName,
+    exTarget,
+    exBody,
+    exEquip,
+    exPopular,
+    exCalories,
+    exAbout,
+    exGif,
+  } = modalRefs;
+  const data = await api.getDetails(id.dataset.id);
+  const {
+    name,
+    target,
+    bodyPart,
+    equipment,
+    popularity,
+    burnedCalories,
+    description,
+    gifUrl,
+  } = data;
+  exName.textContent = name.charAt(0).toUpperCase() + str.slice(1);
+  exTarget.textContent = target.charAt(0).toUpperCase() + str.slice(1);
+  exBody.textContent = bodyPart.charAt(0).toUpperCase() + str.slice(1);
+  exEquip.textContent = equipment.charAt(0).toUpperCase() + str.slice(1);
+  exPopular.textContent = popularity;
+  exCalories.textContent = burnedCalories + '/3 min';
+  exAbout.textContent = description;
+  exGif.src = gifUrl;
+}
