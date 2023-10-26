@@ -25,6 +25,7 @@
     flex-direction: row;
     gap: 32px;
     max-width: 1378px;
+    margin-bottom: 100px;
   }
 
   /* .exr-left {
