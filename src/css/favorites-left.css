@@ -79,13 +79,15 @@
 /* todo DIV №3   */
 
 .fluent-icon {
-  fill: rgba(244, 244, 244, 1);
-  stroke: rgba(244, 244, 244, 0.2);
-  background: var(--primary-fontcolor);
+  fill: #242424;
+  /* fill: rgba(244, 244, 244, 1); */
+  /* stroke: rgba(244, 244, 244, 0.2); */
+  /* background: var(--primary-fontcolor);
   width: 34px;
-  height: 34px;
+  height: 34px; */
   border-radius: 50%;
   display: block;
+
 }
 
 .hundr-minutes {
