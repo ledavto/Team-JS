@@ -4,6 +4,7 @@ import svgSprite from '../img/icons.svg';
 
 const favorites = document.querySelector('.js-favorites');
 const favoritesMessage = document.querySelector('.js-favorites-message');
+const trashBtn= document.querySelector('.trash-btn');
 
 const FAVORITES_LS_KEY = 'checkout';
 
@@ -15,7 +16,7 @@ const FAVORITES_LS_KEY = 'checkout';
 let currentPage = 1;
 let itemsPerPage = 8;
 
-const checkoutProducts = [];
+// const checkoutProducts = [];
 
 // const checkoutProducts=[
 //   {
@@ -206,10 +207,12 @@ function createMarkup(exercises, page = 1) {
       `<div data-id="${exercises[i]._id}"class="favorites-card-item">
       <div class="favorites-card-workout">
       <p class="favorites-workout">WORKOUT</p>
+      <button type="button" class="trash-btn">
       <svg class="trash-icon" width="16" height="16">
                   <use href="${svgSprite}#icon-trash"></use>
                 </svg>
-      <div class="favorites-start">Start</div>
+    </button>
+      <div class="favorites-start exr-item-header-start">Start</div>
               <div>
                 <svg class="favorites-header-arrow" width="16" height="16">
                   <use href="${svgSprite}#icon-arrow"></use>
@@ -276,7 +279,7 @@ let totalPages = checkoutFavorites.length / 8;
 favorites.addEventListener('click', trashcard);
 
 function trashcard(event) {
-  if (!event.target.classList.contains('trash-icon')) {
+  if (!event.target.classList.contains('trash-btn')) {
     return;
   }
   const card = event.target.closest('.favorites-card-item'); // отримаємо посилання на всю лішку
@@ -305,4 +308,16 @@ function trashcard(event) {
   </p>`
     );
   }
+
+  
 }
+const favoritesCard= document.querySelector('.favorites-card-item');
+
+favoritesCard.addEventListener('click', event => {
+  document.querySelector('.backdrop').classList.remove('is-hidden');
+
+  //Додає ID вправи у карточку
+  document
+    .querySelector('.backdrop-exr')
+    .setAttribute('id', event.currentTarget.getAttribute('data-id'));
+});
