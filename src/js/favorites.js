@@ -1,5 +1,6 @@
 import axios from 'axios';
 import Pagination from 'tui-pagination';
+import svgSprite from '../img/icons.svg';
 
 const favorites = document.querySelector('.js-favorites');
 const favoritesMessage = document.querySelector('.js-favorites-message');
@@ -205,11 +206,13 @@ function createMarkup(exercises, page = 1) {
       `<div data-id="${exercises[i]._id}"class="favorites-card-item">
       <div class="favorites-card-workout">
       <p class="favorites-workout">WORKOUT</p>
-      <img class="trash-icon" src="./img/trash-01.png" alt="icon-trash" width="16"/> 
+      <svg class="trash-icon" width="16" height="16">
+                  <use href="${svgSprite}#icon-trash"></use>
+                </svg>
       <div class="favorites-start">Start</div>
               <div>
                 <svg class="favorites-header-arrow" width="16" height="16">
-                  <use href="./img/icons.svg#icon-arrow"></use>
+                  <use href="${svgSprite}#icon-arrow"></use>
                 </svg>
               </div>
               </div>
@@ -217,7 +220,7 @@ function createMarkup(exercises, page = 1) {
               <div class="favorites-name">
               <div class="favorites-name-svg">
                 <svg class="favorites-name-svg-svg" width="20" height="20">
-                  <use href="./img/icons.svg#icon-running-stick-figure"></use>
+                  <use href="${svgSprite}#icon-running-stick-figure"></use>
                 </svg>
               </div>
               <div class="favorites-name-text">${exercises[i].name}</div>
