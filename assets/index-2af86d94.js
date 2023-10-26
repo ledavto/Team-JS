@@ -6,13 +6,13 @@ import{a as f,P as v}from"./go-top-90a69c03.js";let i=1,s="Body parts",o,p="",u=
             <div class="exr-item-header-rating">${r.rating}</div>
             <div class="exr-item-header-star">
               <svg width="14" height="13">
-                <use href="../img/icons.svg#star-rate"></use>
+                <use href="./img/icons.svg#star-rate"></use>
               </svg>
             </div>
             <button class="exr-item-header-start" type="button">
               <span class="exr-item-header-text">Start</span>
               <svg class="exr-item-header-arrow" width="16" height="16">
-                <use href="../img/icons.svg#icon-arrow"></use>
+                <use href="./img/icons.svg#icon-arrow"></use>
               </svg>
             </button>
           </div>
@@ -20,7 +20,7 @@ import{a as f,P as v}from"./go-top-90a69c03.js";let i=1,s="Body parts",o,p="",u=
           <div class="exr-item-name">
             <div class="exr-item-name-svg">
               <svg class="exr-item-name-svg-svg" width="15" height="15">
-                <use href="../img/icons.svg#icon-running-stick-figure"></use>
+                <use href="./img/icons.svg#icon-running-stick-figure"></use>
               </svg>
             </div>
             <div class="exr-item-name-text">${r.name}</div>
