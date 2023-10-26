@@ -1,4 +1,4 @@
-.favorites-container{
+.favorites-container {
   margin: 0 auto;
   padding-right: 20px;
   padding-left: 20px;
@@ -39,15 +39,15 @@
 }
 .favorites-hundr-minutes {
   color: var(--footer-background-color);
-font-feature-settings: 'clig' off, 'liga' off;
-font-size: 24px;
-font-weight: 500;
-line-height: 1.33;
-padding-top: 15px;
-padding-bottom: 6px;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.33;
+  padding-top: 15px;
+  padding-bottom: 6px;
 }
 .favorites-text-daily-norm {
-  color: rgba(36, 36, 36, 0.60);
+  color: rgba(36, 36, 36, 0.6);
   font-size: 14px;
   font-weight: 400;
   line-height: 1.28;
@@ -233,14 +233,13 @@ padding-bottom: 6px;
   text-transform: capitalize;
 }
 @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .contain-two-foto {
-      background-image: url(./img/mobile/women-sportswear-working-mobile@2x.png);
-    }
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .contain-two-foto {
+    background-image: url(/src/img/mobile/women-sportswear-working-mobile@2x.png);
   }
+}
 @media screen and (min-width: 768px) {
-  
   .favorites-parts-container {
     width: 768px;
     display: flex;
@@ -322,15 +321,14 @@ padding-bottom: 6px;
   }
 }
 @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .contain-two-foto {
-      background-image: url(./img/tablet/women-sportswear-working-tablet@2x.png);
-    }
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .contain-two-foto {
+    background-image: url(./img/tablet/women-sportswear-working-tablet@2x.png);
   }
+}
 
 @media screen and (min-width: 1440px) {
-
   .favorites-parts-container {
     display: flex;
     flex-direction: row;
@@ -368,10 +366,11 @@ padding-bottom: 6px;
     min-height: 487px;
     height: 100%;
   }
-.favorites-list{
-  height: 487px;
-  overflow: scroll;}
-  
+  .favorites-list {
+    height: 487px;
+    overflow: scroll;
+  }
+
   .favoritesMessage {
     padding-top: 102px;
   }
@@ -410,9 +409,9 @@ padding-bottom: 6px;
   }
 }
 @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .contain-two-foto {
-      background-image: url(./img/desktop/women-sportswear-working@2x.png);
-    }
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .contain-two-foto {
+    background-image: url(./img/desktop/women-sportswear-working@2x.png);
   }
+}
