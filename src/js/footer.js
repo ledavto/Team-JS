@@ -13,7 +13,6 @@ const clickHandler = async event => {
   if (valid) {
     const response = await api.subscribe(inputValue);
 
-    //   TODO: if undefined - error
     if (
       response === undefined ||
       (response.status !== 201 && response.status !== 200)

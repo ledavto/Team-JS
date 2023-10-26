@@ -246,13 +246,12 @@ function showExercises(category, subCategory, keywords, page = 1) {
           categoryCards.appendChild(exrCard);
 
           //Слухач на натискання скнопки START
-          exrCard.addEventListener('click', event => {
-            document.querySelector('.backdrop').classList.remove('is-hidden');
+          exrCard.addEventListener('click', async event => {
+            document.querySelector('body').classList.add('modal-exercise-open');
 
-            //Додає ID вправи у карточку
-            document
-              .querySelector('.backdrop-exr')
-              .setAttribute('id', event.currentTarget.getAttribute('data-id'));
+            const id = exrCard.getAttribute('data-id');
+            const response = await api.getDetails(id);
+            // api.getDetails;
           });
         });
       } else {

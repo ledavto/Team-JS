@@ -1,3 +1,27 @@
+.modal-wrapper {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.overlay {
+  left: 0;
+  right: 0;
+  position: fixed;
+  background-color: #00000082;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: none;
+}
+
+.modal-exercise-open .overlay,
+.modal-exercise-open .modal-wrapper {
+  display: block;
+}
+
 .backdrop-exr {
   position: fixed;
   width: 100%;
@@ -47,7 +71,28 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  /* position: relative; */
 }
+
+/* .modal-open {
+  position: fixed;
+}
+
+.modal-open > .nested-2 {
+  display: block;
+}
+
+.modal-open > .modal-window {
+  display: block;
+}
+
+.overlay {
+  display: none;
+}
+
+.modal-window {
+  display: none;
+} */
 
 .modal-general-close-btn {
   position: absolute;
@@ -147,6 +192,12 @@
 
 .modal-star {
   margin-bottom: 16px;
+}
+
+.icon-star-exr {
+  fill: #f4f4f433;
+  width: 24px;
+  height: 24px;
 }
 
 .modal-add-favorates-btn:hover {
