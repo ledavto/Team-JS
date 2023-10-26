@@ -3,6 +3,8 @@ import api from './api';
 import Pagination from 'tui-pagination';
 // import 'tui-pagination/dist/tui-pagination.css';
 
+import svgSprite from '../img/icons.svg';
+
 let currentPage = 1;
 let selectedCategory = 'Body parts';
 let itemsPerPage;
@@ -214,7 +216,7 @@ function showExercises(category, subCategory, keywords, page = 1) {
             <button class="exr-item-header-start" type="button">
               <span class="exr-item-header-text">Start</span>
               <svg class="exr-item-header-arrow" width="16" height="16">
-                <use href="/img/icons.svg#icon-arrow"></use>
+                <use href="${svgSprite}.svg#icon-arrow"></use>
               </svg>
             </button>
           </div>
