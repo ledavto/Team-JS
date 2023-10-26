@@ -127,23 +127,19 @@
   border-radius: 15px;
   border: 1px solid var(--footer-background-color);
 }
-.trash-btn {
-  position: absolute;
-  left: 80px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  max-width: 25px;
-  max-height: 25px;
-  font-size: 0;
-  border: 0;
-  background-color: transparent;
+.btnTrashFav{
+  margin: auto;
 }
-
 .trash-icon {
   height: 16px;
   stroke: #242424;
   fill: white;
+  margin-left: 8px;
+  margin-right: 150px;
+}
+.btnStartFav{
+ display: flex;
+ margin: auto;
 }
 .favorites-start {
   color: var(--footer-background-color);
@@ -152,7 +148,6 @@
   line-height: 1.28;
   width: auto;
   margin-right: 8px;
-  margin-left: 174px;
 }
 .favorites-header-arrow {
   stroke: var(--footer-background-color);
@@ -311,8 +306,8 @@
   .favorites-card-item {
     width: 344px;
   }
-  .favorites-start {
-    margin-left: 179px;
+  .trash-icon {
+    margin-right: 155px;
   }
   .favorites-star {
     margin-right: 126px;
@@ -394,8 +389,12 @@
   .favorites-card-item {
     width: 405px;
   }
-  .favorites-start {
-    margin-left: 240px;
+  .trash-icon {
+    height: 16px;
+    stroke: #242424;
+    fill: white;
+    margin-left: 8px;
+    margin-right: 216px;
   }
   .favorites-star {
     margin-right: 224px;
