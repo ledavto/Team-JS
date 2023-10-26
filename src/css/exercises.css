@@ -94,8 +94,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 32px 15px;
-    margin: 0 30px;
-    max-width: calc(225px * 3 + 15px * 2);
+    max-width: calc((225px * 3 + 15px * 2) + 1px);
   }
 
   .category-card {
@@ -661,6 +660,7 @@
 }
 
 .exr-item-header-start {
+  display: flex;
   width: auto;
   background: #fff;
   border: none;
