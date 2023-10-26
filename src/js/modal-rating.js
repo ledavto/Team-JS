@@ -2,7 +2,6 @@ import api from './api.js';
 
 const refsRating = {
   ratingModal: document.querySelector('[data-rating-modal]'),
-  generalModal: document.querySelector('[data-modal-general]'),
   form: document.querySelector('.rating-form'),
   ratingCloseBtn: document.querySelector('.rating-close-btn'),
   rateList: document.querySelector('.rate'),
@@ -14,8 +13,6 @@ const variables = {
   rate: 0,
   exerciseId: '64f389465ae26083f39b17a2',
 };
-
-console.log(localStorage.length);
 
 refsRating.rateList.addEventListener('mouseover', handleHover);
 function handleHover(event) {
@@ -92,10 +89,4 @@ async function handleRatigSubmit(event) {
 refsRating.ratingCloseBtn.addEventListener('click', handleRatingClose);
 function handleRatingClose() {
   refsRating.ratingModal.classList.add('is-hidden');
-  console.log(refsRating.generalModal);
 }
-
-refs.modalCloseBtn.addEventListener(
-  'click',
-  document.querySelector('.backdrop').classList.add('is-hidden')
-);
