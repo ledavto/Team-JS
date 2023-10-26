@@ -10,7 +10,6 @@ body {
   background: #fff; */
   display: flex;
   flex-direction: column;
-  /* max-width: 375px; */
   background-color: var(--primary-background-color);
   margin: 0 auto;
   margin-top: 80px;
@@ -73,7 +72,7 @@ body {
   fill: var(--primary-background-color);
   width: 20px;
   height: 20px;
-  margin-left: 40px;
+  margin-left: 60px;
 }
 .boxAutor {
   margin-left: 72px;
@@ -356,7 +355,7 @@ body {
   .exr-left {
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 16px;
+    /* gap: 16px; */
     /* margin: 32px; */
     width: 444px;
     margin: 0;
