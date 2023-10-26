@@ -129,3 +129,53 @@ refs.modalRating.addEventListener('click', event => {
         })
     }
 }**/
+
+const modalRefs = {
+  id: document.querySelector('.backdrop-exr'),
+  exName: document.querySelector('.text-title-pop'),
+  exStars: document.querySelectorAll('.icon-star-exr'),
+  exTarget: document.querySelector('.target-name'),
+  exBody: document.querySelector('.body-part-name'),
+  exEquip: document.querySelector('.equipment-name'),
+  exPopular: document.querySelector('.popular'),
+  exCalories: document.querySelector('.how-much-calories'),
+  exAbout: document.querySelector('.about-exr'),
+  exGif: document.querySelector('.img-poppup'),
+};
+
+async function setDetails() {
+  const {
+    id,
+    exName,
+    exTarget,
+    exBody,
+    exEquip,
+    exPopular,
+    exCalories,
+    exAbout,
+    exGif,
+  } = modalRefs;
+  const data = await api.getDetails(id.dataset.id);
+  console.log(id);
+  console.log(data);
+  const {
+    name,
+    target,
+    bodyPart,
+    equipment,
+    popularity,
+    burnedCalories,
+    description,
+    gifUrl,
+  } = data;
+  exName.textContent = name;
+  exTarget.textContent = target;
+  exBody.textContent = bodyPart;
+  exEquip.textContent = equipment;
+  exPopular.textContent = popularity;
+  exCalories.textContent = burnedCalories + '/3 min';
+  exAbout.textContent = description;
+  exGif.src = gifUrl;
+}
+
+setDetails();
