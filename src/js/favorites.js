@@ -49,7 +49,10 @@ function showFavorites(page = 1) {
         // Додає ID вправи у карточку
         document
           .querySelector('.backdrop-exr')
-          .setAttribute('id', element.getAttribute('data-id'));
+          .setAttribute('data-id', element.getAttribute('data-id'));
+        
+        document.querySelector('.modal-add-favorates-btn').textContent = 'Remove favorites';
+        document.querySelector('.modal-add-favorates-btn').classList.add('removeFav')
       });
     });
 

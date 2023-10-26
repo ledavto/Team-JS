@@ -15,9 +15,11 @@ const closeModalTemplate = (closeButtonSelector, closeFunction) => {
 };
 // TODO: Remove event listeners!
 
+
 const closeExerciseModal = () => {
   document.querySelector('body').classList.remove('modal-exercise-open');
 };
+
 
 const openExerciseModal = () => {
   document.querySelector('body').classList.add('modal-exercise-open');
