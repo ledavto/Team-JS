@@ -11,7 +11,8 @@ const refsRating = {
 
 const variables = {
   rate: 0,
-  exerciseId: '64f389465ae26083f39b17a2',
+  //exerciseId: '64f389465ae26083f39b17a2',
+  exerciseId: document.querySelector('.backdrop-exr').getAttribute('id'),
 };
 
 refsRating.rateList.addEventListener('mouseover', handleHover);
@@ -88,6 +89,7 @@ async function handleRatigSubmit(event) {
 
 refsRating.ratingCloseBtn.addEventListener('click', handleRatingClose);
 function handleRatingClose() {
+  variables.rate = 0;
   refsRating.ratingModal.classList.add('is-hidden');
   document.querySelector('[data-modal-general]').classList.remove('is-hidden');
 }
