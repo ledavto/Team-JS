@@ -4,34 +4,8 @@
   height: 100%;
   top: 0;
   left: 0;
-  /* margin-left: 20px;
-
-  width: 100%;
-  /* background-color: rgba(4, 4, 4, 0.4); */
-  /* top: 0;
-  left: 0; */
-  /* position: absolute; */
-  /* min-height: 100%; */
-  /*position: fixed;
-  height: 100%;
-  width: 100%;
-background-color: rgba(4, 4, 4, 0.4);
-top: 0;
-left: 0;*/
-
-  /* padding: 20px 20px; */
-  /* overflow-y: auto; */
-  /* overflow-x: hidden;
-  z-index: 11;
-  transition: all 0.8s ease 0s; */
-  /*opacity:0;
-  visibility: visible;*/
 }
 
-/* .backdrop-modal-general:open {
-  opacity: 1;
-  visibility: visible;
-} */
 .popup-body {
   min-height: 100%;
   display: flex;
@@ -40,14 +14,14 @@ left: 0;*/
   min-width: 100%;
 }
 
-/* Сергій 25.10.23 */
-.line {
-  border: 1px solid rgba(244, 244, 244, 0.2);
-}
 .modal-pop-up-items {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 16px;
+  border-bottom: 1px solid rgba(244, 244, 244, 0.2);
+  border-top: 1px solid rgba(244, 244, 244, 0.2);
+  padding: 8px 0;
+  margin-bottom: 24px;
 }
 .about-exr {
   color: rgba(244, 244, 244, 0.6);
@@ -56,27 +30,25 @@ left: 0;*/
   font-weight: 400;
   line-height: 1.28;
   max-width: 295px;
+  width: 100%;
 }
 
 .modal-general {
   background-color: rgba(36, 36, 36, 1);
   color: rgba(244, 244, 244, 1);
-  /* max-width: 335px; */
+  max-width: calc(100% - 40px);
   padding: 40px 20px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 375px;
-  width: calc(100% - 40px);
-  position: relative;
   right: 10px;
   top: 10px;
-
-  display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
+
 .modal-general-close-btn {
   position: absolute;
   right: 20px;
@@ -90,6 +62,7 @@ left: 0;*/
   background-color: transparent;
   padding: auto;
 }
+
 .modal-general-close-icon {
   stroke: #f4f4f4;
   width: 24px;
@@ -103,10 +76,10 @@ left: 0;*/
 
 .modal-title {
   display: block;
-  /* position: relative; */
   right: 20px;
   top: 20px;
 }
+
 .text-title-pop {
   font-family: Neue Montreal;
   font-size: 20px;
@@ -114,7 +87,9 @@ left: 0;*/
   line-height: 20px;
   letter-spacing: 0px;
   text-align: left;
+  margin-bottom: 16px;
 }
+
 .popup-items {
   font-family: Neue Montreal;
   font-size: 14px;
@@ -134,21 +109,14 @@ left: 0;*/
   letter-spacing: 0px;
   text-align: left;
   color: rgba(244, 244, 244, 0.4);
-
-  gap: 8px;
+  margin-bottom: 4px;
 }
-.modal-button {
-  display: block;
-}
-
-/* ------------------------------- */
 
 .modal-general-img {
-  /*padding-top: 40px;*/
   display: flex;
-
-  /*padding-right: auto;*/
+  justify-content: center;
 }
+
 .img-poppup {
   border-radius: 12px;
   max-width: 100%;
@@ -156,10 +124,11 @@ left: 0;*/
 .modal-button {
   display: flex;
   align-items: center;
-  justify-content: center;
   padding: 20px 0px 0px 0px;
   font-size: 14px;
+  width: 100%;
 }
+
 .modal-add-favorates-btn {
   display: block;
   border: 0;
@@ -172,8 +141,12 @@ left: 0;*/
   justify-content: center;
   line-height: 18px;
   height: 42px;
-  width: 167px;
-  font-size: 14px;
+  max-width: 167px;
+  width: 100%;
+}
+
+.modal-star {
+  margin-bottom: 16px;
 }
 
 .modal-add-favorates-btn:hover {
@@ -206,98 +179,34 @@ left: 0;*/
   height: 42px;
   width: 122px;
 }
-/* 
-@media only screen and (min-width: 768px) {
-  .backdrop-modal-general {
-  }
-  .modal-general {
-    max-width: 704px;
-    padding: 40px 32px;
-  }
-  .modal-general-close-btn {
-    width: 28px;
-    height: 28px;
-  }
-  .modal-general-close-icon {
-    width: 28px;
-    height: 28px;
-  }
 
-  .modal-button {
-    font-size: 16px;
-    line-height: 24px;
-    margin-right: auto;
-    float: left;
-  }
-  .modal-add-favorates-btn {
-    width: 183px;
-    height: 48px;
-    margin-right: 8px;
-  }
-  .icon-heart {
-    width: 20px;
-    height: 20px;
-    padding: 2.5px, 1.29px, 2.31px, 1.29px;
-  }
-  .modal-giv-rating-btn {
-    width: 183px;
-  }
-} */
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 768px) {
   .popup-body {
     max-width: 708px;
     max-height: 435px;
-    /* position: absolute;
-    background-color: rgba(4, 4, 4, 0.4); */
-    /* top: 0;
-  left: 0; */
-    /* min-height: 100%; */
     display: flex;
     flex-direction: column;
-    /* align-items: center;
-  justify-content: center; */
-    /* padding: 20px 20px; */
-    /* overflow-y: auto; */
-    /* overflow-x: hidden;
-    z-index: 11;
-    transition: all 0.8s ease 0s; */
-    /*opacity: 0;
-  visibility: hidden;*/
   }
 
   .modal-general {
-    /* max-width: 335px; */
-    /* padding: 40px 20px; */
     border-radius: 20px;
-    flex-direction: row;
     gap: 20px;
+    max-width: 710px;
+    width: 100%;
+    min-height: 435px;
   }
-  .modal-general-img img {
-    /* width: 295px; */
-  }
-  .modal-general-img {
-    /* max-width: 295px; */
 
-    /*height: 259px; */
+  .modal-general-img {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  /* .modal-general-info {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-} */
+  .about-exr {
+    max-width: 342px;
+  }
 
-  .modal-general-close-btn {
-  }
-  .modal-general-close-icon {
-  }
-  .modal-button {
-  }
-  .icon-heart {
-  }
-  .modal-giv-rating-btn {
+  .modal-general-info {
+    flex-direction: unset;
   }
 }
