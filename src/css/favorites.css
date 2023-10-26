@@ -412,6 +412,6 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .contain-two-foto {
-    background-image: url(./img/desktop/women-sportswear-working@2x.png);
+    background-image: url(../img/desktop/women-sportswear-working@2x.png);
   }
 }
