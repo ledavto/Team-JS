@@ -34,7 +34,6 @@
 
 .soc-svg {
   fill: var(--footer-fontcolor);
-  /* transition: fill 0.5s; */
 }
 
 .footer-icon:hover .soc-svg {

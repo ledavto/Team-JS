@@ -1,4 +1,4 @@
-import axios from 'axios';
+import modalFunctions from './modal';
 import api from './api';
 import Pagination from 'tui-pagination';
 // import 'tui-pagination/dist/tui-pagination.css';
@@ -246,15 +246,13 @@ function showExercises(category, subCategory, keywords, page = 1) {
           categoryCards.appendChild(exrCard);
 
           //Слухач на натискання скнопки START
-          exrCard.querySelector('.exr-item-header-start').addEventListener('click', event => {
-            document.querySelector('.backdrop').classList.remove('is-hidden');
+          exrCard.addEventListener('click', async () => {
+            const id = exrCard.getAttribute('data-id');
+            document
+              .querySelector('.modal-general')
+              .setAttribute('data-id', id);
 
-            //Додає ID вправи у карточку
-            // document
-            //   .querySelector('.backdrop-exr')
-            //   .setAttribute('id', event.currentTarget.getAttribute('data-id'));
-            document.querySelector('.backdrop-exr').dataset.id =
-              exrCard.getAttribute('data-id');
+            await modalFunctions.setDataExerciseModal(id);
           });
         });
       } else {
