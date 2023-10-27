@@ -81,7 +81,7 @@ const setDataExerciseModal = async id => {
       </button>`
     );
   } else {
-    console.log(getBtnCont);
+    //console.log(getBtnCont);
     getBtnCont.insertAdjacentHTML(
       'afterbegin',
       `<button class="modal-add-favorates-btn">
