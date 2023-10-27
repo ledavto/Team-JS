@@ -1,12 +1,12 @@
-import{m,s as u,P as y}from"./go-top-031fcc8b.js";const l=document.querySelector(".js-favorites");document.querySelector(".js-favorites-message");const f="checkout";let v=1,a=8,g=JSON.parse(localStorage.getItem(f))??[];function p(s=1){if(g.length===0)l.insertAdjacentHTML("beforeend",`<p class="favoritesMessage js-favorites-message">
+import{m,s as u,P as y}from"./go-top-235ac5f9.js";const l=document.querySelector(".js-favorites");document.querySelector(".js-favorites-message");const g="checkout";let v=1,a=8,f=JSON.parse(localStorage.getItem(g))??[];function p(s=1){if(f.length===0)l.insertAdjacentHTML("beforeend",`<p class="favoritesMessage js-favorites-message">
     It appears that you haven't added any exercises to your favorites yet.
     To get started, you can add exercises that you like to your favorites
     for easier access in the future.
-  </p>`);else{l.innerHTML="",l.insertAdjacentHTML("beforeend",S(g,s)),document.querySelectorAll(".favorites-card-item").forEach(t=>{t.querySelector(".btnStartFav").addEventListener("click",async()=>{const r=t.getAttribute("data-id");console.log(t.getAttribute("data-id")),document.querySelector(".modal-general").setAttribute("data-id",r),await m.setDataExerciseModal(r)})});const n=document.querySelectorAll(".favorites-card-item");n.forEach(t=>{t.querySelector(".trash-icon").addEventListener("click",r=>{const i=t.getAttribute("data-id");let o=JSON.parse(localStorage.getItem(f))??[];o.find(({_id:d})=>d===i);const e=o.findIndex(({_id:d})=>d===i);e!==-1&&(o.splice(e,1),localStorage.setItem(f,JSON.stringify(o)),t.remove(),h(n/8)),o.length===0&&l.insertAdjacentHTML("beforeend",`<p class="favoritesMessage js-favorites-message">
+  </p>`);else{l.innerHTML="",l.insertAdjacentHTML("beforeend",S(f,s)),document.querySelectorAll(".favorites-card-item").forEach(t=>{t.querySelector(".btnStartFav").addEventListener("click",async()=>{const r=t.getAttribute("data-id");document.querySelector(".modal-general").setAttribute("data-id",r),await m.setDataExerciseModal(r)})});const n=document.querySelectorAll(".favorites-card-item");n.forEach(t=>{t.querySelector(".trash-icon").addEventListener("click",r=>{const i=t.getAttribute("data-id");let o=JSON.parse(localStorage.getItem(g))??[];o.find(({_id:d})=>d===i);const e=o.findIndex(({_id:d})=>d===i);e!==-1&&(o.splice(e,1),localStorage.setItem(g,JSON.stringify(o)),t.remove(),h(n/8)),o.length===0&&l.insertAdjacentHTML("beforeend",`<p class="favoritesMessage js-favorites-message">
     It appears that you haven't added any exercises to your favorites yet.
     To get started, you can add exercises that you like to your favorites
     for easier access in the future.
-  </p>`)})})}}p(v);function S(s,c=1){const n=window.innerWidth;n<768?a=8:n<1440?a=10:a=0;const t=g.length;let r=0,i=t;a>0&&(r=(c-1)*a,i=c*a,i>t&&(i=t));const o=[];for(let e=r;e<i;e++){const d=`<div data-id="${s[e]._id}" class="favorites-card-item">
+  </p>`)})})}}p(v);function S(s,c=1){const n=window.innerWidth;n<768?a=8:n<1440?a=10:a=0;const t=f.length;let r=0,i=t;a>0&&(r=(c-1)*a,i=c*a,i>t&&(i=t));const o=[];for(let e=r;e<i;e++){const d=`<div data-id="${s[e]._id}" class="favorites-card-item">
       <div class="favorites-card-workout">
       <p class="favorites-workout">WORKOUT</p>
       <div class="btnTrashFav">
@@ -39,4 +39,4 @@ import{m,s as u,P as y}from"./go-top-031fcc8b.js";const l=document.querySelector
             <p class="description-target-grey">Target:</p>
             <p class="description-target-normal">${s[e].target}</p>
             </div>
-      </div>`;o.push(d)}if(a>0){let e=t/a;e=Math.trunc(e),e*a<t&&(e=e+1),h(e)}return o.join(" ")}function h(s){const c=document.getElementById("pagination");c.innerHTML="";const n={totalItems:s*a,itemsPerPage:a,visiblePages:5,page:v};new y(c,n).on("beforeMove",r=>{v=r.page,p(v)})}g.length/8;
+      </div>`;o.push(d)}if(a>0){let e=t/a;e=Math.trunc(e),e*a<t&&(e=e+1),h(e)}return o.join(" ")}function h(s){const c=document.getElementById("pagination");c.innerHTML="";const n={totalItems:s*a,itemsPerPage:a,visiblePages:5,page:v};new y(c,n).on("beforeMove",r=>{v=r.page,p(v)})}
