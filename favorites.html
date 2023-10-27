@@ -10,9 +10,9 @@
       href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
     />
     
-    <script type="module" crossorigin src="/Team-JS/assets/favorites-059011b1.js"></script>
-    <link rel="modulepreload" crossorigin href="/Team-JS/assets/go-top-e14ae3da.js">
-    <link rel="stylesheet" href="/Team-JS/assets/favorites-6d947af7.css">
+    <script type="module" crossorigin src="/Team-JS/assets/favorites-821263b6.js"></script>
+    <link rel="modulepreload" crossorigin href="/Team-JS/assets/go-top-c4178695.js">
+    <link rel="stylesheet" href="/Team-JS/assets/favorites-e31a7dd0.css">
   </head>
   <body>
     <!-- <link rel="stylesheet" href="../css/header.css"> -->
@@ -292,7 +292,13 @@
 
     <div class="modal-button">
       <button class="modal-add-favorates-btn">
-        Add favorites
+        <span>Add favorites</span>
+        <svg class="icon-heart">
+          <use href="/Team-JS/assets/icons-ce884f8c.svg#icon-heart"></use>
+        </svg>
+      </button>
+      <button class="modal-rem-favorates-btn is-hidden">
+        <span>Remove favorites</span>
         <svg class="icon-heart">
           <use href="/Team-JS/assets/icons-ce884f8c.svg#icon-heart"></use>
         </svg>
@@ -390,7 +396,7 @@
   </button>
 </div>
 
-
+    <div class="overlay"></div>
     
     <script
       defer
