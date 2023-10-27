@@ -15,11 +15,9 @@ const closeModalTemplate = (closeButtonSelector, closeFunction) => {
 };
 // TODO: Remove event listeners!
 
-
 const closeExerciseModal = () => {
   document.querySelector('body').classList.remove('modal-exercise-open');
 };
-
 
 const openExerciseModal = () => {
   document.querySelector('body').classList.add('modal-exercise-open');
@@ -49,6 +47,70 @@ const setDataExerciseModal = async id => {
     response.rating;
 
   openExerciseModal();
+
+  //Закриття по ESCAPE
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') handleClose();
+  });
+
+  //Зчитування з LocalStorage
+  let checkoutFavorites = JSON.parse(localStorage.getItem('checkout')) ?? [];
+
+  let getListFavor = [];
+  if (localStorage.getItem('checkout')) {
+    getListFavor = [...JSON.parse(localStorage.getItem('checkout'))];
+  }
+
+  console.log(checkoutFavorites);
+
+  //Перевірка наявності у LocalStorage
+  const findInLocal = checkoutFavorites.findIndex(
+    ({ _id }) => _id === response._id
+  );
+  const getElemAdd = document.querySelector('.modal-add-favorates-btn');
+  const getElemRem = document.querySelector('.modal-rem-favorates-btn');
+
+  if (findInLocal !== -1) {
+    getElemAdd.classList.add('is-hidden');
+    getElemRem.classList.remove('is-hidden');
+  } else {
+    getElemAdd.classList.remove('is-hidden');
+    getElemRem.classList.add('is-hidden');
+  }
+
+  if (document.querySelector('.modal-add-favorates-btn')) {
+    //Слухач кнопки AddToFavorites
+    getElemAdd.addEventListener('click', handleAddFav);
+    function handleAddFav() {
+      getListFavor.push(response);
+      localStorage.setItem('checkout', JSON.stringify(getListFavor));
+      getElemAdd.classList.add('is-hidden');
+      getElemRem.classList.remove('is-hidden');
+    }
+  }
+
+  //Слухач кнопки RemoveFavorites
+  if (document.querySelector('.modal-rem-favorates-btn')) {
+    getElemRem.addEventListener('click', handleRemFav);
+    function handleRemFav() {
+      getElemAdd.classList.remove('is-hidden');
+      getElemRem.classList.add('is-hidden');
+
+      const currentCard = checkoutFavorites.find(
+        ({ _id }) => _id === response._id
+      );
+      const newCardIdx = checkoutFavorites.findIndex(
+        ({ _id }) => _id === response._id
+      );
+
+      if (newCardIdx !== -1) {
+        // якщо це вправа є в localStorage
+        localStorage.clear();
+        getListFavor.splice(newCardIdx, 1);
+        localStorage.setItem('checkout', JSON.stringify(getListFavor));
+      }
+    }
+  }
 };
 
 closeModalTemplate('.modal-general-close-btn', closeExerciseModal);
@@ -70,36 +132,3 @@ document
   .addEventListener('click', openRatingModal);
 
 export default { setDataExerciseModal, closeRatingModal };
-
-
-let getListFavor = [];
-if (localStorage.getItem('checkout')) {
-  getListFavor = [...JSON.parse(localStorage.getItem('checkout'))];
-}
-
-//Закриття по ESCAPE
-document.addEventListener("keydown", event => {
-  if (event.key === 'Escape') handleClose();
-});
-
-//Слухач кнопки AddToFavorites
-//console.log(refs.modalAddFavoritesBtn);
-document.querySelector('.modal-add-favorates-btn').addEventListener('click', handleAddFav);
-function handleAddFav() {
-  // api
-  //   .getDetails(document.querySelector('.backdrop-exr').getAttribute('data-id'))
-  //   .then(data => {
-  //     //console.log(data);
-
-  //     getListFavor.push(data);
-  //     localStorage.setItem('checkout', JSON.stringify(getListFavor));
-  //   })
-  //   .catch(error => {
-  //     console.error(error);
-  //   });
-  async id => {
-    const response = await api.getDetails(id);
-    getListFavor.push(response);
-    localStorage.setItem('checkout', JSON.stringify(getListFavor));
-  }
-}

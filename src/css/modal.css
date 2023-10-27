@@ -180,7 +180,8 @@
   width: 100%;
 }
 
-.modal-add-favorates-btn {
+.modal-add-favorates-btn,
+.modal-rem-favorates-btn {
   display: flex;
   border: 0;
   font-size: 14px;
@@ -209,14 +210,16 @@
   height: 24px;
 }
 
-.modal-add-favorates-btn:hover {
+.modal-add-favorates-btn:hover,
+.modal-rem-favorates-btn:hover {
   background-color: transparent;
   border-color: var(--footer-fontcolor);
   color: var(--footer-fontcolor);
   border: solid 1px var(--footer-fontcolor);
 }
 
-.modal-add-favorates-btn:hover .icon-heart {
+.modal-add-favorates-btn:hover .icon-heart,
+.modal-rem-favorates-btn:hover .icon-heart {
   stroke: white;
 }
 

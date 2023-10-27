@@ -1,6 +1,7 @@
 import axios from 'axios';
 import Pagination from 'tui-pagination';
 import svgSprite from '../img/icons.svg';
+import modalFunctions from './modal';
 
 const favorites = document.querySelector('.js-favorites');
 const favoritesMessage = document.querySelector('.js-favorites-message');
@@ -39,65 +40,83 @@ function showFavorites(page = 1) {
 
     //Слухач на натискання скнопки START
     const arrFavEl = document.querySelectorAll('.favorites-card-item');
-     
-    arrFavEl.forEach((element) => {
 
-      element.querySelector('.btnStartFav').addEventListener('click', event => {
-        document.querySelector('.backdrop').classList.remove('is-hidden');
+    arrFavEl.forEach(element => {
+      element
+        .querySelector('.btnStartFav')
+        .addEventListener('click', async () => {
+          const id = element.getAttribute('data-id');
+          console.log(element.getAttribute('data-id'));
+          document.querySelector('.modal-general').setAttribute('data-id', id);
 
-        console.log(element);
-        // Додає ID вправи у карточку
-        document
-          .querySelector('.backdrop-exr')
-          .setAttribute('data-id', element.getAttribute('data-id'));
-        
-        document.querySelector('.modal-add-favorates-btn').textContent = 'Remove favorites';
-        document.querySelector('.modal-add-favorates-btn').classList.add('removeFav')
-      });
+          await modalFunctions.setDataExerciseModal(id);
+        });
     });
+    //   {
+    //     document.querySelector('.backdrop').classList.remove('is-hidden');
+
+    //     console.log(element);
+    //     // Додає ID вправи у карточку
+    //     document
+    //       .querySelector('.backdrop-exr')
+    //       .setAttribute('data-id', element.getAttribute('data-id'));
+
+    //     document.querySelector('.modal-add-favorates-btn').textContent = 'Remove favorites';
+    //     document.querySelector('.modal-add-favorates-btn').classList.add('removeFav')
+    //   });
+    // });
+
+    // exrCard
+    //         .querySelector('.exr-item-header-start')
+    //         .addEventListener('click', async () => {
+    //           const id = exrCard.getAttribute('data-id');
+    //           document
+    //             .querySelector('.modal-general')
+    //             .setAttribute('data-id', id);
+
+    //           await modalFunctions.setDataExerciseModal(id);
+    //         });
 
     //Слухач на натискання скнопки TRASH
     const arrFavTrash = document.querySelectorAll('.favorites-card-item');
-    
-    arrFavTrash.forEach((element) => {
-  
+
+    arrFavTrash.forEach(element => {
       //console.log(element.querySelector('.trash-icon'));
 
       element.querySelector('.trash-icon').addEventListener('click', event => {
-        
-         const cardId = element.getAttribute('data-id');
-        
+        const cardId = element.getAttribute('data-id');
+
         let checkoutFavorites =
           JSON.parse(localStorage.getItem(FAVORITES_LS_KEY)) ?? [];
-        
-  const currentCard = checkoutFavorites.find(({ _id }) => _id === cardId); // знайшли обʼєкт поточного товару в масиві всіх товарів за id
 
-  const newCardIdx = checkoutFavorites.findIndex(({ _id }) => _id === cardId); // знаходимо індекс вправи з масиву favorites (якщо такої вправи немає - повертає -1)
+        const currentCard = checkoutFavorites.find(({ _id }) => _id === cardId); // знайшли обʼєкт поточного товару в масиві всіх товарів за id
 
-  if (newCardIdx !== -1) {
-    // якщо це вправа є в localStorage
-    checkoutFavorites.splice(newCardIdx, 1);
-    localStorage.setItem(FAVORITES_LS_KEY, JSON.stringify(checkoutFavorites));
-    element.remove();
-    updatePaginationFavorites(arrFavTrash/8);
-  }
-  if (checkoutFavorites.length === 0) {
-    favorites.insertAdjacentHTML(
-      'beforeend',
-      `<p class="favoritesMessage js-favorites-message">
+        const newCardIdx = checkoutFavorites.findIndex(
+          ({ _id }) => _id === cardId
+        ); // знаходимо індекс вправи з масиву favorites (якщо такої вправи немає - повертає -1)
+
+        if (newCardIdx !== -1) {
+          // якщо це вправа є в localStorage
+          checkoutFavorites.splice(newCardIdx, 1);
+          localStorage.setItem(
+            FAVORITES_LS_KEY,
+            JSON.stringify(checkoutFavorites)
+          );
+          element.remove();
+          updatePaginationFavorites(arrFavTrash / 8);
+        }
+        if (checkoutFavorites.length === 0) {
+          favorites.insertAdjacentHTML(
+            'beforeend',
+            `<p class="favoritesMessage js-favorites-message">
     It appears that you haven't added any exercises to your favorites yet.
     To get started, you can add exercises that you like to your favorites
     for easier access in the future.
   </p>`
-    );
+          );
         }
-        
-
-        
       });
     });
-
-      
   }
 }
 
@@ -130,9 +149,7 @@ function createMarkup(exercises, page = 1) {
   const arr = [];
 
   for (let i = indStart; i < indEnd; i++) {
-
-    const favCard =
-      `<div data-id="${exercises[i]._id}" class="favorites-card-item">
+    const favCard = `<div data-id="${exercises[i]._id}" class="favorites-card-item">
       <div class="favorites-card-workout">
       <p class="favorites-workout">WORKOUT</p>
       <div class="btnTrashFav">
@@ -167,7 +184,6 @@ function createMarkup(exercises, page = 1) {
             </div>
       </div>`;
     arr.push(favCard);
-
   }
 
   if (itemsPerPage > 0) {

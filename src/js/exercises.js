@@ -246,14 +246,16 @@ function showExercises(category, subCategory, keywords, page = 1) {
           categoryCards.appendChild(exrCard);
 
           //Слухач на натискання скнопки START
-          exrCard.addEventListener('click', async () => {
-            const id = exrCard.getAttribute('data-id');
-            document
-              .querySelector('.modal-general')
-              .setAttribute('data-id', id);
+          exrCard
+            .querySelector('.exr-item-header-start')
+            .addEventListener('click', async () => {
+              const id = exrCard.getAttribute('data-id');
+              document
+                .querySelector('.modal-general')
+                .setAttribute('data-id', id);
 
-            await modalFunctions.setDataExerciseModal(id);
-          });
+              await modalFunctions.setDataExerciseModal(id);
+            });
         });
       } else {
         const exrCard = document.createElement('div');
