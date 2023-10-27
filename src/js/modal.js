@@ -18,10 +18,12 @@ const closeModalTemplate = (closeButtonSelector, closeFunction) => {
 
 const openExerciseModal = () => {
   document.querySelector('body').classList.add('modal-exercise-open');
+  document.querySelector('.go-top').classList.add('is-hidden');
 };
 
 const closeExerciseModal = () => {
   document.querySelector('body').classList.remove('modal-exercise-open');
+  document.querySelector('.go-top').classList.remove('is-hidden');
 };
 
 const setDataExerciseModal = async id => {
@@ -94,6 +96,9 @@ const setDataExerciseModal = async id => {
   function handleRemFav() {
     getBtnCont.querySelector('.modal-rem-favorates-btn').remove();
 
+    //console.log(document.querySelector(`div[data-id="${response._id}"]`));
+    document.querySelector(`div[data-id="${response._id}"]`).remove();
+    //  button[data-action="close"]
     getBtnCont.insertAdjacentHTML(
       'afterbegin',
       `<button class="modal-add-favorates-btn">

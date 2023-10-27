@@ -8,11 +8,6 @@ const favoritesMessage = document.querySelector('.js-favorites-message');
 
 const FAVORITES_LS_KEY = 'checkout';
 
-// const getListFavor = [];
-// if (localStorage.getItem('checkout')) {
-//   getListFavor = [...JSON.parse(localStorage.getItem('checkout'))];
-// }
-
 let currentPage = 1;
 let itemsPerPage = 8;
 
@@ -46,36 +41,11 @@ function showFavorites(page = 1) {
         .querySelector('.btnStartFav')
         .addEventListener('click', async () => {
           const id = element.getAttribute('data-id');
-          console.log(element.getAttribute('data-id'));
           document.querySelector('.modal-general').setAttribute('data-id', id);
 
           await modalFunctions.setDataExerciseModal(id);
         });
     });
-    //   {
-    //     document.querySelector('.backdrop').classList.remove('is-hidden');
-
-    //     console.log(element);
-    //     // Додає ID вправи у карточку
-    //     document
-    //       .querySelector('.backdrop-exr')
-    //       .setAttribute('data-id', element.getAttribute('data-id'));
-
-    //     document.querySelector('.modal-add-favorates-btn').textContent = 'Remove favorites';
-    //     document.querySelector('.modal-add-favorates-btn').classList.add('removeFav')
-    //   });
-    // });
-
-    // exrCard
-    //         .querySelector('.exr-item-header-start')
-    //         .addEventListener('click', async () => {
-    //           const id = exrCard.getAttribute('data-id');
-    //           document
-    //             .querySelector('.modal-general')
-    //             .setAttribute('data-id', id);
-
-    //           await modalFunctions.setDataExerciseModal(id);
-    //         });
 
     //Слухач на натискання скнопки TRASH
     const arrFavTrash = document.querySelectorAll('.favorites-card-item');
@@ -219,40 +189,4 @@ function updatePaginationFavorites(totalPages) {
   });
 }
 
-let totalPages = checkoutFavorites.length / 8;
-// updatePaginationExercises(totalPages);
-
-// favorites.addEventListener('click', trashcard);
-
-// function trashcard(event) {
-//   if (!event.target.classList.contains('trash-icon')) {
-//     return;
-//   }
-
-//   const card = event.target.closest('.favorites-card-item'); // отримаємо посилання на всю лішку
-
-//   const cardId = card.dataset.id; // через дата атрибут отримали id поточної вправи
-
-//   let checkoutFavorites =
-//     JSON.parse(localStorage.getItem(FAVORITES_LS_KEY)) ?? [];
-//   const currentCard = checkoutFavorites.find(({ _id }) => _id === cardId); // знайшли обʼєкт поточного товару в масиві всіх товарів за id
-
-//   const newCardIdx = checkoutFavorites.findIndex(({ _id }) => _id === cardId); // знаходимо індекс вправи з масиву favorites (якщо такої вправи немає - повертає -1)
-
-//   if (newCardIdx !== -1) {
-//     // якщо це вправа є в localStorage
-//     checkoutFavorites.splice(newCardIdx, 1);
-//     localStorage.setItem(FAVORITES_LS_KEY, JSON.stringify(checkoutFavorites));
-//     card.remove();
-//   }
-//   if (checkoutFavorites.length === 0) {
-//     favorites.insertAdjacentHTML(
-//       'beforeend',
-//       `<p class="favoritesMessage js-favorites-message">
-//     It appears that you haven't added any exercises to your favorites yet.
-//     To get started, you can add exercises that you like to your favorites
-//     for easier access in the future.
-//   </p>`
-//     );
-//   }
-// }
+//let totalPages = checkoutFavorites.length / 8;
