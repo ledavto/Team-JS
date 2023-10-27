@@ -19,11 +19,13 @@ const closeModalTemplate = (closeButtonSelector, closeFunction) => {
 const openExerciseModal = () => {
   document.querySelector('body').classList.add('modal-exercise-open');
   document.querySelector('.go-top').classList.add('is-hidden');
+  document.body.style.overflow = 'hidden';
 };
 
 const closeExerciseModal = () => {
   document.querySelector('body').classList.remove('modal-exercise-open');
   document.querySelector('.go-top').classList.remove('is-hidden');
+  document.body.style.overflow = 'visible';
 };
 
 const setDataExerciseModal = async id => {

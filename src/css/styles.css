@@ -71,6 +71,7 @@ body {
   color: var(--primary-fontcolor);
   font-size: var(--primary-fontsize);
   font-weight: var(--primary-fontweight);
+  /* overflow: hidden; */
 }
 
 .container {
