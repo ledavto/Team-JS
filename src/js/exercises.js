@@ -52,7 +52,7 @@ function updatePagination(totalPages) {
   paginationContainer.innerHTML = '';
 
   // lm
-  if (totalPages > 0) {
+  if (totalPages > 1) {
     paginationContainer.style.display = 'block';
   } else {
     paginationContainer.style.display = 'none';
@@ -69,20 +69,20 @@ function updatePagination(totalPages) {
   const pagination = new Pagination(paginationContainer, options);
 
   // lm
-  if (totalPages > 1){     
-    document.querySelector('.tui-first').style.display = 'inline-block';
-    document.querySelector('.tui-prev').style.display = 'inline-block';
-    document.querySelector('.tui-next').style.display = 'inline-block';
-    document.querySelector('.tui-last').style.display = 'inline-block';
-  } else {
-    document.querySelector('.tui-first').style.display = 'none';
-    document.querySelector('.tui-prev').style.display = 'none';
-    document.querySelector('.tui-next').style.display = 'none';
-    document.querySelector('.tui-last').style.display = 'none';
-  }
-// lm
+  // if (totalPages > 1){
+  //   document.querySelector('.tui-first').style.display = 'inline-block';
+  //   document.querySelector('.tui-prev').style.display = 'inline-block';
+  //   document.querySelector('.tui-next').style.display = 'inline-block';
+  //   document.querySelector('.tui-last').style.display = 'inline-block';
+  // } else {
+  //   document.querySelector('.tui-first').style.display = 'none';
+  //   document.querySelector('.tui-prev').style.display = 'none';
+  //   document.querySelector('.tui-next').style.display = 'none';
+  //   document.querySelector('.tui-last').style.display = 'none';
+  // }
+  // lm
 
-pagination.on('beforeMove', event => {
+  pagination.on('beforeMove', event => {
     const newPage = event.page;
     currentPage = newPage;
     showCategories(selectedCategory, newPage);
@@ -315,7 +315,7 @@ function updatePaginationExercises(totalPages) {
   const paginationContainer = document.getElementById('pagination');
   paginationContainer.innerHTML = '';
 
-  if (totalPages > 0) {
+  if (totalPages > 1) {
     paginationContainer.style.display = 'block';
   } else {
     paginationContainer.style.display = 'none';
@@ -330,18 +330,18 @@ function updatePaginationExercises(totalPages) {
 
   const pagination = new Pagination(paginationContainer, options);
 
-  if (totalPages > 1){     
-    document.querySelector('.tui-first').style.display = 'inline-block';
-    document.querySelector('.tui-prev').style.display = 'inline-block';
-    document.querySelector('.tui-next').style.display = 'inline-block';
-    document.querySelector('.tui-last').style.display = 'inline-block';
-  } else {
-    document.querySelector('.tui-first').style.display = 'none';
-    document.querySelector('.tui-prev').style.display = 'none';
-    document.querySelector('.tui-next').style.display = 'none';
-    document.querySelector('.tui-last').style.display = 'none';
-  }
-  
+  // if (totalPages > 1){
+  //   document.querySelector('.tui-first').style.display = 'inline-block';
+  //   document.querySelector('.tui-prev').style.display = 'inline-block';
+  //   document.querySelector('.tui-next').style.display = 'inline-block';
+  //   document.querySelector('.tui-last').style.display = 'inline-block';
+  // } else {
+  //   document.querySelector('.tui-first').style.display = 'none';
+  //   document.querySelector('.tui-prev').style.display = 'none';
+  //   document.querySelector('.tui-next').style.display = 'none';
+  //   document.querySelector('.tui-last').style.display = 'none';
+  // }
+
   pagination.on('beforeMove', event => {
     const newPage = event.page;
     currentPage = newPage;
