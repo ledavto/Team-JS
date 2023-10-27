@@ -1,4 +1,5 @@
 import api from './api';
+import svgSprite from '../img/icons.svg';
 
 const closeModalTemplate = (closeButtonSelector, closeFunction) => {
   document.querySelector('.overlay').addEventListener('click', closeFunction);
@@ -68,31 +69,26 @@ const setDataExerciseModal = async id => {
     getBtnCont.querySelector('.modal-rem-favorates-btn').remove();
 
   if (findInLocal !== -1) {
-    //getElemAdd.classList.add('is-hidden');
-    //console.log(getBtnCont);
     getBtnCont.insertAdjacentHTML(
       'afterbegin',
       `<button class="modal-rem-favorates-btn">
         <span>Remove favorites</span>
         <svg class="icon-heart">
-          <use href="./img/icons.svg#icon-heart"></use>
+          <use href="${svgSprite}#icon-heart"></use>
         </svg>
       </button>`
     );
-    //getElemRem.classList.remove('is-hidden');
   } else {
-    //getElemAdd.classList.remove('is-hidden');
     console.log(getBtnCont);
     getBtnCont.insertAdjacentHTML(
       'afterbegin',
       `<button class="modal-add-favorates-btn">
         <span>Add favorites</span>
         <svg class="icon-heart">
-          <use href="./img/icons.svg#icon-heart"></use>
+          <use href="${svgSprite}#icon-heart"></use>
         </svg>
       </button>`
     );
-    //getElemRem.classList.add('is-hidden');
   }
 
   function handleRemFav() {
@@ -103,7 +99,7 @@ const setDataExerciseModal = async id => {
       `<button class="modal-add-favorates-btn">
         <span>Add favorites</span>
         <svg class="icon-heart">
-          <use href="./img/icons.svg#icon-heart"></use>
+          <use href="${svgSprite}#icon-heart"></use>
         </svg>
       </button>`
     );
@@ -111,9 +107,6 @@ const setDataExerciseModal = async id => {
     getBtnCont
       .querySelector('.modal-add-favorates-btn')
       .addEventListener('click', handleAddFav);
-
-    //getElemAdd.classList.remove('is-hidden');
-    //getElemRem.classList.add('is-hidden');
 
     const currentCard = checkoutFavorites.find(
       ({ _id }) => _id === response._id
@@ -140,16 +133,13 @@ const setDataExerciseModal = async id => {
       `<button class="modal-rem-favorates-btn">
         <span>Remove favorites</span>
         <svg class="icon-heart">
-          <use href="./img/icons.svg#icon-heart"></use>
+          <use href="${svgSprite}#icon-heart"></use>
         </svg>
       </button>`
     );
     getBtnCont
       .querySelector('.modal-rem-favorates-btn')
       .addEventListener('click', handleRemFav);
-
-    // getElemAdd.classList.add('is-hidden');
-    // getElemRem.classList.remove('is-hidden');
   }
 
   if (document.querySelector('.modal-add-favorates-btn')) {
