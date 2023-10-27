@@ -12,12 +12,12 @@ Notiflix needs to be appended to the "<`+s+'>" element, but you called it before
         <svg class="icon-heart">
           <use href="${jt}#icon-heart"></use>
         </svg>
-      </button>`):(console.log(a),a.insertAdjacentHTML("afterbegin",`<button class="modal-add-favorates-btn">
+      </button>`):a.insertAdjacentHTML("afterbegin",`<button class="modal-add-favorates-btn">
         <span>Add favorites</span>
         <svg class="icon-heart">
           <use href="${jt}#icon-heart"></use>
         </svg>
-      </button>`));function r(){a.querySelector(".modal-rem-favorates-btn").remove(),document.querySelector(`div[data-id="${e._id}"]`).remove(),a.insertAdjacentHTML("afterbegin",`<button class="modal-add-favorates-btn">
+      </button>`);function r(){a.querySelector(".modal-rem-favorates-btn").remove(),document.querySelector(`div[data-id="${e._id}"]`).remove(),a.insertAdjacentHTML("afterbegin",`<button class="modal-add-favorates-btn">
         <span>Add favorites</span>
         <svg class="icon-heart">
           <use href="${jt}#icon-heart"></use>

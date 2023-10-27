@@ -10,8 +10,8 @@
       href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
     />
     
-    <script type="module" crossorigin src="/Team-JS/assets/index-558ec250.js"></script>
-    <link rel="modulepreload" crossorigin href="/Team-JS/assets/go-top-235ac5f9.js">
+    <script type="module" crossorigin src="/Team-JS/assets/index-1c0fa1a8.js"></script>
+    <link rel="modulepreload" crossorigin href="/Team-JS/assets/go-top-c35d1c6c.js">
     <link rel="stylesheet" href="/Team-JS/assets/index-bab49f38.css">
   </head>
   <body>
@@ -253,8 +253,8 @@
           data-filter="Body%20parts"
         >
           Body parts
-          <div class="underline"></div>
         </button>
+        <div class="underline"></div>
       </li>
       <li>
         <button
@@ -342,7 +342,7 @@
     <!-- <div class="exr"> -->
     <div class="category-container">
       <div class="category-cards" id="category-cards"></div>
-      <div id="pagination" class="tui-pagination" style="display: ''"></div>
+      <div id="pagination" class="tui-pagination"></div>
     </div>
     <!-- </div> -->
   </div>
@@ -415,9 +415,9 @@
 
         <form class="footer-form">
           <label for="subscribe-input">
-            <p class="subscribe-title">
+            <div class="subscribe-title">
               Subscribe and learn about new exercises!
-            </p>
+            </div>
             <input
               type="email"
               class="form-input"
@@ -458,7 +458,13 @@
     </button>
     <div class="modal-general-info">
       <div class="modal-general-img">
-        <img class="img-poppup" id="modal-exersice-img" alt="" width="295" />
+        <img
+          class="img-poppup"
+          src=""
+          id="modal-exersice-img"
+          alt=""
+          width="295"
+        />
       </div>
       <div>
         <div class="modal-title">
@@ -587,7 +593,6 @@
       />
       <textarea
         class="rating-inp-com"
-        type="text"
         name="comment"
         id="rating-comment"
         placeholder="Your comment"
